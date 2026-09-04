@@ -1,6 +1,6 @@
-# Activity 06 — Value Proposition and Interaction Loop
+# Activity 06 - Value Proposition and Interaction Loop
 
-[← Session 1](../README.md) · [← Previous activity](05-candidate-idea-screen.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [← Previous activity](05-candidate-idea-screen.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
 **Time:** 10 minutes · **Format:** team writing and diagramming in shared notes
 
@@ -8,11 +8,13 @@
 
 Connect the selected problem to an intended human outcome and define the minimum system boundary for one complete interaction.
 
+The **system boundary** separates what the system does from what the user and environment do.
+
 ## Prompt
 
 State what could become better for the named user in the named context. Then trace the minimum interaction that could produce that change. Label assumptions instead of filling gaps with invented certainty.
 
-## Part 1 — Value proposition
+## Part 1 - Value proposition
 
 **Time: 4 minutes**
 
@@ -25,7 +27,7 @@ Check the sentence:
 - Could user evidence show that the claimed value is weak, different, or absent?
 - Does it avoid claiming that the solution is already effective?
 
-## Part 2 — Interaction loop
+## Part 2 - Interaction loop
 
 **Time: 6 minutes**
 
@@ -45,14 +47,14 @@ Add the interface or touchpoint through which each action or perception occurs. 
 
 ### Value proposition
 
-> For students in a long shared study session who need to maintain a workable environment without monitoring raw sensor readings, a calm and glanceable cue may help the group decide when to ventilate, so that they can continue their work with less disruption.
+> For students in a long shared study session who need to maintain a workable environment without monitoring raw sensor readings, a calm signal that is easy to understand at a glance may help the group decide when to ventilate, so that they can continue their work with less disruption.
 
 ### Interaction loop
 
 | Element | Example |
 |---|---|
 | User goal | Continue focused group work |
-| Environmental event | The simulated or measured comfort value crosses a provisional threshold |
+| Environmental event | The simulated or measured comfort value crosses an initial threshold |
 | Input | A sensor value enters the system |
 | State change | Status changes from “Comfortable” to “Action suggested” |
 | Output | The physical indicator changes to a labelled symbol and the web status updates |
@@ -79,7 +81,7 @@ Add the interface or touchpoint through which each action or perception occurs. 
 
 ## Output
 
-One provisional value proposition, one complete interaction loop, named interface touchpoints, and visibly marked assumptions.
+One initial value proposition, one complete interaction loop, named controls or places where interaction happens, and clearly marked assumptions.
 
 ## Academic basis
 

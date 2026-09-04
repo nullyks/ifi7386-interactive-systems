@@ -1,33 +1,33 @@
-# Activity 07 — Main Use Scenario and Low-Fidelity Concept
+# Activity 07 - Main Use Scenario and Low-Fidelity Concept
 
-[← Session 1](../README.md) · [← Previous activity](06-value-proposition-and-interaction-loop.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [← Previous activity](06-value-proposition-and-interaction-loop.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
 **Time:** 25 minutes · **Format:** team scenario → rapid making → internal rehearsal
 
 ## Goal
 
-Turn an abstract concept into a concrete sequence of use and create the smallest prototype that can enact one important uncertainty.
+Turn an abstract concept into clear steps and create the smallest prototype that can explore one important unanswered question.
 
 ## Materials
 
-Use blank paper, sticky notes, markers, index cards, tape, scrap cardboard, and optional modelling material. A simple digital mock-up is also acceptable if it remains quick to change and supports enactment.
+Use blank paper, sticky notes, markers, index cards, tape, scrap cardboard, and optional modelling material. A simple digital mock-up is also acceptable if it remains quick to change and lets the team act out the interaction.
 
-## Part 1 — Six-step main scenario
+## Part 1 - Six-step main scenario
 
 **Time: 13 minutes**
 
 Create one scenario:
 
-1. **Trigger and setting** — Where and when does the situation occur? What starts it?
-2. **User goal** — What is the person trying to achieve at this moment?
-3. **User action or environmental input** — What does the person or environment do that becomes input?
-4. **System response or state** — What does the system interpret, decide, remember, or change?
-5. **Output and feedback** — What becomes perceivable? How can the user understand its meaning?
-6. **Interpretation and outcome** — What does the user think happened, what do they do next, and how does this relate to the intended value?
+1. **Trigger and setting** - Where and when does the situation occur? What starts it?
+2. **User goal** - What is the person trying to achieve at this moment?
+3. **User action or environmental input** - What does the person or environment do that becomes input?
+4. **System response or state** - What does the system interpret, decide, remember, or change?
+5. **Output and feedback** - What can the user notice? How can the user understand its meaning?
+6. **Interpretation and outcome** - What does the user think happened, what do they do next, and how does this relate to the intended value?
 
 Use short sentences and arrows. Add a “before” step only if the current workaround helps explain the problem.
 
-## Part 2 — Prototype question
+## Part 2 - Prototype question
 
 Before making anything, complete:
 
@@ -41,18 +41,18 @@ Suitable questions include whether:
 - the user can identify the current system state;
 - the interaction causes interruption, embarrassment, overload, or exclusion.
 
-## Part 3 — Build and enact
+## Part 3 - Build and act it out
 
 **Time: 10 minutes**
 
 1. Build only the elements required by the scenario and prototype question.
 2. Represent changing states with movable cards, replaceable paper screens, or objects.
-3. Let one person act as the system if automatic behaviour is not implemented. This is a Wizard-of-Oz enactment.
+3. Let one person act as the system if automatic behaviour is not implemented. This is called a **Wizard-of-Oz prototype**.
 4. Run the scenario once with a team member who did not make the relevant interface element.
 5. Do not explain the interface during the rehearsal.
 6. Record hesitation, misinterpretation, missed feedback, and unexpected action.
 
-## Part 4 — Record the result
+## Part 4 - Record the result
 
 **Time: 2 minutes**
 
@@ -81,7 +81,7 @@ Capture a photo or digital image of the prototype. Record:
 
 ### Prototype representation
 
-A folded cardboard device holds one of three interchangeable state cards. A paper browser screen mirrors the label. A person changes the state card when the simulated threshold is reached. No real sensor, threshold logic, or network is implemented because those elements are not required to examine interpretation.
+A folded cardboard device holds one of three replaceable state cards. A paper browser screen shows the same label. A person changes the state card when the simulated threshold is reached. The prototype has no real sensor, threshold logic, or network because those parts are not needed to test whether the user understands the message.
 
 ## Discuss
 
@@ -93,7 +93,7 @@ A folded cardboard device holds one of three interchangeable state cards. A pape
 
 ## Output
 
-A six-step scenario, a named prototype question, an enactable low-fidelity concept, a capture of the artefact, and one rehearsal observation.
+A six-step scenario, a named prototype question, a low-fidelity concept the team can act out, a photo or screenshot of the prototype, and one rehearsal observation.
 
 ## Academic basis
 

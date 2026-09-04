@@ -1,12 +1,12 @@
-# Activity 09 — Exit Ticket and Between-Session Task
+# Activity 09 - Exit Ticket and Between-Session Task
 
-[← Session 1](../README.md) · [← Previous activity](08-pitch-and-peer-feedback.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [← Previous activity](08-pitch-and-peer-feedback.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
 **Time in class:** 2 minutes · **Format:** team exit record followed by contextual evidence gathering
 
 ## Goal
 
-End the meeting with an explicit uncertainty and a feasible action that can improve the concept before Session 2.
+End the meeting with one clear unanswered question and one realistic action that can improve the concept before Session 2.
 
 ## Exit record
 
@@ -16,7 +16,7 @@ Record these items in the team's shared notes before leaving:
 2. The next thing we need to learn is…
 3. Before Session 2, we will investigate this by…
 4. The person responsible for arranging the activity is…
-5. The team will store anonymised evidence in…
+5. The team will store anonymised evidence, with identifying details removed, in…
 
 ## Three assumption categories
 
@@ -40,7 +40,7 @@ Is sensing plausible? Does the concept avoid sensitive data? Could it be mistake
 2. Ask for informed and voluntary participation. Explain the purpose and avoid collecting sensitive personal data.
 3. Conduct one or two short contextual observations or preparatory conversations.
 4. Focus on the current activity, goal, workaround, breakdown, environmental constraints, and meaning of a better outcome.
-5. Keep concise anonymised notes.
+5. Keep short anonymised notes. Remove names and other identifying details.
 6. Separate observation or participant statement from the team's interpretation.
 7. Revise the user–context–problem statement and value proposition while preserving the original version.
 8. Change the low-fidelity concept only where evidence or a high-priority assumption justifies the change.
@@ -57,11 +57,11 @@ Is sensing plausible? Does the concept avoid sensitive data? Could it be mistake
 
 ## Worked example
 
-**Largest assumption:** Students want an ambient study-room cue and will treat it as support for a discussion rather than an instruction.
+**Largest assumption:** Students want a background room-status signal and will treat it as support for a discussion rather than an instruction.
 
 **Next thing to learn:** How students currently notice poor room comfort and negotiate who should act.
 
-**Evidence action:** Observe one consenting group-work session and conduct two short conversations with students who use bookable study rooms. Record how the issue appears, who mentions it, what the group does, and whether a glanceable cue would be acceptable.
+**Evidence action:** Observe one group-work session with the participants' consent and have two short conversations with students who use bookable study rooms. Record how the issue appears, who mentions it, what the group does, and whether a signal that is easy to understand at a glance would be acceptable.
 
 ### Possible finding
 

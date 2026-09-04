@@ -1,6 +1,6 @@
-# Activity 03 — Team Formation and Skills Mapping
+# Activity 03 - Team Formation and Skills Mapping
 
-[← Session 1](../README.md) · [← Previous activity](02-human-centred-design-worked-example.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [← Previous activity](02-human-centred-design-worked-example.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
 **Time:** 20 minutes · **Format:** individual reflection → structured team formation → team agreement
 
@@ -8,7 +8,7 @@
 
 Form a workable team of 3–5 students while making interests, current contributions, learning goals, availability, and collaboration expectations visible.
 
-## Part 1 — Individual profile
+## Part 1 - Individual profile
 
 **Time: 6 minutes**
 
@@ -20,14 +20,14 @@ Record brief answers in a note you can show classmates.
 4. When can you realistically work with a team outside class?
 5. Which constraints should a team respect? Share only what you are comfortable making relevant to teamwork.
 
-## Part 2 — Structured team formation
+## Part 2 - Structured team formation
 
 **Time: 7 minutes**
 
 1. Speak with several classmates before committing.
 2. Look for compatible availability and a shared interest in a user or problem area.
 3. Prefer complementary contributions and learning goals. Do not build a team around one technical expert.
-4. Form a provisional team of 3–5.
+4. Form an initial team of 3–5. You can still change it if important practical problems appear.
 5. Tell the instructor if you are not included or practical constraints make the team unworkable.
 
 Before moving on, check that:
@@ -38,7 +38,7 @@ Before moving on, check that:
 - contributions are not divided simply into “technical” and “non-technical”;
 - no member is made solely responsible for implementation, documentation, or presentation.
 
-## Part 3 — Team record and working agreement
+## Part 3 - Team record and working agreement
 
 **Time: 7 minutes**
 
@@ -76,7 +76,7 @@ A team shares an interest in study environments. One member can organise and con
 
 ## Output
 
-A provisional team of 3–5 and a short digital record of team composition, interests, working constraints, rotating roles, and three working agreements.
+An initial team of 3–5 and a short digital record of team members, interests, practical limits, rotating roles, and three working agreements.
 
 ## Academic basis
 

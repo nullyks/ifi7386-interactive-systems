@@ -1,17 +1,19 @@
-# Activity 04 — Problem Candidates and Context Scan
+# Activity 04 - Problem Candidates and Context Scan
 
-[← Session 1](../README.md) · [← Previous activity](03-team-formation-and-skills-mapping.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [← Previous activity](03-team-formation-and-skills-mapping.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
-**Time:** 24 minutes · **Format:** individual divergence → team clustering → context analysis
+**Time:** 24 minutes · **Format:** individual ideas → team grouping → context analysis
 
 ## Goal
 
 Generate several project directions, then describe the user and context before selecting a solution. This prevents the first available gadget or feature from becoming the project by default.
 
-> [!IMPORTANT]
-> Your team must be able to reach at least one plausible user before Session 2. Claims made today remain provisional.
+A **context scan** is a short, structured description of the user, task, place, social situation, tools, and other conditions that may affect the interaction.
 
-## Part 1 — Generate candidates
+> [!IMPORTANT]
+> Your team must be able to reach at least one relevant user before Session 2. Claims made today are early ideas, not confirmed facts.
+
+## Part 1 - Generate candidates
 
 **Time: 5 minutes**
 
@@ -21,10 +23,10 @@ Useful starting questions:
 
 - Who experiences a recurring difficulty that the team can investigate?
 - Which activity contains waiting, uncertainty, interruption, coordination, physical effort, missed feedback, or inaccessible information?
-- Where could a physical or sensed input and a perceivable output form a meaningful interaction?
+- Where could a physical or sensed input and an output the user can notice form a meaningful interaction?
 - Which setting can the team observe safely and ethically?
 
-## Part 2 — Cluster and frame candidates
+## Part 2 - Cluster and frame candidates
 
 **Time: 7 minutes**
 
@@ -35,13 +37,13 @@ Combine related notes and produce two or three candidate frames. For each candid
 - user goal;
 - current breakdown, difficulty, or workaround;
 - why the outcome matters to the user;
-- how the team could obtain evidence before Session 2.
+- how the team could collect evidence before Session 2.
 
 Use this pattern:
 
 > In **[specific situation]**, **[specific user]** needs to **[goal]**, but **[present condition or breakdown]** makes this difficult. We currently believe this because of **[named observation, report, experience, or assumption]**.
 
-## Part 3 — Context scan
+## Part 3 - Context scan
 
 **Time: 12 minutes**
 
@@ -82,7 +84,7 @@ For every candidate, identify:
 - If the user is “everyone,” name the person who directly interacts in the main scenario.
 - If the statement contains an app, sensor, or feature, remove that word temporarily and state what the person still needs to achieve.
 - If the context is broad, add a place, time, activity, trigger, and constraint.
-- If user access is vague, name a feasible route to one observation or conversation.
+- If user access is vague, name a practical way to arrange one observation or conversation.
 
 ## Output
 

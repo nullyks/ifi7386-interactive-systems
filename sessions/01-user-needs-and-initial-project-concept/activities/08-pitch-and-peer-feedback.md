@@ -1,6 +1,6 @@
-# Activity 08 — Pitch and Peer Feedback
+# Activity 08 - Pitch and Peer Feedback
 
-[← Session 1](../README.md) · [← Previous activity](07-main-scenario-and-low-fidelity-concept.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [← Previous activity](07-main-scenario-and-low-fidelity-concept.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
 **Time:** 8 minutes · **Format:** paired teams
 
@@ -12,21 +12,21 @@ Make the first concept understandable to another team and collect focused format
 
 | Step | Time |
 |---|---:|
-| Team A pitch and enactment | 60 seconds |
+| Team A pitch and demonstration | 60 seconds |
 | Team B feedback | 2 minutes |
 | Switch | About 30 seconds |
-| Team B pitch and enactment | 60 seconds |
+| Team B pitch and demonstration | 60 seconds |
 | Team A feedback | 2 minutes |
 | Both teams record a decision | About 1 minute |
 
 ## Sixty-second pitch
 
-1. **User and context — 10 seconds:** Who is the primary user, and where or when does the situation occur?
-2. **Problem and current workaround — 10 seconds:** What breaks down now, and which part is still assumed?
-3. **Intended value — 10 seconds:** What may improve for the user?
-4. **Interaction concept — 15 seconds:** Trace input, system response or state, output, and feedback.
-5. **Prototype enactment — 10 seconds:** Show the main scenario rather than listing features.
-6. **Main uncertainty — 5 seconds:** What does the team need to learn next?
+1. **User and context - 10 seconds:** Who is the primary user, and where or when does the situation occur?
+2. **Problem and current workaround - 10 seconds:** What breaks down now, and which part is still assumed?
+3. **Intended value - 10 seconds:** What may improve for the user?
+4. **Interaction concept - 15 seconds:** Trace input, system response or state, output, and feedback.
+5. **Prototype demonstration - 10 seconds:** Show the main scenario rather than listing features.
+6. **Main uncertainty - 5 seconds:** What does the team need to learn next?
 
 ## Give feedback
 
@@ -53,7 +53,7 @@ After both rounds, record one of the following:
 
 ### Pitch
 
-Our primary user is a student in a long group-work session in a bookable study room. The group wants to maintain a workable environment, but students may notice poor comfort only after concentration has declined. A glanceable cue may help the group decide when to ventilate without reading raw sensor values. When a simulated value crosses a provisional threshold, the system changes state and displays a labelled physical and web cue. A student sees “Action suggested,” opens the window, and later sees “Comfortable.” Our largest uncertainty is whether the cue supports a group decision without becoming distracting or falsely authoritative.
+Our primary user is a student in a long group-work session in a bookable study room. The group wants to maintain a workable environment, but students may notice poor comfort only after concentration has declined. A signal that is easy to understand at a glance may help the group decide when to ventilate without reading raw sensor values. When a simulated value crosses an initial threshold, the system changes state and shows a labelled physical and web signal. A student sees “Action suggested,” opens the window, and later sees “Comfortable.” Our largest uncertainty is whether the signal supports a group decision without becoming distracting or appearing more reliable than it is.
 
 ### Example peer feedback
 

@@ -1,18 +1,18 @@
-# Activity 02 — Human-Centred Design Worked Example
+# Activity 02 - Human-Centred Design Worked Example
 
-[← Session 1](../README.md) · [← Previous activity](01-interactive-system-think-pair-share.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [← Previous activity](01-interactive-system-think-pair-share.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
 **Time:** 10 minutes · **Format:** demonstration and whole-class questions
 
 ## Goal
 
-See how a technology-led idea becomes a provisional human-centred concept. Distinguish a component, a problem hypothesis, intended value, an interaction loop, and evidence still needed.
+See how a technology-led idea becomes an initial human-centred concept. Learn the difference between a technical component, a problem hypothesis, the intended user benefit, an interaction loop, and missing evidence.
 
 ## Starting statement
 
 > Let us build something with a CO₂ sensor and LEDs.
 
-Before this can be treated as a project concept, it still needs a specific user, use context, goal or problem, intended human outcome, complete interaction, and evidence that the problem and response matter.
+Before this can become a project concept, it still needs a specific user, context, goal or problem, possible user benefit, complete interaction, and evidence that the problem and response matter.
 
 ## Worked example
 
@@ -34,7 +34,7 @@ This is an initial hypothesis. The team has not yet observed how students notice
 
 ### Value proposition
 
-> For students in a long shared study session who need to maintain a workable environment without monitoring raw data, a calm and glanceable cue may support a timely group decision to ventilate.
+> For students in a long shared study session who need to maintain a workable environment without monitoring raw data, a calm signal that is easy to understand at a glance may help the group decide when to ventilate.
 
 ### Interaction loop
 
@@ -65,16 +65,16 @@ This is an initial hypothesis. The team has not yet observed how students notice
 ## Evidence still needed
 
 - How students currently notice and respond to poor air or discomfort
-- Whether an ambient cue is acceptable during concentrated work
+- Whether a background signal is acceptable during concentrated work
 - Which wording or symbol communicates the state without alarm
 - Where the cue could be visible without becoming distracting
 - Whether a CO₂ measure is an appropriate proxy for the intended experience
-- Whether proposed thresholds and sensing are technically feasible
+- Whether the proposed thresholds and sensing are technically realistic
 
 ## Discuss
 
 - Which claims concern users, and which concern implementation?
-- Which part of the value proposition could evidence challenge?
+- Which part of the value proposition could new evidence change or prove wrong?
 - What did the volunteer misunderstand or overlook?
 - What should the next contextual inquiry or prototype examine?
 

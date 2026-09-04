@@ -1,6 +1,6 @@
 # Academic readings and source notes
 
-[Course home](../README.md) · [Session 1](../sessions/01-user-needs-and-initial-project-concept/README.md)
+[Course home](../README.md) · [Session 1](../sessions/01-user-needs-and-initial-project-concept/README.md) · [Glossary](glossary.md)
 
 The links on this page are public and do not require access through the university library. Full-text readings are identified separately from official overviews and publication records. Links were checked on **4 September 2026**.
 

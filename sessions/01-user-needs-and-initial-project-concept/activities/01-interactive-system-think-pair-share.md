@@ -1,12 +1,12 @@
-# Activity 01 — Interactive System Think–Pair–Share
+# Activity 01 - Interactive System Think–Pair–Share
 
-[← Session 1](../README.md) · [Academic readings](../../../resources/academic-readings.md)
+[← Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
 
 **Time:** 7 minutes · **Format:** individual reflection → pairs → whole-class synthesis
 
 ## Goal
 
-Identify a user goal, input, system response or state, output, perceivable feedback, and the user's next action or interpretation.
+Identify a user goal, input, system response or state, output, feedback the user can notice, and what the user does or understands next.
 
 ## Prompt
 
@@ -22,10 +22,10 @@ Name one interactive system you used today.
 
 ## Steps
 
-1. **Think — 1 minute.** Select an example and record short answers.
-2. **Explain — 2 minutes.** Partner A explains the interaction loop while Partner B looks for a missing link. Swap.
-3. **Select — 1 minute.** Choose the example that makes the interaction clearest or raises the most useful question.
-4. **Share — 3 minutes.** Contribute the example to the whole-class map.
+1. **Think - 1 minute.** Select an example and record short answers.
+2. **Explain - 2 minutes.** Partner A explains the interaction loop while Partner B looks for a missing link. Swap.
+3. **Select - 1 minute.** Choose the example that makes the interaction clearest or raises the most useful question.
+4. **Share - 3 minutes.** Contribute the example to the whole-class map.
 
 Use this sequence:
 
@@ -59,10 +59,10 @@ A printed bus timetable is useful but is not itself an interactive system. It pr
 ## Check your example
 
 - Is the user's goal different from the device's function?
-- Is the output perceivable and interpretable as feedback?
+- Can the user notice the output and understand it as feedback?
 - What state changed inside the system?
 - Could the same system succeed in one context and fail in another?
-- Does the example show that interaction can be physical, audible, ambient, or distributed across people and technology?
+- Does the example show that interaction can use physical action, sound, signals in the environment, or a combination of people and technology?
 
 ## Output
 
