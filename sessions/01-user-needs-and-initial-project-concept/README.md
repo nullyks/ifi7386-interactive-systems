@@ -1,5 +1,3 @@
-<a id="top"></a>
-
 # Session 1 - User Needs and Initial Project Concept
 
 [Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Academic readings](../../resources/academic-readings.md)
@@ -294,4 +292,4 @@ Before leaving, record the largest untested assumption, what you need to learn n
 
 ---
 
-[Back to course home](../../README.md) · [Open the glossary](../../resources/glossary.md) · [Open the academic readings](../../resources/academic-readings.md) · [Back to top](#top)
+[Back to course home](../../README.md) · [Open the glossary](../../resources/glossary.md) · [Open the academic readings](../../resources/academic-readings.md) · [Back to session route](#session-route)
