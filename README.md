@@ -48,6 +48,7 @@ See the [session index](sessions/README.md) for the stable folder and naming str
 
 ```text
 .
+├── LICENSE
 ├── README.md
 ├── resources/
 │   ├── academic-readings.md
@@ -62,3 +63,9 @@ See the [session index](sessions/README.md) for the stable folder and naming str
 ```
 
 Session folders use a two-digit number so that later material remains easy to find and appears in teaching order. Each session contains one main teaching page and its own activity pages.
+
+## Licence
+
+Except where otherwise stated, the original course materials in this repository are © 2026 Tanel Toova and licensed under the [Creative Commons Attribution 4.0 International Licence](LICENSE).
+
+You may share and adapt the materials for any purpose. You must give appropriate credit, link to the licence, and indicate if you made changes. Linked external resources remain under their own copyright and licence terms.
