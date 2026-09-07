@@ -1,6 +1,6 @@
 # Course glossary
 
-[Course home](../README.md) · [Session 1](../sessions/01-user-needs-and-initial-project-concept/README.md) · [Academic readings](academic-readings.md)
+[Course home](../README.md) · [Session 1](../sessions/01-user-needs-and-initial-project-concept/README.md) · [Session 2](../sessions/02-interaction-architecture-and-prototyping/README.md) · [Academic readings](academic-readings.md)
 
 This glossary explains important course terms in simple English. The examples show how the terms connect to the shared study-room comfort-cue example used in Session 1.
 
@@ -132,6 +132,42 @@ The line between what the system does and what happens outside it. Defining the 
 
 **Example:** The system receives a sensor value and changes a status. Opening the window is an action outside the system.
 
+### System architecture
+
+A purposeful description of the system's main parts, their responsibilities, and their relationships. A course architecture diagram does not need to show every implementation detail.
+
+### Component
+
+A part of the system with a named responsibility.
+
+**Example:** The input component receives a room-comfort value; the control component applies the current rule; the output component updates the physical indicator.
+
+### Data flow
+
+An event, value, command, message, or stored item that moves between components or across the system boundary.
+
+**Example:** A comfort value moves from the simulated input to the state rule. A labelled status message moves from the system to the web interface.
+
+### Event
+
+Something that happens at a particular time and may trigger system behaviour.
+
+**Example:** A user presses a button, a new sensor value arrives, or a timeout expires.
+
+### Transition
+
+A change from one system state to another caused by an event or condition.
+
+### Guard condition
+
+A condition that must be true before a transition can occur.
+
+**Example:** The status changes only if the comfort value remains above the threshold for the agreed interval.
+
+### Alternative interaction path
+
+A meaningful route other than the expected main scenario, such as cancellation, repeated input, missing feedback, timeout, or recovery.
+
 ### Threshold
 
 A value or condition that causes a system to change state.
@@ -179,6 +215,22 @@ The specific question a prototype should help answer.
 A prototype in which a person secretly or openly performs a system action that is not yet automated.
 
 **Example:** A team member changes the room-status card when a simulated sensor value crosses a threshold.
+
+### Fidelity
+
+How closely a prototype represents selected qualities of the intended system. Fidelity can differ across appearance, behaviour, timing, physical form, data, and technical implementation.
+
+### Interaction pattern
+
+A reusable design response to a recurring interaction problem. A pattern must be selected for a stated problem and context rather than copied automatically.
+
+### Ergonomics
+
+The study and design of interactions between people and other parts of a system. In this course, ergonomic review includes perception, reach, movement, posture, mapping, workload, timing, and use errors in the intended context.
+
+### Accessibility
+
+The extent to which people with a wide range of abilities and needs can use a product, system, service, environment, or facility to achieve their goals in the intended context.
 
 ### Iteration
 

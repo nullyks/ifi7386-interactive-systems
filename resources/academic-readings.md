@@ -1,8 +1,8 @@
 # Academic readings and source notes
 
-[Course home](../README.md) · [Session 1](../sessions/01-user-needs-and-initial-project-concept/README.md) · [Glossary](glossary.md)
+[Course home](../README.md) · [Session 1](../sessions/01-user-needs-and-initial-project-concept/README.md) · [Session 2](../sessions/02-interaction-architecture-and-prototyping/README.md) · [Glossary](glossary.md)
 
-The links on this page are public and do not require access through the university library. Full-text readings are identified separately from official overviews and publication records. Links were checked on **4 September 2026**.
+The links on this page are public and do not require access through the university library. Full-text readings are identified separately from official overviews and publication records. Links were checked on **7 September 2026**.
 
 ## Start here
 
@@ -67,3 +67,62 @@ These public pages verify the concepts and bibliographic details. The full ISO s
 | Team formation | Oakley and colleagues |
 | Project work | Blumenfeld and colleagues |
 | Peer feedback | Topping |
+
+## Session 2 readings
+
+The following sources support architecture, interaction flow, ergonomics, accessibility, and the choice of prototype fidelity and method. Every reading link is either open full text or a clearly labelled public standards overview. You do not need to buy a standard or use a university-library login for this session.
+
+### Architecture, data flow, and state
+
+9. **ISO/IEC/IEEE 42010:2022. _Software, systems and enterprise - Architecture description_.** The official overview explains the role and structure of an architecture description. The full standard is not required reading.
+   - [Official ISO overview](https://www.iso.org/standard/74393.html)
+
+10. **Fielding, R. T. (2000). _Software architecture_.** Chapter 1 of _Architectural Styles and the Design of Network-based Software Architectures_. The open HTML chapter defines components, connectors, data, configurations, and architectural views.
+    - [Open dissertation chapter](https://ics.uci.edu/~fielding/pubs/dissertation/software_arch.htm)
+
+11. **Harel, D. (1987). _Statecharts: A visual formalism for complex systems_.** _Science of Computer Programming, 8_(3), 231-274. A classic peer-reviewed account of state-based behavioural modelling.
+    - [University-hosted open PDF](https://www.csd.uoc.gr/~hy565/docs/pdfs/papers/statecharts_visual_formalism.pdf)
+    - DOI: [10.1016/0167-6423(87)90035-9](https://doi.org/10.1016/0167-6423(87)90035-9)
+
+12. **MIT 6.813/6.831. _Reading 12: Input_.** An open course reading with concrete interface examples of events, state machines, cancellation, and feedback.
+    - [Open HTML reading](https://web.mit.edu/6.813/www/sp17/classes/12-input/)
+
+### Interaction patterns, ergonomics, and accessibility
+
+13. **van Welie, M., & Trætteberg, H. (2000). _Interaction patterns in user interfaces_.** The paper presents interaction patterns from an end-user and usability perspective.
+    - [Open author-hosted PDF](https://www.welie.com/papers/PLoP2k-Welie.pdf)
+
+14. **ISO 9241-110:2020. _Ergonomics of human-system interaction - Part 110: Interaction principles_.** Use the official overview for the scope of technology-independent interaction principles. The full standard is not required reading.
+    - [Official ISO overview](https://www.iso.org/standard/75258.html)
+
+15. **ISO 9241-171:2025. _Ergonomics of human-system interaction - Part 171: Software accessibility_.** The official overview explains its scope across physical, sensory, and cognitive abilities and contexts of use. The full standard is not required reading.
+    - [Official ISO overview](https://www.iso.org/standard/86308.html)
+
+16. **W3C. (2024). _Web Content Accessibility Guidelines WCAG 2.2_.** The complete W3C Recommendation and its filtering tool are public primary sources for web-accessibility principles and success criteria.
+    - [WCAG 2.2 Recommendation](https://www.w3.org/TR/WCAG22/)
+    - [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)
+
+### Prototype fidelity and Wizard-of-Oz
+
+17. **Virzi, R. A., Sokolov, J. L., & Karis, D. (1996). _Usability problem identification using both low- and high-fidelity prototypes_.** In _Proceedings of CHI 96_, 236-243. Peer-reviewed comparison of problems found with low- and high-fidelity prototypes. ACM marks this article as free access.
+    - [Free ACM full text](https://doi.org/10.1145/238386.238516)
+
+18. **Walker, M., Takayama, L., & Landay, J. A. (2002). _High-fidelity or low-fidelity, paper or computer? Choosing attributes when testing web prototypes_.** _Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46_(5), 661-665.
+    - [Author-hosted preprint](https://www.leilatakayama.org/downloads/Takayama.Prototypes_HFES2002_prepress.pdf)
+    - DOI: [10.1177/154193120204600513](https://doi.org/10.1177/154193120204600513)
+
+19. **Porcheron, M., Fischer, J. E., & Reeves, S. (2020). _Pulling back the curtain on the Wizards of Oz_.** _Proceedings of the ACM on Human-Computer Interaction, 4_(CSCW3), Article 243. Peer-reviewed analysis of how the wizard, interface, researchers, and participants jointly shape a Wizard-of-Oz study.
+    - [Open author-hosted PDF](https://people.cs.nott.ac.uk/pszsr/files/porcheron-2020-wizard-of-oz.pdf)
+    - DOI: [10.1145/3432942](https://doi.org/10.1145/3432942)
+
+## How the readings connect to Session 2
+
+| Topic | Best starting point |
+|---|---|
+| Architecture and system boundaries | Fielding; ISO/IEC/IEEE 42010 overview |
+| States, events, and transitions | MIT open reading; Harel |
+| Interaction patterns | van Welie and Trætteberg; ISO 9241-110 |
+| Ergonomics | ISO 9241-110; ISO 9241-171 |
+| Web accessibility | WCAG 2.2; ISO 9241-171 |
+| Low- and high-fidelity comparison | Houde and Hill; Lim and colleagues; Virzi and colleagues; Walker and colleagues |
+| Wizard-of-Oz | Porcheron, Fischer, and Reeves |
