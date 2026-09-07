@@ -5,7 +5,7 @@ Student learning materials for **IFI7386.DT Foundations for the Development of I
 This repository is the course's shared learning space. Open the current session during class, follow the material from top to bottom, and use the linked activity pages when prompted. New sessions will be added here as the course progresses.
 
 > [!IMPORTANT]
-> **Current session:** [Session 2 - Interaction, Architecture, and Prototyping](sessions/02-interaction-architecture-and-prototyping/README.md)
+> **Current session:** [Session 1 - User Needs and Initial Project Concept](sessions/01-user-needs-and-initial-project-concept/README.md)
 
 ## How to use this repository
 
