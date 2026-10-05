@@ -16,7 +16,7 @@ By the end of the meeting, you can:
 - run a repeatable Wizard-of-Oz task and separate observation from interpretation;
 - upload and change an Arduino sketch, identify the board and port, and use Serial Monitor;
 - explain digital input, a control rule, and digital output through a working button-to-LED circuit;
-- identify a suitable sensor or actuator path for one part of your project and its power or integration constraints;
+- compare sensing, screens and LED elements, motors, and an UNO R4 WiFi web interface as possible project routes, including their requirements and constraints;
 - name a small Arduino-based Hi-Fi slice, a first test, and what will remain simulated.
 
 ## Session route
@@ -27,7 +27,7 @@ By the end of the meeting, you can:
 | 35–45 | Transition from simulated to implemented behaviour | [Activity 02](activities/02-map-the-interaction-to-arduino.md) | Input → rule → output map |
 | 45–70 | Board, sketch, upload, and first output | [Activity 03](activities/03-first-upload-and-output.md) | Working on-board Blink and checked board/port |
 | 70–100 | Button input and LED feedback | [Activity 04](activities/04-button-to-led-loop.md) | Working physical interaction and Serial Monitor evidence |
-| 100–120 | Sensor and motor options | [Activity 05](activities/05-component-stations.md) | Feasibility notes for the project |
+| 100–120 | Sensors, displays, movement, and web interface options | [Activity 05](activities/05-component-stations.md) | Feasibility notes for project routes |
 | 120–135 | Choose the Hi-Fi slice | [Activity 06](activities/06-hifi-slice-and-handover.md) | Build decision and next-session preparation |
 
 ## Key terms for today
@@ -88,18 +88,24 @@ Disconnect the USB cable before changing wiring. Check LED polarity and avoid a 
 - [Button input and `INPUT_PULLUP`](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/4_Nupu_lugemine.md)
 - [LED control and PWM](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/5_LED_juhtimine.md)
 
-## 5. Explore sensor and movement options
+## 5. Explore sensing, feedback, movement, and web interface options
 
-Use the component examples as design choices. You do not need to build every circuit today. For sensing, compare the event or physical quantity your project needs with the available examples: force or bend, temperature, distance, motion, humidity, and soil moisture. Ask whether the reading is direct enough for the user claim, whether it needs calibration, and what a missing or noisy value should cause.
+Use the component examples as design choices. You do not need to build every circuit today. For sensing, compare the event or physical quantity your project needs with examples for force or bend, temperature, distance, motion, humidity, and soil moisture. Ask whether the reading is direct enough for the user claim, whether it needs calibration, and what a missing or noisy value should cause.
+
+For physical visual feedback, compare seven-segment modules, RGB LEDs, LCD, TFT, OLED, and NeoPixel elements. Select a display by the information the person needs, viewing distance, readability, available components, and power requirements. A screen can show more detail than a simple LED, while a simple light may be easier to notice at a distance.
 
 For movement, choose the required physical behaviour first. A servo targets an angle; a DC motor turns continuously and may need speed or direction control; a stepper moves in controlled steps. **Do not power a motor directly from an Arduino I/O pin.** Motor work requires a suitable driver, separate power where specified, correct voltage and current, and common ground. During this introduction, use the motor material to plan or inspect an instructor-prepared setup; wire a motor only with appropriate parts and supervision.
+
+A browser interface is another project route. The [UNO R4 WiFi web-server material](https://github.com/nullyks/Arduino_UNO_R4_server) demonstrates a local web page on a phone or computer communicating with the board. This route requires an Arduino UNO R4 WiFi, its board package, and the aWOT library. The board can provide its own local Wi-Fi network, so the example does not need internet access. UNO R3 and UNO R4 Minima do not have the Wi-Fi hardware used by these examples.
 
 **Do now:** [Activity 05 - Component Stations](activities/05-component-stations.md)
 
 ### Source route
 
 - [Arduino sensors: overview and component lessons](https://github.com/nullyks/Arduino-erinevad-andurid)
+- [Arduino screens and LED elements: seven-segment, RGB, LCD, TFT, OLED, and NeoPixel](https://github.com/nullyks/Arduino-ekraanid-ja-led-elemendid)
 - [Arduino motors and power: overview and component lessons](https://github.com/nullyks/Arduino-mootorid-ja-toide)
+- [Arduino UNO R4 WiFi web server and browser interface](https://github.com/nullyks/Arduino_UNO_R4_server)
 
 ## 6. Select a Hi-Fi slice for your project
 
