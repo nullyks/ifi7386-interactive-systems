@@ -5,7 +5,7 @@ Student learning materials for **IFI7386.DT Foundations for the Development of I
 This repository is the course's shared learning space. Open the current session during class, follow the material from top to bottom, and use the linked activity pages when prompted. New sessions will be added here as the course progresses.
 
 > [!IMPORTANT]
-> **Current session:** [Session 2 - Interaction, Architecture, and Prototyping](sessions/02-interaction-architecture-and-prototyping/README.md)
+> **Current session:** [Session 3 - Wizard-of-Oz Study and Arduino Prototyping](sessions/03-wizard-of-oz-and-arduino-prototyping/README.md)
 
 ## How to use this repository
 
@@ -35,7 +35,8 @@ The first concept must have:
 |---|---|---|
 | [01](sessions/01-user-needs-and-initial-project-concept/README.md) | User Needs and Initial Project Concept | Available |
 | [02](sessions/02-interaction-architecture-and-prototyping/README.md) | Interaction, Architecture, and Prototyping | Available |
-| 03 onward | Added as the course progresses | Not yet published |
+| [03](sessions/03-wizard-of-oz-and-arduino-prototyping/README.md) | Wizard-of-Oz Study and Arduino Prototyping | Available |
+| 04 onward | Added as the course progresses | Not yet published |
 
 See the [session index](sessions/README.md) for the stable folder and naming structure.
 
@@ -61,10 +62,15 @@ See the [session index](sessions/README.md) for the stable folder and naming str
     │   └── activities/
     │       ├── 01-interactive-system-think-pair-share.md
     │       └── ...
-    └── 02-interaction-architecture-and-prototyping/
+    ├── 02-interaction-architecture-and-prototyping/
+    │   ├── README.md
+    │   └── activities/
+    │       ├── 01-evidence-and-concept-reconnect.md
+    │       └── ...
+    └── 03-wizard-of-oz-and-arduino-prototyping/
         ├── README.md
         └── activities/
-            ├── 01-evidence-and-concept-reconnect.md
+            ├── 01-wizard-of-oz-study.md
             └── ...
 ```
 
