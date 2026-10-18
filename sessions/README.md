@@ -9,6 +9,7 @@ Use the session pages in numerical order. Each main page contains the concepts, 
 | 01 | User Needs and Initial Project Concept | [Open Session 1](01-user-needs-and-initial-project-concept/README.md) |
 | 02 | Interaction, Architecture, and Prototyping | [Open Session 2](02-interaction-architecture-and-prototyping/README.md) |
 | 03 | Wizard-of-Oz Study and Arduino Prototyping | [Open Session 3](03-wizard-of-oz-and-arduino-prototyping/README.md) |
+| 04 | Integration and Collaborative Development | [Open Session 4](04-integration-and-collaborative-development/README.md) |
 
 ## How this section will grow
 

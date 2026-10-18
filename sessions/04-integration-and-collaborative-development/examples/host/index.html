@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Session 4 prototypes</title>
+  <!-- HTML describes content. CSS inside style controls its appearance. -->
+  <style>
+    body { font: 18px system-ui; max-width: 900px; margin: 24px auto; padding: 16px; background: #f7f8fa; color: #152333; }
+    section { background: white; border: 1px solid #abb7c4; padding: 20px; margin: 20px 0; }
+    svg { max-width: 560px; width: 100%; background: #edf1f5; }
+    .free { fill: #178443; }
+    .occupied { fill: #bc2635; }
+    .unknown { fill: #687482; }
+    .selected { fill: #ffe172; stroke: #152333; stroke-width: 3; }
+    text { font: 16px system-ui; fill: #152333; }
+    .chair-label { fill: white; font-weight: bold; }
+    rect { stroke: #152333; }
+    button { font: inherit; padding: 8px; }
+    #network { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Integrated prototypes</h1>
+  <p id="network" role="status">Connecting to host…</p>
+  <button id="clear-ticket">Clear ticket display</button>
+
+  <section>
+    <h2>Group 1 · Library</h2>
+    <p>Green = free · Red = occupied · Grey = unknown / no recent data</p>
+    <!-- SVG is a drawing. x/y set position; width/height set size. -->
+    <svg viewBox="0 0 560 230" aria-label="Library plan: two seats next to a table">
+      <rect x="15" y="15" width="530" height="200" fill="none" />
+      <rect x="200" y="55" width="160" height="70" fill="#d8c5a7" />
+      <text x="252" y="95">Table</text>
+      <!-- id connects a drawn chair to its data: L1 or L2. -->
+      <rect id="L1" x="160" y="145" width="100" height="50" class="unknown" />
+      <text x="193" y="177" class="chair-label">L1</text>
+      <rect id="L2" x="300" y="145" width="100" height="50" class="unknown" />
+      <text x="333" y="177" class="chair-label">L2</text>
+    </svg>
+    <p id="library" role="status"></p>
+  </section>
+
+  <section>
+    <h2>Group 2 · Ticket guidance</h2>
+    <p id="reader" role="status"></p>
+    <p id="guide" role="status">Scan a ticket.</p>
+    <svg viewBox="0 0 560 340" aria-label="Hall with rows A to C and a centre aisle">
+      <rect x="100" y="10" width="360" height="30" fill="#ccd6e0" />
+      <text x="245" y="32">SCREEN</text>
+      <!-- Change these positions to adapt your hall. Keep IDs unique. -->
+        <rect id="seat-A1" x="50" y="65" width="75" height="40" fill="white" />
+        <text x="72" y="92">A1</text>
+        <rect id="seat-A2" x="140" y="65" width="75" height="40" fill="white" />
+        <text x="162" y="92">A2</text>
+        <rect id="seat-A3" x="330" y="65" width="75" height="40" fill="white" />
+        <text x="352" y="92">A3</text>
+        <rect id="seat-A4" x="420" y="65" width="75" height="40" fill="white" />
+        <text x="442" y="92">A4</text>
+        <rect id="seat-B1" x="50" y="130" width="75" height="40" fill="white" />
+        <text x="72" y="157">B1</text>
+        <rect id="seat-B2" x="140" y="130" width="75" height="40" fill="white" />
+        <text x="162" y="157">B2</text>
+        <rect id="seat-B3" x="330" y="130" width="75" height="40" fill="white" />
+        <text x="352" y="157">B3</text>
+        <rect id="seat-B4" x="420" y="130" width="75" height="40" fill="white" />
+        <text x="442" y="157">B4</text>
+        <rect id="seat-C1" x="50" y="195" width="75" height="40" fill="white" />
+        <text x="72" y="222">C1</text>
+        <rect id="seat-C2" x="140" y="195" width="75" height="40" fill="white" />
+        <text x="162" y="222">C2</text>
+        <rect id="seat-C3" x="330" y="195" width="75" height="40" fill="white" />
+        <text x="352" y="222">C3</text>
+        <rect id="seat-C4" x="420" y="195" width="75" height="40" fill="white" />
+        <text x="442" y="222">C4</text>
+      <path id="route" fill="none" stroke="#1461bb" stroke-width="6" />
+      <text x="240" y="323">Entrance</text>
+    </svg>
+  </section>
+
+  <!-- JavaScript below RUNS IN THE BROWSER, not on Arduino. -->
+  <script>
+    // Remember the exact host scan that the user cleared on this browser.
+    // Do not compare the laptop's time with the Pi's time: clocks may differ.
+    let latestTicketTime = null;
+    let clearedTicketTime = null;
+
+    function removeRoute() {
+      document.getElementById('route').setAttribute('d', '');
+      const selectedSeats = document.querySelectorAll('.selected');
+      for (const seat of selectedSeats) {
+        seat.classList.remove('selected');
+      }
+    }
+
+    function clearTicket() {
+      clearedTicketTime = latestTicketTime;
+      document.getElementById('guide').textContent = 'Scan a ticket.';
+      removeRoute();
+    }
+    // Run our function WHEN the user clicks, not immediately on page load.
+    document.getElementById('clear-ticket').addEventListener('click', clearTicket);
+
+    function showLibrary(seats) {
+      const descriptions = [];
+      for (const id of ['L1', 'L2']) {
+        const seat = seats[id];
+        // A CSS class changes the rectangle colour using the rules above.
+        document.getElementById(id).setAttribute('class', seat.state);
+        let reading = '—';
+        if (seat.raw !== null) {
+          reading = seat.raw;
+        }
+        descriptions.push(id + ': ' + seat.state + ' (raw: ' + reading + ')');
+      }
+      // textContent shows plain text; it does not interpret it as HTML code.
+      document.getElementById('library').textContent = descriptions.join(' · ');
+    }
+
+    function drawRoute(seatId) {
+      const seat = document.getElementById('seat-' + seatId);
+      if (seat === null) {
+        return;
+      }
+      seat.classList.add('selected');
+      // Number converts an HTML attribute (text) into a number for arithmetic.
+      const centreX = Number(seat.getAttribute('x')) + 37;
+      const centreY = Number(seat.getAttribute('y')) + 20;
+      // M = move to starting point; L = draw a line to the next point.
+      // Entrance -> centre aisle at row -> seat. This is a fixed demo route.
+      const route = 'M 280 295 L 280 ' + centreY + ' L ' + centreX + ' ' + centreY;
+      document.getElementById('route').setAttribute('d', route);
+    }
+
+    function showTicket(state) {
+      removeRoute(); // Never retain the previous visitor's destination.
+      let message = 'Scan a ticket.';
+      let readerMessage = 'Reader offline / unknown';
+      if (state.reader.online) {
+        if (state.reader.ready) {
+          readerMessage = 'Reader ready';
+        } else {
+          readerMessage = 'Reader hardware error';
+        }
+      }
+      document.getElementById('reader').textContent = readerMessage;
+      latestTicketTime = null;
+      if (state.ticket !== null) {
+        latestTicketTime = state.ticket.at;
+        if (state.ticket.at !== clearedTicketTime && state.reader.online && state.reader.ready) {
+          if (state.ticket.known) {
+            message = 'Seat ' + state.ticket.seat + '. ' + state.ticket.route;
+            drawRoute(state.ticket.seat);
+          } else {
+            message = 'Unknown ticket. Please ask an organiser.';
+          }
+        }
+      }
+      document.getElementById('guide').textContent = message;
+    }
+
+    function showHostError() {
+      document.getElementById('network').textContent = 'Host unavailable. Check Wi-Fi and server.';
+      document.getElementById('L1').setAttribute('class', 'unknown');
+      document.getElementById('L2').setAttribute('class', 'unknown');
+      document.getElementById('library').textContent = 'L1: unknown · L2: unknown';
+      document.getElementById('reader').textContent = 'Reader status unknown';
+      document.getElementById('guide').textContent = 'Scan a ticket.';
+      removeRoute();
+    }
+
+    async function refresh() {
+      try {
+        // await waits for the reply. A 2500 ms timeout avoids waiting forever.
+        const response = await fetch('/api/state', { signal: AbortSignal.timeout(2500) });
+        if (!response.ok) {
+          throw new Error('Host returned an error');
+        }
+        const state = await response.json(); // JSON text becomes a JS object.
+        document.getElementById('network').textContent = 'Host connected';
+        showLibrary(state.seats);
+        showTicket(state);
+      } catch (error) {
+        showHostError();
+      } finally {
+        // Schedule the NEXT request only after this one finishes.
+        setTimeout(refresh, 1000);
+      }
+    }
+    refresh(); // Start the first request now.
+  </script>
+</body>
+</html>

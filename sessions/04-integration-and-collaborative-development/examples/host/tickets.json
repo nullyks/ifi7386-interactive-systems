@@ -1,0 +1,14 @@
+{
+  "04A1B2C3": {
+    "seat": "A2",
+    "route": "From the entrance, follow the centre aisle to row A. Turn left to seat 2."
+  },
+  "04112233": {
+    "seat": "B3",
+    "route": "From the entrance, follow the centre aisle to row B. Turn right to seat 3."
+  },
+  "04ABCDEF": {
+    "seat": "C1",
+    "route": "From the entrance, follow the centre aisle to row C. Turn left to seat 1."
+  }
+}
