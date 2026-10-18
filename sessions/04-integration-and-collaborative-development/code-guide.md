@@ -2,8 +2,6 @@
 
 [Session 4](README.md)
 
-Comments and teaching pages are in English, matching the course. Comments explain WHY a step exists and what each new programming idea means. You do not have to type the complete program from memory.
-
 ## Which file do I open?
 
 | Stage | Group 1 | Group 2 | What should happen? |
