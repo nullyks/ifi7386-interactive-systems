@@ -1,6 +1,6 @@
 # Session 4 — Integration and Collaborative Development
 
-[Course home](../../README.md) · [Sessions](../README.md) · [Instructor plan](instructor-notes.md)
+[Course home](../../README.md) · [Sessions](../README.md)
 
 **135 minutes in three 45-minute blocks · Working language: English**
 
