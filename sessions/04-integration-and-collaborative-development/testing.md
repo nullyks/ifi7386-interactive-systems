@@ -12,6 +12,9 @@ Stop any optional simulators first. Record PASS/FAIL, actual result, photo/log e
 | G1 | Empty both mounted chairs | Both free after settling |
 | G1 | Occupy L1, L2, both | Correct independent states in a few seconds |
 | G1 | Release each; repeat three cycles | Correct return, no rapid chatter |
+| G1 | Click each of the three table areas | Correct separate description opens; close button/Escape works |
+| G1 | Tab to table area, activate with Enter/Space | Same description is accessible by keyboard |
+| G1 | Inspect added chairs while sensor values change | White dashed chairs remain unmeasured; only L1/L2 change sensor state |
 | G1 | Unplug UNO; wait >10 s | Seats grey/unknown |
 | G1 | Reconnect | Fresh states return automatically |
 | G2 | Scan 2–3 registered tags | Distinct correct seats, paths and text |

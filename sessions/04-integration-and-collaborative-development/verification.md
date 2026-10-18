@@ -33,3 +33,7 @@ Stage 1 has separate serial-only sketches with no networking. Stage 2 repeats th
 - [Supplied Amazon item](https://www.amazon.de/dp/B0FKH38Z6H) was inaccessible. [Secondary ASIN listing](https://www.odkarla.cz/sada-pn532-nfc-rfid-modulu-v2-nfc-ctecka-pro-kompatibilitu-podporuje-i2c-spi-hsu-s-dosahem-az-7~p2094865) identifies PN532 V2 / XD045. Treat identification as provisional and inspect actual module/supplier pinout before powering.
 
 The original example code accompanies the course licence; linked libraries retain their own licences. One UNO reads both chairs; one Pi per group preferred; separate ports required if using one Pi. Displays are browser interfaces, with static routes from one entrance.
+
+## Three-table library view
+
+The Group 1 map contains independent 2-, 4- and 6-seat areas with their own descriptions. Browser checks confirmed mouse opening for Tables 2/3, close-button/Escape behaviour and keyboard activation. Simulated POST still updates L1 red and L2 green; added chairs stay white/dashed and unmeasured. Group 1 API regression test passes. Arduino and server code were unchanged.

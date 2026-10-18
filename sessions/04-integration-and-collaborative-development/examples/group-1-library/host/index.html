@@ -8,7 +8,18 @@
   <style>
     body { font: 18px system-ui; max-width: 900px; margin: 24px auto; padding: 16px; background: #f7f8fa; color: #152333; }
     section { background: white; border: 1px solid #abb7c4; padding: 20px; margin: 20px 0; }
-    svg { max-width: 560px; width: 100%; background: #edf1f5; }
+    svg { width: 100%; background: #edf1f5; }
+    .table-area { cursor: pointer; }
+    .area-background { fill: #f9fbfd; stroke: #8b9aab; stroke-dasharray: 5 4; }
+    .table-area:hover .area-background, .table-area:focus .area-background { fill: #e1edfb; stroke: #1461bb; stroke-width: 3; }
+    .table-area:focus { outline: none; }
+    .table-top { fill: #d8c5a7; }
+    .no-sensor { fill: #fff; stroke: #687482; stroke-dasharray: 4 3; }
+    .table-name { font-weight: bold; }
+    .seat-text { font-size: 13px; text-anchor: middle; }
+    dialog { max-width: 460px; border: 1px solid #8b9aab; border-radius: 10px; padding: 24px; }
+    dialog::backdrop { background: #15233388; }
+    button { font: inherit; padding: 8px 16px; cursor: pointer; }
     .free { fill: #178443; }
     .occupied { fill: #bc2635; }
     .unknown { fill: #687482; }
@@ -24,22 +35,111 @@
   <section>
     <h2>Group 1 · Library</h2>
     <p>Green = free · Red = occupied · Grey = unknown / no recent data</p>
-    <!-- SVG is a drawing. x/y set position; width/height set size. -->
-    <svg viewBox="0 0 560 230" aria-label="Library plan: two seats next to a table">
-      <rect x="15" y="15" width="530" height="200" fill="none" />
-      <rect x="200" y="55" width="160" height="70" fill="#d8c5a7" />
-      <text x="252" y="95">Table</text>
-      <!-- id connects a drawn chair to its data: L1 or L2. -->
-      <rect id="L1" x="160" y="145" width="100" height="50" class="unknown" />
-      <text x="193" y="177" class="chair-label">L1</text>
-      <rect id="L2" x="300" y="145" width="100" height="50" class="unknown" />
-      <text x="333" y="177" class="chair-label">L2</text>
+    <p>White dashed seats have no sensor; their availability is not measured. Click a table area to read its description.</p>
+    <!-- Each SVG group (g) contains ONE table, its chairs and its clickable area.
+         The large background rectangle also catches clicks between chairs.
+         tabindex and role make the area usable with a keyboard as a button. -->
+    <svg viewBox="0 0 900 350" aria-label="Library plan: three table areas with two, four and six seats">
+      <g id="table-area-1" class="table-area" role="button" tabindex="0"
+         aria-label="Table 1, 2 seats. Open description." aria-haspopup="dialog">
+        <rect class="area-background" x="15" y="15" width="280" height="320" rx="10" />
+        <text class="table-name" x="35" y="45">Table 1 · 2 seats</text>
+        <rect class="table-top" x="95" y="125" width="120" height="90" rx="5" />
+        <text x="130" y="175">Table 1</text>
+        <rect id="L1" class="unknown" x="90" y="245" width="55" height="40" rx="5" />
+        <text class="seat-text chair-label" x="117" y="270">L1</text>
+        <rect id="L2" class="unknown" x="165" y="245" width="55" height="40" rx="5" />
+        <text class="seat-text chair-label" x="192" y="270">L2</text>
+      </g>
+      <g id="table-area-2" class="table-area" role="button" tabindex="0"
+         aria-label="Table 2, 4 seats. Open description." aria-haspopup="dialog">
+        <rect class="area-background" x="310" y="15" width="280" height="320" rx="10" />
+        <text class="table-name" x="330" y="45">Table 2 · 4 seats</text>
+        <rect class="table-top" x="390" y="125" width="120" height="90" rx="5" />
+        <text x="425" y="175">Table 2</text>
+        <rect class="no-sensor" x="385" y="245" width="55" height="40" rx="5" />
+        <text class="seat-text" x="412" y="270">T2-1</text>
+        <rect class="no-sensor" x="460" y="245" width="55" height="40" rx="5" />
+        <text class="seat-text" x="487" y="270">T2-2</text>
+        <rect class="no-sensor" x="385" y="65" width="55" height="40" rx="5" />
+        <text class="seat-text" x="412" y="90">T2-3</text>
+        <rect class="no-sensor" x="460" y="65" width="55" height="40" rx="5" />
+        <text class="seat-text" x="487" y="90">T2-4</text>
+      </g>
+      <g id="table-area-3" class="table-area" role="button" tabindex="0"
+         aria-label="Table 3, 6 seats. Open description." aria-haspopup="dialog">
+        <rect class="area-background" x="605" y="15" width="280" height="320" rx="10" />
+        <text class="table-name" x="625" y="45">Table 3 · 6 seats</text>
+        <rect class="table-top" x="685" y="125" width="120" height="90" rx="5" />
+        <text x="720" y="175">Table 3</text>
+        <rect class="no-sensor" x="680" y="245" width="55" height="40" rx="5" />
+        <text class="seat-text" x="707" y="270">T3-1</text>
+        <rect class="no-sensor" x="755" y="245" width="55" height="40" rx="5" />
+        <text class="seat-text" x="782" y="270">T3-2</text>
+        <rect class="no-sensor" x="680" y="65" width="55" height="40" rx="5" />
+        <text class="seat-text" x="707" y="90">T3-3</text>
+        <rect class="no-sensor" x="755" y="65" width="55" height="40" rx="5" />
+        <text class="seat-text" x="782" y="90">T3-4</text>
+        <rect class="no-sensor" x="615" y="150" width="55" height="40" rx="5" />
+        <text class="seat-text" x="642" y="175">T3-5</text>
+        <rect class="no-sensor" x="820" y="150" width="55" height="40" rx="5" />
+        <text class="seat-text" x="847" y="175">T3-6</text>
+      </g>
     </svg>
     <p id="library" role="status"></p>
   </section>
 
+  <!-- A dialog opens above the map. Its built-in Escape key closes it too. -->
+  <dialog id="table-description" aria-labelledby="description-title">
+    <h2 id="description-title"></h2>
+    <p id="description-text"></p>
+    <form method="dialog">
+      <button>Close description</button>
+    </form>
+  </dialog>
+
   <!-- This JavaScript runs in the BROWSER, not on Arduino. -->
   <script>
+    // Change these descriptions to match the real library. They are example text.
+    // Only Table 1 has physical sensors. Extra seats do NOT send Arduino data.
+    const tableDescriptions = {
+      'table-area-1': {
+        title: 'Table 1 · Quiet reading · 2 seats',
+        text: 'A small table for individual reading. Seats L1 and L2 have pressure sensors: green means free, red means occupied and grey means no recent data.'
+      },
+      'table-area-2': {
+        title: 'Table 2 · Shared study · 4 seats',
+        text: 'A four-seat table for studying together and discussing course work. The seats have no sensors in this prototype, so their availability is not measured.'
+      },
+      'table-area-3': {
+        title: 'Table 3 · Group project work · 6 seats',
+        text: 'A larger table for a six-person project group to spread out books and materials. The seats have no sensors in this prototype, so their availability is not measured.'
+      }
+    };
+
+    function openDescription(areaId) {
+      // Use the clicked area's ID to find its own title and description.
+      const description = tableDescriptions[areaId];
+      document.getElementById('description-title').textContent = description.title;
+      document.getElementById('description-text').textContent = description.text;
+      document.getElementById('table-description').showModal();
+    }
+
+    const tableAreas = document.querySelectorAll('.table-area');
+    for (const area of tableAreas) {
+      // Clicking the table, a chair or the space inside its area opens the dialog.
+      area.addEventListener('click', function () {
+        openDescription(area.id);
+      });
+      // Keyboard users can Tab to an area and activate it with Enter or Space.
+      area.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault(); // Space should open the dialog, not scroll.
+          openDescription(area.id);
+        }
+      });
+    }
+
     function showLibrary(seats) {
       const descriptions = [];
       for (const id of ['L1', 'L2']) {

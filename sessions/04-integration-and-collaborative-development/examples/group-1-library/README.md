@@ -27,7 +27,7 @@ Open `library/library.ino`. Check Wi-Fi settings and Pi address. Copy your FOUR 
 
 On a browser joined to YOUR Pi hotspot open http://10.42.0.1:3000, or on Pi itself http://localhost:3000. Your server serves its own `host/index.html`.
 
-The page shows ONLY two library chairs. No RFID or ticket code is needed.
+The library plan has three clickable table areas with 2, 4 and 6 chairs. Click an area to open its own description, or use Tab and Enter/Space. Only L1 and L2 at Table 1 have sensors. The ten additional chairs are drawn with white dashed outlines and have no measured availability. No RFID or ticket code is needed.
 
 Optional host test, in a second terminal in this same host folder:
 
@@ -49,3 +49,7 @@ L1 alternates occupied/free; L2 remains free. Stop with Ctrl+C before using Ardu
 Group 1 POST route: /api/seats. State contains only seats. Both use GET / for HTML and GET /api/state for browser updates. The other group's routes are deliberately unavailable.
 
 If both servers run on one computer, Group 2 must use port 3001; see [shared-machine instructions](../../setup.md). On separate Pis both groups keep port 3000. Reload after changing HTML; restart after server changes. Then run [acceptance tests](../../testing.md).
+
+## Edit table areas and descriptions
+
+In `host/index.html`, each `<g class="table-area">` groups a table, its chairs and clickable background. Keep each area ID unique. Edit `tableDescriptions` to change its title and description. New decorative chairs must not use L1/L2 IDs: sensor updates still affect only those two physical seats.
