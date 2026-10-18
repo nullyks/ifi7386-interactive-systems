@@ -1,7 +1,6 @@
 // OPTIONAL host troubleshooting after real sensor readings work.
-// Run: node simulate.js library | ticket UID | reader-error
+// Run: node simulate.js
 const host = process.env.HOST_URL || 'http://localhost:3000';
-const mode = process.argv[2]; // The word after node simulate.js.
 
 async function send(endpoint, message) {
   message.v = 1;
@@ -36,14 +35,5 @@ function sendChairs() {
   occupied = !occupied; // Swap true and false for the next message.
 }
 
-if (mode === 'library') {
-  sendChairs();
-  setInterval(sendChairs, 2000); // Repeat every two seconds until Ctrl+C.
-} else if (mode === 'ticket') {
-  const uid = process.argv[3] || '04A1B2C3';
-  send('/api/ticket', { uid: uid });
-} else if (mode === 'reader-error') {
-  send('/api/reader', { ready: false });
-} else {
-  console.log('Usage: node simulate.js library | ticket UID | reader-error');
-}
+sendChairs();
+setInterval(sendChairs, 2000); // Stop with Ctrl+C.

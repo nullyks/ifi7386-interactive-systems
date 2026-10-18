@@ -8,7 +8,7 @@ Stop any optional simulators first. Record PASS/FAIL, actual result, photo/log e
 
 | Group | Action | Expected |
 |---|---|---|
-| Both | Start host without devices | Seats unknown; reader offline; no route |
+| Both | Start your own group’s host without devices | G1: seats unknown. G2: reader offline, no route |
 | G1 | Empty both mounted chairs | Both free after settling |
 | G1 | Occupy L1, L2, both | Correct independent states in a few seconds |
 | G1 | Release each; repeat three cycles | Correct return, no rapid chatter |
@@ -24,7 +24,7 @@ Stop any optional simulators first. Record PASS/FAIL, actual result, photo/log e
 | Both | Restart host, wait for messages | Browser recovers without reload |
 | Both | Send malformed JSON / invalid ID | HTTP 400; valid state not overwritten |
 
-Run `npm test` in examples/host for API checks; these do not replace hardware/browser tests.
+Run `npm test` in `examples/group-1-library/host` OR `examples/group-2-ticket/host` for your own API checks; these do not replace hardware/browser tests.
 
 Demonstration: about four minutes per group and one minute feedback. Show main interaction, one failure/recovery, one JSON message, and main limitation. Each member explains a layer.
 

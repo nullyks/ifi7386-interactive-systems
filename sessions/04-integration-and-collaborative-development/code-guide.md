@@ -6,9 +6,9 @@
 
 | Stage | Group 1 | Group 2 | What should happen? |
 |---|---|---|---|
-| 1, no Pi/Wi-Fi | `examples/library_serial/library_serial.ino` | `examples/ticket_serial/ticket_serial.ino` | Real sensor readings or UIDs in Serial Monitor |
-| 2, transmission | `examples/library/library.ino` | `examples/ticket/ticket.ino` | Same physical input, plus JSON and HTTP reply |
-| 3, display | `examples/host/server.js`, then `index.html` | Same host; also `tickets.json` | Map responds to physical input |
+| 1, no Pi/Wi-Fi | `examples/group-1-library/library_serial/library_serial.ino` | `examples/group-2-ticket/ticket_serial/ticket_serial.ino` | Real sensor readings or UIDs in Serial Monitor |
+| 2, transmission | `examples/group-1-library/library/library.ino` | `examples/group-2-ticket/ticket/ticket.ino` | Same physical input, plus JSON and HTTP reply |
+| 3, display | Your group’s `host/server.js`, then `host/index.html` | Your own `host/server.js`, `host/index.html` and `examples/group-2-ticket/host/tickets.json` | Map responds to physical input |
 
 Open the .ino file in its same-named folder, choose UNO R4 WiFi and the USB port, upload, then open Serial Monitor at 115200. Keep each serial-only program as a known working reference. Stage 2 repeats its sensor functions so you can compare them directly. G1 must COPY its measured four threshold values into the second sketch. Stage 2 is a separate sketch, not a file pasted after Stage 1.
 
@@ -34,8 +34,8 @@ Do not confuse three successes: a local reading proves sensing; HTTP 200 proves 
 
 ## Pi and browser code
 
-`server.js` runs on Pi with Node. Start reading at `handleRequest`: GET / asks for HTML; GET /api/state asks for current state; POST routes accept Arduino data. `JSON.parse` turns text into named data; `JSON.stringify` turns it back into text. Validation checks data before saving it. `snapshot` marks old measurements unknown. Leave validation in place when making changes.
+`server.js` runs on Pi with Node. Start reading at `handleRequest`: GET / asks for HTML; GET /api/state asks for current state; POST /api/seats accepts Arduino chair data in G1; POST /api/reader and POST /api/ticket accept reader messages in G2. Each server contains only its own application logic. `JSON.parse` turns text into named data; `JSON.stringify` turns it back into text. Validation checks data before saving it. `snapshot` marks old measurements unknown. Leave validation in place when making changes.
 
-`index.html` runs in the browser. HTML describes content, CSS colours/styles it, SVG draws the plan, and JavaScript changes it. Read `refresh()` first: request state → show library → show ticket → wait and repeat. `async`/`await` let a function wait for a network reply. `try`/`catch` handles failure. `document.getElementById` finds an element by its HTML id; `textContent` changes its text; `setAttribute` changes drawing properties.
+`index.html` runs in the browser. HTML describes content, CSS colours/styles it, SVG draws the plan, and JavaScript changes it. Read `refresh()` first: request state → show YOUR group’s library or ticket feedback → wait and repeat. `async`/`await` let a function wait for a network reply. `try`/`catch` handles failure. `document.getElementById` finds an element by its HTML id; `textContent` changes its text; `setAttribute` changes drawing properties.
 
 Start modifications with ONE setting or label. Suggested entry points: four FSR thresholds, UID keys in tickets.json, written route text, or one chair rectangle position. Keep the validation/network helper code as supplied until the main loop works. The optional simulator and automated test file are support tools, not required code-writing tasks in this 135-minute class.

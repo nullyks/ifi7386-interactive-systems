@@ -1,6 +1,6 @@
 # Group 2 — Ticket to seat and route
 
-[Session 4](README.md) · [Setup](setup.md) · [Stage 1: serial-only sketch](examples/ticket_serial/ticket_serial.ino) · [Stage 2: network sketch](examples/ticket/ticket.ino) · [Mapping](examples/host/tickets.json)
+[Session 4](README.md) · [Setup](setup.md) · [Stage 1: serial-only sketch](examples/group-2-ticket/ticket_serial/ticket_serial.ino) · [Stage 2: network sketch](examples/group-2-ticket/ticket/ticket.ino) · [Mapping](examples/group-2-ticket/host/tickets.json)
 
 ## Confirm reader and electrical compatibility
 
@@ -21,7 +21,7 @@ Connect translator reference rails, enable and direction according to its docume
 
 ## Stage 1 — Arduino and reader ONLY (minutes 10–45)
 
-1. Install Adafruit PN532 plus BusIO beforehand. Open `examples/ticket_serial/ticket_serial.ino`; select UNO R4 WiFi and correct USB port. This sketch has NO network code.
+1. Install Adafruit PN532 plus BusIO beforehand. Open `examples/group-2-ticket/ticket_serial/ticket_serial.ino`; select UNO R4 WiFi and correct USB port. This sketch has NO network code.
 2. Upload. At Serial Monitor **115200** expect READER_READY. READER_NOT_FOUND means check power, mode, ground, wiring and translation. Initialization retries every five seconds after failure.
 3. Scan a compatible 13.56 MHz ISO14443A tag; a 125 kHz tag will not work. Remove it for at least two seconds before scanning the same one again. Read the uppercase hex UID, preserving zeros, without spaces.
 4. Label 2–3 tags and record their ACTUAL UIDs on paper/shared log. Decide destinations A2, B3, C1. Scan each three times. **C1:** demonstrate reliable local UIDs before using Pi.
@@ -30,8 +30,8 @@ Connect translator reference rails, enable and direction according to its docume
 
 1. Turn one actual UID into a [JSON message](data-contract.md).
 2. Follow [Pi setup](setup.md): join hotspot and start host.
-3. Open `examples/ticket/ticket.ino`. Check G2 credentials; use G1 credentials if sharing that Pi. Upload. Scan a tag and inspect outgoing UID JSON plus HTTP 200 in Serial Monitor (**C2**).
-4. Replace sample KEYS in `host/tickets.json` with your saved UIDs and destinations. Keep valid JSON, no trailing comma. The bundled UIDs are examples and will probably not match your cards. Restart host after saving.
+3. Open `examples/group-2-ticket/ticket/ticket.ino`. Check G2 credentials. If sharing the G1 Pi, use its credentials AND set `SERVER_PORT = 3001` while starting your own server with `PORT=3001` (see setup). Upload. Scan a tag and inspect outgoing UID JSON plus HTTP 200 in Serial Monitor (**C2**).
+4. Replace sample KEYS in `examples/group-2-ticket/host/tickets.json` with your saved UIDs and destinations. Keep valid JSON, no trailing comma. The bundled UIDs are examples and will probably not match your cards. Restart host after saving.
 5. Open http://10.42.0.1:3000. Scan each tag and check correct seat, path and written directions. Scan an unregistered tag: previous route must disappear. **C3:** physical card selects its actual mapped seat.
 
 No writing to cards is required: host looks up UID. Keep names out of mappings. UID matching is a classroom demonstration, not secure authentication.

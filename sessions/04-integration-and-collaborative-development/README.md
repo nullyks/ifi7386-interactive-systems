@@ -4,7 +4,7 @@
 
 **135 minutes in three 45-minute blocks · Working language: English**
 
-Build your selected Hi-Fi slice as one integrated system. Get the supplied example working first, then change one meaningful feature. The display is a browser on the Pi monitor or a computer connected to its Wi-Fi; no Arduino screen module is required.
+Build your selected Hi-Fi slice as one integrated system. Each group uses its own independent server, page and Arduino examples. Get your group’s supplied example working first, then change one meaningful feature. The display is a browser on the Pi monitor or a computer connected to its Wi-Fi; no Arduino screen module is required.
 
 - Group 1: two FSRs → one UNO R4 WiFi → Pi 400 → library plan with two seats.
 - Group 2: PN532 → UNO R4 WiFi → Pi 400 → hall plan with seat and route for 2–3 tickets.
@@ -35,7 +35,7 @@ If breaks must fit inside the slot, take them from optional modification time. D
 4. **After HTTP 200:** open the browser and finish Stage 2 in your group guide.
 5. [Acceptance tests and handover](testing.md).
 
-[Example files](examples/) · [Verification and sources](verification.md)
+[Group 1 application](examples/group-1-library/README.md) · [Group 2 application](examples/group-2-ticket/README.md) · [Verification and sources](verification.md)
 
 ## Explain the complete loop
 

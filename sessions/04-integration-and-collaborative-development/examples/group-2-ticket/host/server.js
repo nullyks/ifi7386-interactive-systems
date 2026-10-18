@@ -4,37 +4,20 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 
-// JSON.parse converts text to data. Restart after changing tickets.json.
+// Only Group 2 loads ticket assignments. Restart after changing this file.
 const tickets = JSON.parse(fs.readFileSync(path.join(__dirname, 'tickets.json')));
 const STALE_MS = Number(process.env.STALE_MS || 10000);
-// null means no measurement yet. Each seat remembers its own latest reading.
-const seats = {
-  L1: { occupied: null, raw: null, seen: 0 },
-  L2: { occupied: null, raw: null, seen: 0 }
-};
+const TICKET_MS = Number(process.env.TICKET_MS || 15000);
 let reader = { seen: 0, ready: false };
 let ticket = null;
 
-function seatState(seat, now) {
-  let state = 'unknown';
-  if (seat.seen > 0 && now - seat.seen <= STALE_MS) {
-    if (seat.occupied) {
-      state = 'occupied';
-    } else {
-      state = 'free';
-    }
-  }
-  return { occupied: seat.occupied, raw: seat.raw, seen: seat.seen, state: state };
-}
-
 function snapshot() {
-  const now = Date.now(); // Host time in milliseconds.
+  const now = Date.now();
   let currentTicket = null;
-  if (ticket !== null && now - ticket.at < 15000) {
+  if (ticket !== null && now - ticket.at < TICKET_MS) {
     currentTicket = ticket;
   }
   return {
-    seats: { L1: seatState(seats.L1, now), L2: seatState(seats.L2, now) },
     reader: {
       seen: reader.seen,
       ready: reader.ready,
@@ -51,37 +34,6 @@ function reply(response, status, data) {
     'Cache-Control': 'no-store' // Do not reuse old data from browser cache.
   });
   response.end(JSON.stringify(data)); // Convert data back to JSON text.
-}
-
-function validSeats(data) {
-  // Check the WHOLE message before changing stored data.
-  if (!Array.isArray(data.seats)) {
-    return false;
-  }
-  if (data.seats.length < 1 || data.seats.length > 2) {
-    return false;
-  }
-  const usedIds = [];
-  for (const seat of data.seats) {
-    if (seat === null || typeof seat !== 'object') {
-      return false;
-    }
-    if (seat.id !== 'L1' && seat.id !== 'L2') {
-      return false;
-    }
-    if (usedIds.includes(seat.id)) {
-      return false;
-    } // No duplicate seat IDs.
-    usedIds.push(seat.id);
-    // true is boolean; 'true' is text and is NOT accepted.
-    if (typeof seat.occupied !== 'boolean') {
-      return false;
-    }
-    if (!Number.isInteger(seat.raw) || seat.raw < 0 || seat.raw > 1023) {
-      return false;
-    }
-  }
-  return true;
 }
 
 function validUid(uid) {
@@ -114,7 +66,7 @@ async function handleRequest(request, response) {
     return;
   }
   // POST brings new data from Arduino.
-  const known = ['/api/seats', '/api/reader', '/api/ticket'];
+  const known = ['/api/reader', '/api/ticket'];
   if (request.method !== 'POST' || !known.includes(endpoint)) {
     reply(response, 404, { error: 'NOT_FOUND' });
     return;
@@ -140,15 +92,7 @@ async function handleRequest(request, response) {
       reply(response, 400, { error: 'BAD_VERSION' });
       return;
     }
-    if (endpoint === '/api/seats') {
-      if (!validSeats(data)) {
-        reply(response, 400, { error: 'BAD_SEATS' });
-        return;
-      }
-      for (const seat of data.seats) {
-        seats[seat.id] = { occupied: seat.occupied, raw: seat.raw, seen: Date.now() };
-      }
-    } else if (endpoint === '/api/reader') {
+    if (endpoint === '/api/reader') {
       if (typeof data.ready !== 'boolean') {
         reply(response, 400, { error: 'BAD_READER' });
         return;

@@ -1,6 +1,6 @@
 # Group 1 — Two library chairs
 
-[Session 4](README.md) · [Setup](setup.md) · [Stage 1: serial-only sketch](examples/library_serial/library_serial.ino) · [Stage 2: network sketch](examples/library/library.ino)
+[Session 4](README.md) · [Setup](setup.md) · [Stage 1: serial-only sketch](examples/group-1-library/library_serial/library_serial.ino) · [Stage 2: network sketch](examples/group-1-library/library/library.ino)
 
 ## Parts and wiring
 
@@ -17,7 +17,7 @@ All grounds common. Pressure lowers FSR resistance so the reading rises. Begin o
 
 ## Stage 1 — Arduino and FSRs ONLY (minutes 10–45)
 
-1. Open `examples/library_serial/library_serial.ino`. This sketch has NO Wi-Fi code. Select Arduino UNO R4 WiFi and your USB port, then upload.
+1. Open `examples/group-1-library/library_serial/library_serial.ino`. This sketch has NO Wi-Fi code. Select Arduino UNO R4 WiFi and your USB port, then upload.
 2. Open Serial Monitor at **115200**. Read `L1 raw`, `L2 raw` and occupied (1=true, 0=false). Press each sensor separately, then release. Ten-bit raw readings range from 0 to 1023.
 3. Mount and record at least five empty readings and five occupied readings per chair. Finger pressure alone is not final calibration.
 4. Set `CHAIR_1_OFF` above stable empty readings and `CHAIR_1_ON` below stable occupied readings; repeat for `CHAIR_2_OFF` and `CHAIR_2_ON`. OFF must be lower than ON. Example ONLY: empty 50–150, occupied 650–850 → OFF=400, ON=550. Upload again.
@@ -28,7 +28,7 @@ All grounds common. Pressure lowers FSR resistance so the reading rises. Begin o
 
 1. Use your actual readings to explain one [JSON message](data-contract.md).
 2. Follow [Pi setup](setup.md): join prepared hotspot and start host. No simulator is required on the main route.
-3. Open `examples/library/library.ino`. Copy your FOUR calibrated thresholds from the serial-only sketch; opening another sketch does not transfer values automatically. Check Wi-Fi name/password and Pi address at the top.
+3. Open `examples/group-1-library/library/library.ino`. Copy your FOUR calibrated thresholds from the serial-only sketch; opening another sketch does not transfer values automatically. Check Wi-Fi name/password and Pi address at the top.
 4. Upload; Serial Monitor now shows local readings, outgoing JSON and response. **C2:** obtain HTTP 200. If it fails, first check hotspot/server/address. Local sensing should already be verified.
 5. Open http://10.42.0.1:3000. Verify L1, L2 and both chairs; page shows raw readings, labels and colours. **C3:** physical input changes the correct seat. Expect a few seconds latency.
 

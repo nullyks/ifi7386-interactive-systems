@@ -8,7 +8,7 @@ At minutes 55–70: join the prepared hotspot, start the supplied host, upload t
 
 ## Prepare before class
 
-Prefer one Pi per group. With one shared Pi use G1 credentials in BOTH sketches; one server supports both projects. G1 uses one board with two sensors. Separate boards per chair are an optional extension, each reporting only its unique seat ID.
+Each group has its OWN application folder and server. Prefer one Pi per group. Both Pis may use port 3000 and address 10.42.0.1 on their separate hotspots. G1 uses one board with two sensors. Separate boards per chair are an optional extension, each reporting only its unique seat ID. For one shared Pi/computer see the separate-port instructions below.
 
 Use Raspberry Pi OS with NetworkManager (Bookworm or later). Work at the Pi keyboard/monitor or through Ethernet: hotspot activation disconnects existing Wi-Fi access. Set the correct Wi-Fi country in Raspberry Pi Configuration or `sudo raspi-config`. Check `nmcli device status` and `systemctl is-active NetworkManager`; commands below assume `wlan0`. Do not replace network management during class.
 
@@ -39,41 +39,39 @@ To stop the hotspot later, locally run `sudo nmcli connection down ifi-lab`, the
 
 ## Start host, then send real Arduino data
 
-Enter the copied session's `examples/host` folder; adapt this example path:
+Choose ONLY your group's application and follow its own startup instructions:
+
+- [Group 1 application and commands](examples/group-1-library/README.md): two FSR chairs, no ticket code.
+- [Group 2 application and commands](examples/group-2-ticket/README.md): RFID tickets, no chair code.
+
+Each application has its own `host/server.js`, `host/index.html`, `host/simulate.js`, `host/test.js` and `host/package.json`. Group 2 alone has `tickets.json`. There are no shared runtime files or packages. You may copy only your group's folder to its Pi.
+
+On a separate Pi for each group, enter that group's `host` directory and run:
 
 ```bash
-cd ~/04-integration-and-collaborative-development/examples/host
 node server.js
 ```
 
-Keep terminal open. Browse to **http://10.42.0.1:3000** from the Pi hotspot, or **http://localhost:3000** on Pi itself. Stop with Ctrl+C. Restart after changing `server.js` or `tickets.json`; reload browser after editing `index.html`. Server restart clears state until new messages arrive. Allow port 3000 on the lab interface if a firewall is enabled.
+Keep the terminal open. First upload your group's network sketch and look for HTTP 200 in Serial Monitor; then browse to **http://10.42.0.1:3000** from that Pi hotspot, or **http://localhost:3000** on the Pi. Stop with Ctrl+C. Restart after changing server code or Group 2 ticket mapping; reload the browser after editing HTML. Each server holds ONLY its own state in memory. Allow the lab port in any enabled firewall.
 
-## Optional: isolate a host problem with simulated data
+## Optional: both servers on one computer/Pi
 
-Use this only AFTER the sensor-only checkpoint if you need to distinguish a network/host fault from a sensor fault. It is not a substitute for actual readings. In a second terminal in the same directory:
-
-```bash
-node simulate.js library
-```
-
-L1 alternates; L2 stays free. Stop with Ctrl+C BEFORE real hardware, otherwise simulation overwrites real readings. After >10 seconds without reports seats become grey/unknown.
+Each server defaults to port 3000. Two processes cannot listen on the same port. In two terminals, enter the corresponding host directories and start:
 
 ```bash
-node simulate.js ticket 04A1B2C3
-node simulate.js ticket 04112233
-node simulate.js ticket FFFFFFFF
-node simulate.js reader-error
+# Terminal 1, in group-1-library/host:
+node server.js
+# Terminal 2, in group-2-ticket/host:
+PORT=3001 node server.js
 ```
 
-The first two select different seats, the third shows unknown ticket, the fourth hardware error. These are sample UIDs until replaced by real ones. One-shot ticket simulation has no heartbeat, so reader goes offline after ten seconds. Real firmware sends two-second heartbeats. “Clear ticket display” clears this browser only; a new scan can show guidance again.
+On Windows PowerShell, use `$env:PORT=3001` then `node server.js` in the Group 2 terminal instead. Open G1 at http://localhost:3000 and G2 at http://localhost:3001. For another device on the Pi hotspot use 10.42.0.1 instead of localhost.
 
-Equivalent request to inspect (Pi terminal):
+For a SHARED Pi, both Arduino sketches must use that Pi's SSID/password/address, and G2 must change `SERVER_PORT` from 3000 to **3001**. G1 keeps 3000. The Group 2 simulator also needs the matching destination: on Pi run `HOST_URL=http://localhost:3001 node simulate.js ticket 04A1B2C3`; on PowerShell set `$env:HOST_URL='http://localhost:3001'` first. This is an optional hardware-saving arrangement; the main lesson assumes one Pi per group.
 
-```bash
-curl -i http://localhost:3000/api/seats -H 'Content-Type: application/json' -d '{"v":1,"seats":[{"id":"L1","occupied":true,"raw":700},{"id":"L2","occupied":false,"raw":80}]}'
-```
+## Optional: isolate a host fault
 
-Expect HTTP 200 and `{"ok":true}`. Open `/api/state` to inspect what the browser receives. On another computer replace `localhost` with `10.42.0.1`. Host/UI development also works locally on a laptop with Node; the intended physical integration uses Pi.
+Use only AFTER the serial-only checkpoint. Each group's own application README lists its simulator commands. Stop a running simulator before connecting real Arduino input, otherwise it can overwrite real readings/events. Simulation is not a substitute for actual sensor evidence.
 
 ## Upload and troubleshoot
 

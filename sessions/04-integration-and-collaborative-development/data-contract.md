@@ -2,6 +2,8 @@
 
 [Session 4](README.md)
 
+Each group runs its OWN server. Group 1 implements /api/seats; Group 2 implements /api/ticket and /api/reader. Both independently implement GET / and GET /api/state. A route belonging to the other group returns HTTP 404.
+
 Firmware sends HTTP POST with Content-Type application/json to Pi 10.42.0.1:3000. Browser polls GET /api/state every second. Version v is number 1. Host stores state in memory. This small example assumes a trusted isolated classroom network; there is no authentication or encrypted transport.
 
 ## Requests
@@ -30,7 +32,7 @@ POST /api/reader every two seconds:
 
 ready=false reports detected initialization failure and clears old ticket. No scans is normal; no device heartbeat eventually means unknown connectivity.
 
-Success: HTTP 200, `{"ok":true}` confirms receipt, not that a person saw feedback. GET /api/state provides seats with state/raw/seen, reader with online/ready/seen, and latest ticket with known/seat/route/at. Host receipt timestamps are Unix milliseconds; Arduino needs no synchronized clock. Ticket is null when expired. Do not post response objects as requests.
+Success: HTTP 200, `{"ok":true}` confirms receipt, not that a person saw feedback. Group 1 GET /api/state provides only seats with state/raw/seen. Group 2 GET /api/state provides only reader with online/ready/seen and latest ticket with known/seat/route/at. Host receipt timestamps are Unix milliseconds; Arduino needs no synchronized clock. Ticket is null when expired. Do not post response objects as requests.
 
 | Condition | Display / state |
 |---|---|
