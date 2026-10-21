@@ -19,6 +19,8 @@ node server.js
 
 Keep terminal open. Stop with Ctrl+C. The server defaults to port 3000 on all network interfaces.
 
+If the Arduino cannot join the Pi hotspot, use [Wi-Fi diagnosis](../../wifi-troubleshooting.md) before changing sensor code. The separate Wi-Fi check needs no sensors or server. Confirm the Arduino can see the hotspot and obtain an IP address; a phone connection alone does not verify the Arduino connection.
+
 ## 3. Transmit real data
 
 Open `library/library.ino`. Check Wi-Fi settings and Pi address. Copy your FOUR measured thresholds from the serial-only sketch. Upload and inspect outgoing JSON and HTTP 200 in Serial Monitor.

@@ -21,6 +21,8 @@ node server.js
 
 Keep terminal open. Stop with Ctrl+C. The server defaults to port 3000 on all network interfaces.
 
+If the Arduino cannot join the Pi hotspot, use [Wi-Fi diagnosis](../../wifi-troubleshooting.md) before changing RFID code. The separate Wi-Fi check needs no reader, RFID library or server. Confirm the Arduino can see the hotspot and obtain an IP address; a phone connection alone does not verify the Arduino connection.
+
 ## 3. Transmit real data
 
 Open `ticket/ticket.ino`. Check Wi-Fi settings and Pi address. Keep your actual UIDs ready for the mapping file. Upload and inspect outgoing JSON and HTTP 200 in Serial Monitor.

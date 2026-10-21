@@ -24,16 +24,26 @@ Use Node >=18. The host needs no downloaded npm dependencies. On programming lap
 
 ## Hotspot (once per Pi)
 
-At the Pi local keyboard, run the following for G1. If `ifi-lab` already exists, inspect/reuse it instead of duplicating it.
+At the Pi local keyboard, run the following for G1. If `ifi-lab` already exists, skip the first command and modify that existing profile. Do not create duplicate profiles with the same name.
 
 ```bash
-sudo nmcli device wifi hotspot ifname wlan0 con-name ifi-lab ssid IFI7386-G1 password 'PrototypeG1!'
-sudo nmcli connection modify ifi-lab 802-11-wireless.band bg 802-11-wireless.channel 6 ipv4.method shared ipv4.addresses 10.42.0.1/24 ipv6.method disabled connection.autoconnect yes
+sudo nmcli device wifi hotspot ifname wlan0 con-name ifi-lab ssid IFI7386-G1 band bg channel 6 password 'PrototypeG1!'
+sudo nmcli connection modify ifi-lab 802-11-wireless.mode ap 802-11-wireless.ssid IFI7386-G1 802-11-wireless.band bg 802-11-wireless.channel 6 802-11-wireless.hidden no
+sudo nmcli connection modify ifi-lab 802-11-wireless-security.key-mgmt wpa-psk 802-11-wireless-security.proto rsn 802-11-wireless-security.pairwise ccmp 802-11-wireless-security.group ccmp 802-11-wireless-security.pmf 1 802-11-wireless-security.psk 'PrototypeG1!'
+sudo nmcli connection modify ifi-lab ipv4.method shared ipv4.addresses 10.42.0.1/24 ipv6.method disabled connection.autoconnect yes
+sudo nmcli connection down ifi-lab
 sudo nmcli connection up ifi-lab
 nmcli -f GENERAL,IP4 device show wlan0
+iw dev wlan0 info
 ```
 
-For a separate G2 Pi, substitute SSID `IFI7386-G2` and password `PrototypeG2!` in the first command. Use channel 11 if needed to reduce interference. Confirm AP operation and address 10.42.0.1/24, then connect another device. Shared mode supplies client IP addresses. Separate hotspots can use the same subnet. Stay connected despite “no internet”; disable automatic network switching if necessary. Internet is not required after preparation.
+For a separate G2 Pi, substitute SSID `IFI7386-G2` and password `PrototypeG2!` in ALL the commands above. Use channel 11 instead of 6 in both places if needed to reduce interference. The active SSID and password must match the settings in that group's Arduino sketch.
+
+This sets an explicit classroom compatibility baseline: **2.4 GHz, WPA2/RSN with CCMP, PMF disabled** (`pmf 1` means disabled, not required). It removes security-setting ambiguity; it is not a confirmed diagnosis of a failed kit. The original `nmcli device wifi hotspot` command can already choose WPA2 according to device capabilities, so do not assume that a connection failure proves WPA3 was enabled.
+
+Confirm `iw` reports `type AP` and channel 6 (2437 MHz), or channel 11 (2462 MHz), and the Pi has address 10.42.0.1/24. Then connect another device. Shared mode supplies client IP addresses. Separate hotspots can use the same subnet. Stay connected despite “no internet”; disable automatic network switching if necessary. Internet is not required after preparation.
+
+**Before starting either group's server, check one real UNO R4 WiFi connection.** If it fails, or a phone connects but Arduino does not, follow [Wi-Fi connection diagnosis](wifi-troubleshooting.md) and use the separate [wifi_check sketch](examples/wifi_check/wifi_check.ino). Phone success alone is not the Arduino checkpoint. Do not reinstall the Pi OS before collecting the connection evidence.
 
 To stop the hotspot later, locally run `sudo nmcli connection down ifi-lab`, then `sudo nmcli connection up 'YOUR_PREVIOUS_PROFILE'` using the actual former Wi-Fi profile name. This interrupts remote Wi-Fi access.
 
@@ -85,6 +95,7 @@ Open the appropriate `.ino` in its same-named folder. Select **Arduino UNO R4 Wi
 | HTTP 400 | Compare JSON fields/types/IDs to contract |
 | HTTP 404 | Endpoint spelling/method |
 | EADDRINUSE | Another server already on 3000; stop old process |
-| No Wi-Fi | Credentials, 2.4 GHz, country, Wi-Fi firmware, correct board |
+| WIFI_NOT_CONNECTED / No Wi-Fi | Run [Wi-Fi diagnosis](wifi-troubleshooting.md): scan, firmware version, status, Pi connection log |
+| WIFI_CONNECTED with usable Arduino IP, then HOST_UNREACHABLE | Wi-Fi connected; check server, destination IP/port and firewall |
 
 After five minutes on one blocker use the instructor's prepared setup. Keep the verified local sensor sketch as a fallback. Use simulation only to isolate the later host stage, then reconnect actual input.

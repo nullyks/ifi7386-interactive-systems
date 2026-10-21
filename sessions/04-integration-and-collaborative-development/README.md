@@ -37,6 +37,8 @@ If breaks must fit inside the slot, take them from optional modification time. D
 
 [Group 1 application](examples/group-1-library/README.md) · [Group 2 application](examples/group-2-ticket/README.md) · [Verification and sources](verification.md)
 
+If Arduino cannot join the Pi hotspot, including when a phone connects, use [Wi-Fi connection diagnosis](wifi-troubleshooting.md) before proceeding to the server. It includes a separate sensor-free sketch and the evidence needed to identify the failing step.
+
 ## Explain the complete loop
 
 ```text

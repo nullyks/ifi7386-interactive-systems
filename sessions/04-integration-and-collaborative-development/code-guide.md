@@ -30,6 +30,8 @@ Read Stage 1 in this order: pin/settings declarations → setup → loop → the
 
 `connectToWifi()` joins the Pi network. `sendToPi()` sends text to a server path and checks the response. Treat these as provided helper functions at first; read their comments when your own data reaches the host. G1 builds a complete seat snapshot every two seconds. G2 sends new UID events plus regular reader heartbeats. Both print outgoing JSON so you can compare it to the data contract.
 
+`prepareWifi()` prints the firmware version and target SSID. Each connection attempt prints its result; a successful join prints `WIFI_CONNECTED` and the Arduino IP. `WiFi.begin()` can block for ten seconds, so the retry timer starts AFTER it returns. The sketch then leaves ten seconds before trying again. If connection fails, use the [separate Wi-Fi check](wifi-troubleshooting.md) before changing the sensor or server code.
+
 Do not confuse three successes: a local reading proves sensing; HTTP 200 proves host acceptance; the correct changed browser element proves integration.
 
 ## Pi and browser code

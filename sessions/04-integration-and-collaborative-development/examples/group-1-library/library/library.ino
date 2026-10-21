@@ -9,21 +9,70 @@ IPAddress raspberryPiAddress(10, 42, 0, 1);
 const int SERVER_PORT = 3000;
 unsigned long lastWifiAttempt = 0;
 bool wifiAttempted = false;
+bool wifiWasConnected = false;
+
+const char* wifiStatusName(int status) {
+  switch (status) {
+    case WL_NO_MODULE: return "WL_NO_MODULE";
+    case WL_IDLE_STATUS: return "WL_IDLE_STATUS";
+    case WL_NO_SSID_AVAIL: return "WL_NO_SSID_AVAIL";
+    case WL_SCAN_COMPLETED: return "WL_SCAN_COMPLETED";
+    case WL_CONNECTED: return "WL_CONNECTED";
+    case WL_CONNECT_FAILED: return "WL_CONNECT_FAILED";
+    case WL_CONNECTION_LOST: return "WL_CONNECTION_LOST";
+    case WL_DISCONNECTED: return "WL_DISCONNECTED";
+    default: return "OTHER";
+  }
+}
+
+void prepareWifi() {
+  WiFi.setTimeout(10000); // One begin() call can wait for up to ten seconds.
+  Serial.print("Wi-Fi target: ");
+  Serial.println(WIFI_NAME); // Never print the password.
+  Serial.print("Wi-Fi firmware: ");
+  Serial.println(WiFi.firmwareVersion());
+}
 
 bool connectToWifi() {
-  // == asks whether two values are equal. = would assign a value instead.
-  if (WiFi.status() == WL_CONNECTED) {
-    return true;
+  int status = WiFi.status();
+  if (status != WL_CONNECTED) {
+    wifiWasConnected = false;
+    // Wait ten seconds AFTER an attempt finishes, even if begin() was slow.
+    if (!wifiAttempted || millis() - lastWifiAttempt >= 10000) {
+      wifiAttempted = true;
+      if (status == WL_NO_MODULE) {
+        Serial.println("WIFI_NO_MODULE: check the connectivity firmware.");
+      } else {
+        Serial.print("Connecting to Wi-Fi: ");
+        Serial.println(WIFI_NAME);
+        int result = WiFi.begin(WIFI_NAME, WIFI_PASSWORD);
+        Serial.print("WiFi.begin result: ");
+        Serial.print(wifiStatusName(result));
+        Serial.print(" (");
+        Serial.print(result);
+        Serial.println(")");
+      }
+      // begin() blocks while connecting. Start the retry timer AFTER that wait.
+      lastWifiAttempt = millis();
+      status = WiFi.status();
+      if (status != WL_CONNECTED) {
+        Serial.println("WIFI_NOT_CONNECTED: run the separate wifi_check sketch.");
+      }
+    }
   }
 
-  // Retry every 10 seconds. millis() counts milliseconds since board startup.
-  if (!wifiAttempted || millis() - lastWifiAttempt >= 10000) {
-    wifiAttempted = true;
-    lastWifiAttempt = millis();
-    Serial.println("Connecting to Wi-Fi...");
-    WiFi.begin(WIFI_NAME, WIFI_PASSWORD);
+  if (status == WL_CONNECTED) {
+    if (!wifiWasConnected) {
+      Serial.println("WIFI_CONNECTED");
+      Serial.print("Arduino IP: ");
+      Serial.println(WiFi.localIP());
+      Serial.print("Signal (dBm): ");
+      Serial.println(WiFi.RSSI());
+    }
+    wifiWasConnected = true;
+    return true;
   }
-  return WiFi.status() == WL_CONNECTED;
+  return false; // Keep reading sensors; a later call will retry.
 }
 
 // A function lets us give a name to steps we want to reuse.
@@ -159,6 +208,7 @@ unsigned long lastSendTime = 0;
 
 void setup() {
   Serial.begin(115200);
+  prepareWifi();
   analogReadResolution(10);
 }
 

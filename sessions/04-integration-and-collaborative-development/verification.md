@@ -2,7 +2,27 @@
 
 Prepared 18 October 2026. Group 2 updated and rechecked 21 October 2026 for RFID-RC522 V1.33 with AMRFID.
 
+## Wi-Fi follow-up — 21 October 2026
+
+Both groups reported Arduino connection failure on fresh Pi installations; a phone could connect. No Arduino connection output, active Pi security settings or Pi logs were available for diagnosis. The cause of that physical failure remains unconfirmed.
+
+- The setup guide now explicitly configures 2.4 GHz, channel 6/11, WPA2/RSN with CCMP and PMF disabled, and requires an Arduino IP checkpoint. This is a compatibility baseline to test, not evidence that WPA3 or PMF caused the incident. NetworkManager's hotspot helper can already select WPA2.
+- WiFiS3's `begin()` in board package 1.5.3 waits up to ten seconds by default. Both application sketches previously started their retry timer before that blocking call; they now start it after the call returns, leaving ten seconds between attempts. Both print the target SSID, firmware version, connection result and successful connection's IP/signal.
+- A standalone `examples/wifi_check/wifi_check.ino` scans for the configured SSID, reports channel/security/signal, firmware and MAC address, makes one twenty-second connection attempt, and then reports current status/IP. It needs no sensors, RFID library or host application.
+- All three final sketches compile for `arduino:renesas_uno:unor4wifi` with Arduino UNO R4 Boards **1.5.3**. The ticket sketch uses AMRFID **1.0.1** and MFRC522 **1.4.12**; the dependency's architecture-metadata warning remains as described below.
+
+| Current sketch | Flash bytes | RAM bytes |
+|---|---|---|
+| library | 63,068 | 7,588 |
+| ticket | 70,676 | 8,044 |
+| wifi_check | 60,776 | 7,528 |
+
+- Source comparison confirmed that the sensor-reading/message helpers are unchanged and both application Wi-Fi helpers match. Local teaching links resolve.
+- No Pi commands were executed on a real Pi in this follow-up, and no physical Arduino Wi-Fi connection or recovery was tested. The [diagnosis guide](wifi-troubleshooting.md) records the missing evidence and next hardware checks. Compilation does not confirm radio interoperability or that the reported fault is fixed.
+
 ## RC522 update — 21 October 2026
+
+The compile figures in this section describe the RC522 migration before the Wi-Fi follow-up above.
 
 - Both Group 2 sketches compile for `arduino:renesas_uno:unor4wifi` with Arduino UNO R4 Boards **1.5.3**, **AMRFID 1.0.1** and **MFRC522 1.4.12**. SPI and WiFiS3 are provided by the board package. Library downloads were kept outside the repository; no library source was modified.
 
