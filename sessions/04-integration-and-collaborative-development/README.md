@@ -7,7 +7,7 @@
 Build your selected Hi-Fi slice as one integrated system. Each group uses its own independent server, page and Arduino examples. Get your group’s supplied example working first, then change one meaningful feature. The display is a browser on the Pi monitor or a computer connected to its Wi-Fi; no Arduino screen module is required.
 
 - Group 1: two FSRs → one UNO R4 WiFi → Pi 400 → library plan with two seats.
-- Group 2: PN532 → UNO R4 WiFi → Pi 400 → hall plan with seat and route for 2–3 tickets.
+- Group 2: RFID-RC522 V1.33 with AMRFID → UNO R4 WiFi → Pi 400 → hall plan with seat and route for 2–3 tickets.
 
 By the end you can trace physical input through firmware, HTTP and JSON to visible feedback; agree a data contract; distinguish valid, waiting, unknown and error states; integrate contributions across layers; and demonstrate recovery.
 

@@ -1,4 +1,4 @@
-// STEP 2 ONLY: add Wi-Fi AFTER the sensor works in Serial Monitor.
+// STEP 2 ONLY: add Wi-Fi AFTER the RC522 reads real UIDs in Serial Monitor.
 // WiFiS3 is the library supplied with the UNO R4 WiFi board package.
 #include <WiFiS3.h>
 
@@ -79,77 +79,32 @@ bool sendToPi(const char* endpoint, String jsonText) {
 }
 
 
-#include <Adafruit_PN532.h>
-// Software SPI pin order: clock, data IN, data OUT, chip select.
-// Check the wiring/voltage guide BEFORE connecting this reader.
-Adafruit_PN532 reader(13, 12, 11, 10);
-bool readerReady = false;
-String previousUid = "";
-unsigned long lastCardSeenTime = 0;
-unsigned long lastReaderRetryTime = 0;
+#include <AMRFID.h>
+// RC522 uses SPI: SCK = D13, MOSI = D11, MISO = D12.
+// SDA on this module means chip select (SS), not the Arduino SDA pin.
+const int READER_SS_PIN = 10;
+const int READER_RST_PIN = 9;
+AMRFID reader(READER_SS_PIN, READER_RST_PIN);
 
 void startReader() {
   reader.begin();
-  // A non-zero version means the chip replied to our request.
-  readerReady = reader.getFirmwareVersion() != 0;
-  if (readerReady) {
-    readerReady = reader.SAMConfig(); // Configure normal card-reading mode.
-    reader.setPassiveActivationRetries(1);
-  }
-  if (readerReady) {
-    Serial.println("READER_READY");
-  } else {
-    Serial.println("READER_NOT_FOUND: check wiring, mode and power.");
-  }
+  // begin() starts SPI and initialises the reader. It returns no success flag.
+  // A real UID below is the check that the reader and wiring work.
+  Serial.println("READER_INITIALISED: scan a card to check the reader.");
 }
 
 // Return a NEW card UID, or empty text if there is no new scan.
 String readNewCard() {
-  if (!readerReady) {
-    if (millis() - lastReaderRetryTime >= 5000) {
-      lastReaderRetryTime = millis();
-      startReader();
-    }
-    return "";
-  }
-
-  // A UID is a sequence of bytes. uint8_t holds one byte (0 through 255).
-  uint8_t uidBytes[10]; // Reserve room for up to ten UID bytes.
-  uint8_t uidLength = 0;
-  bool cardFound = reader.readPassiveTargetID(
-    PN532_MIFARE_ISO14443A, uidBytes, &uidLength, 100);
-  // & lets the library fill in uidLength. 100 limits the wait to 100 ms.
-  if (!cardFound) {
-    return "";
-  }
-
-  String uidText = "";
-  // Start at byte 0; repeat while index is below uidLength; add 1 each time.
-  for (int index = 0; index < uidLength; index++) {
-    if (uidBytes[index] < 16) {
-      uidText += "0"; // Preserve leading zero: byte 4 must become "04".
-    }
-    uidText += String(uidBytes[index], HEX); // HEX uses base 16, not base 10.
-  }
-  uidText.toUpperCase();
-
-  // Avoid repeating a held card. Remove it for >2 seconds before rescanning.
-  bool isNewScan = false;
-  if (uidText != previousUid) {
-    isNewScan = true;
-  }
-  if (millis() - lastCardSeenTime > 1200) {
-    isNewScan = true;
-  }
-  previousUid = uidText;
-  lastCardSeenTime = millis();
-
-  if (isNewScan) {
+  // lerUID is the library's method name; it means "read UID".
+  // It returns uppercase hexadecimal text, keeping zeros: byte 4 becomes "04".
+  // Empty text ("") means no new card could be read.
+  String uidText = reader.lerUID();
+  if (uidText.length() > 0) {
     Serial.print("UID: ");
     Serial.println(uidText);
-    return uidText;
   }
-  return "";
+  // AMRFID finishes each read by halting the card. Remove it before rescanning.
+  return uidText;
 }
 
 String pendingUid = ""; // Latest scan waiting to be delivered.
@@ -172,13 +127,9 @@ void loop() {
   // A heartbeat says "the board is still here", even with no visitor scanning.
   if (millis() - lastHeartbeatTime >= 2000) {
     lastHeartbeatTime = millis();
-    String heartbeat = "{\"v\":1,\"ready\":";
-    if (readerReady) {
-      heartbeat += "true";
-    } else {
-      heartbeat += "false";
-    }
-    heartbeat += "}";
+    // AMRFID has no hardware-status result. true means begin() was called.
+    // This heartbeat proves the board is online, not that its antenna works.
+    String heartbeat = "{\"v\":1,\"ready\":true}";
     sendToPi("/api/reader", heartbeat);
   }
 

@@ -4,9 +4,11 @@
 
 This folder is a COMPLETE independent example. Copy this folder to your group's Pi and programming laptop as needed. No files from the other group are required. Node >=18; no npm dependency installation required.
 
+Hardware: **RFID-RC522 V1.33 + Arduino UNO R4 WiFi**, using the instructor-tested direct wiring without a logic-level shifter. Power the reader from **3.3 V**. Follow the [pin-by-pin wiring table](../../group-2-ticket.md#parts-and-wiring): SDA/SS→D10, RST→D9, SCK→D13, MOSI→D11, MISO→D12, GND→GND; IRQ is unused.
+
 ## 1. Arduino and real input first
 
-Open `ticket_serial/ticket_serial.ino`, select UNO R4 WiFi and correct USB port, upload and open Serial Monitor at 115200. Complete calibration / actual UID collection using the group activity guide before starting network work.
+In Arduino IDE Library Manager, install **AMRFID 1.0.1** by Guilherme Caiala and its **MFRC522** dependency (tested with **1.4.12**); choose **Install all** if prompted. Open `ticket_serial/ticket_serial.ino`, select UNO R4 WiFi and the correct USB port, upload and open Serial Monitor at **115200**. The initialisation message confirms that the program started; a real `UID: ...` line confirms the reader works. Record the actual UIDs of 2–3 cards using the group activity guide before starting network work. Keep leading zeros and remove the card before scanning it again.
 
 ## 2. Start your own server
 
@@ -29,6 +31,8 @@ On a browser joined to YOUR Pi hotspot open http://10.42.0.1:3000, or on Pi itse
 
 The page shows ONLY reader status, seat selection and route directions. No FSR/chair code is needed.
 
+"Reader initialised; scan a card to check" means the Arduino is sending heartbeats after calling `reader.begin()`. AMRFID does not report initialisation success or a disconnected reader, so confirm operation by scanning a known card.
+
 Replace sample UID keys in `host/tickets.json` with the ACTUAL UIDs saved during Stage 1. Restart the server after editing this mapping. Open the page and rescan a real tag.
 
 Optional host tests, from a second terminal in this same host folder:
@@ -40,7 +44,7 @@ node simulate.js ticket FFFFFFFF
 node simulate.js reader-error
 ```
 
-Use your actual mapped UID if you changed the file. Known sample tickets select A2/B3; an unknown tag clears the previous route; reader-error shows a detected reader error. One-shot simulation has no heartbeat and goes offline after ten seconds. Actual firmware sends heartbeats. Guidance expires after 15 seconds. “Clear ticket display” affects only this browser.
+Use your actual mapped UID if you changed the file. Known sample tickets select A2/B3; an unknown tag clears the previous route; `reader-error` simulates an explicit reader error report (the AMRFID sketches cannot detect this automatically). One-shot simulation has no heartbeat and goes offline after ten seconds. Actual firmware sends heartbeats. Guidance expires after 15 seconds. “Clear ticket display” affects only this browser.
 
 ## Files you may change
 

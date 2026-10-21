@@ -20,7 +20,7 @@ sudo apt install nodejs npm
 node --version
 ```
 
-Use Node >=18. The host needs no downloaded npm dependencies. On programming laptops install Arduino IDE, **Arduino UNO R4 Boards**, and **Adafruit PN532** plus **Adafruit BusIO**. WiFiS3 comes with board support. Resolve Wi-Fi firmware issues with Arduino's Firmware Updater before class.
+Use Node >=18. The host needs no downloaded npm dependencies. On programming laptops install Arduino IDE and **Arduino UNO R4 Boards** through Boards Manager. For Group 2, open **Sketch → Include Library → Manage Libraries...**, search for **AMRFID** by Guilherme Caiala, and install version **1.0.1** with its **MFRC522** dependency (tested here with **1.4.12**). Choose **Install all** if prompted; if MFRC522 is missing, install it separately. SPI and WiFiS3 come with board support. Resolve Wi-Fi firmware issues with Arduino's Firmware Updater before class.
 
 ## Hotspot (once per Pi)
 

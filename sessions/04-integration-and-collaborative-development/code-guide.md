@@ -22,9 +22,9 @@ Open the .ino file in its same-named folder, choose UNO R4 WiFi and the USB port
 - A function names reusable steps. `readChairs()` calls that function. `return` ends a function and can return a result.
 - `setup()` runs once on startup; `loop()` repeats. `Serial.print()` writes to the monitor; `println()` also starts a new line.
 - `delay(100)` pauses for 100 milliseconds. `millis()` reports elapsed time since startup, so we can schedule two tasks at different intervals.
-- A list/array stores several items. Indices start at 0. The RFID UID is a list of bytes, converted to text one byte at a time.
+- A library supplies reusable code. Group 2 uses AMRFID: `reader.begin()` initialises SPI and the RC522; `reader.lerUID()` returns the UID as text, or `""` when no new card could be read. `lerUID` is the library's method name and means "read UID". Keep this spelling; our helper and comments are in English. The library converts UID bytes to uppercase hexadecimal text and preserves leading zeros.
 
-Read Stage 1 in this order: pin/settings declarations → setup → loop → the function loop calls. Predict the next monitor output, change one setting, upload, and compare prediction with result. G1: explain raw versus occupied. G2: explain why byte 4 prints as 04 rather than 4.
+Read Stage 1 in this order: pin/settings declarations → setup → loop → the function loop calls. Predict the next monitor output, change one setting, upload, and compare prediction with result. G1: explain raw versus occupied. G2: explain why byte 4 prints as 04 rather than 4. AMRFID's initialisation has no success flag: the startup message confirms the code ran; a real UID confirms the reader works.
 
 ## What Stage 2 adds
 

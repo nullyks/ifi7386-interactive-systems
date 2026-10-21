@@ -23,11 +23,14 @@ Stop any optional simulators first. Record PASS/FAIL, actual result, photo/log e
 | G2 | Scan then wait >15 s | Prompt returns; heartbeat keeps reader online |
 | G2 | Unplug UNO; wait >10 s | Reader offline; route hidden |
 | G2 | Reconnect and scan again | Correct guidance recovers |
+| G2 | Observe status before scanning a known card | Initialised means the code ran; only a real UID confirms reading works |
 | Both | Stop host while page open | Host unavailable; stale success hidden |
 | Both | Restart host, wait for messages | Browser recovers without reload |
 | Both | Send malformed JSON / invalid ID | HTTP 400; valid state not overwritten |
 
 Run `npm test` in `examples/group-1-library/host` OR `examples/group-2-ticket/host` for your own API checks; these do not replace hardware/browser tests.
+
+Group 2 uses RC522 with AMRFID. Its heartbeats prove the Arduino is online, not that the reader is electrically connected or can read a card. The optional `node simulate.js reader-error` check sends `ready: false` and must clear the previous route; record this as simulated. Do not claim the firmware detects a disconnected RC522. Correct wiring with USB disconnected, reconnect, reset and scan a known card to verify recovery.
 
 Demonstration: about four minutes per group and one minute feedback. Show main interaction, one failure/recovery, one JSON message, and main limitation. Each member explains a layer.
 

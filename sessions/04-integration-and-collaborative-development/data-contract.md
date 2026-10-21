@@ -30,7 +30,7 @@ POST /api/reader every two seconds:
 {"v":1,"ready":true}
 ```
 
-ready=false reports detected initialization failure and clears old ticket. No scans is normal; no device heartbeat eventually means unknown connectivity.
+`ready` is a boolean initialisation/status flag. The AMRFID sketches send `ready: true` after calling `reader.begin()`. AMRFID has no initialisation success result, so this is not proof of working reader hardware; check a real UID first. `ready: false` clears the old ticket and can be sent by the optional `reader-error` simulator or a future driver that detects errors. The supplied firmware cannot detect reader failure automatically. No scans is normal; no device heartbeat eventually means unknown connectivity.
 
 Success: HTTP 200, `{"ok":true}` confirms receipt, not that a person saw feedback. Group 1 GET /api/state provides only seats with state/raw/seen. Group 2 GET /api/state provides only reader with online/ready/seen and latest ticket with known/seat/route/at. Host receipt timestamps are Unix milliseconds; Arduino needs no synchronized clock. Ticket is null when expired. Do not post response objects as requests.
 
@@ -39,11 +39,11 @@ Success: HTTP 200, `{"ok":true}` confirms receipt, not that a person saw feedbac
 | No seat report or older than 10 s | unknown; grey plus text |
 | Fresh occupied=true / false | occupied red / free green, plus labels |
 | No active ticket | Scan a ticket |
-| Known ticket and online ready reader | Seat highlight, route and text |
+| Known ticket and online initialised reader | Seat highlight, route and text |
 | Unknown ticket | Helpful message; no old route |
 | Ticket older than 15 s | Clear to scan prompt |
 | Reader silence >10 s | Offline/unknown; hide route |
-| Detected reader initialization error | Hardware error; clear route |
+| Explicit ready=false report (optional simulator) | Reader error reported; clear route |
 | Browser cannot reach host | Host unavailable; seats unknown; guidance cleared |
 
 | Response | Meaning / action |

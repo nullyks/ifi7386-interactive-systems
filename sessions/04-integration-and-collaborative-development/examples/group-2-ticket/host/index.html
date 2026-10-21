@@ -101,9 +101,9 @@
       let readerMessage = 'Reader offline / unknown';
       if (state.reader.online) {
         if (state.reader.ready) {
-          readerMessage = 'Reader ready';
+          readerMessage = 'Reader initialised; scan a card to check.';
         } else {
-          readerMessage = 'Reader hardware error';
+          readerMessage = 'Reader error reported';
         }
       }
       document.getElementById('reader').textContent = readerMessage;
