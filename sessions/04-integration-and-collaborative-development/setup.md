@@ -24,22 +24,41 @@ Use Node >=18. The host needs no downloaded npm dependencies. On programming lap
 
 ## Hotspot (once per Pi)
 
-At the Pi local keyboard, run the following for G1. If `ifi-lab` already exists, skip the first command and modify that existing profile. Do not create duplicate profiles with the same name.
+Both groups now use **Wi-Fi security: OPEN**. There is no Wi-Fi password. Work at the Pi local keyboard or through Ethernet; restarting the hotspot disconnects Wi-Fi clients. Use the matching group SSID in the Arduino sketch.
+
+### Create a new OPEN hotspot
+
+Use this block ONLY if the `ifi-lab` profile does not already exist. Check with `nmcli connection show` first. The command creates an AP profile without a wireless-security setting.
 
 ```bash
-sudo nmcli device wifi hotspot ifname wlan0 con-name ifi-lab ssid IFI7386-G1 band bg channel 6 password 'PrototypeG1!'
-sudo nmcli connection modify ifi-lab 802-11-wireless.mode ap 802-11-wireless.ssid IFI7386-G1 802-11-wireless.band bg 802-11-wireless.channel 6 802-11-wireless.hidden no
-sudo nmcli connection modify ifi-lab 802-11-wireless-security.key-mgmt wpa-psk 802-11-wireless-security.proto rsn 802-11-wireless-security.pairwise ccmp 802-11-wireless-security.group ccmp 802-11-wireless-security.pmf 1 802-11-wireless-security.psk 'PrototypeG1!'
-sudo nmcli connection modify ifi-lab ipv4.method shared ipv4.addresses 10.42.0.1/24 ipv6.method disabled connection.autoconnect yes
+sudo nmcli connection add type wifi ifname wlan0 con-name ifi-lab ssid IFI7386-G1 802-11-wireless.mode ap 802-11-wireless.band bg 802-11-wireless.channel 6 802-11-wireless.hidden no ipv4.method shared ipv4.addresses 10.42.0.1/24 ipv6.method disabled connection.autoconnect yes
+sudo nmcli connection up ifi-lab
+```
+
+### Convert an existing password-protected hotspot to OPEN
+
+If you followed the earlier guide, reuse its `ifi-lab` profile. Remove the ENTIRE `802-11-wireless-security` setting so old WPA/PSK settings are cleared. If the profile is already OPEN and has no such setting, skip the `remove` line. Do not create a second profile with the same name.
+
+```bash
+sudo nmcli connection modify ifi-lab 802-11-wireless.mode ap 802-11-wireless.ssid IFI7386-G1 802-11-wireless.band bg 802-11-wireless.channel 6 802-11-wireless.hidden no ipv4.method shared ipv4.addresses 10.42.0.1/24 ipv6.method disabled connection.autoconnect yes
+sudo nmcli connection modify ifi-lab remove 802-11-wireless-security
 sudo nmcli connection down ifi-lab
 sudo nmcli connection up ifi-lab
+```
+
+If the profile was not active, `connection down` can report that it is not active; continue with `connection up`.
+
+For a separate G2 Pi, substitute SSID `IFI7386-G2` in the block you use. Use channel 11 instead of 6 if needed to reduce interference. The active SSID must match `WIFI_NAME` in that group's Arduino sketch.
+
+### Verify the OPEN hotspot
+
+```bash
+nmcli connection show ifi-lab
 nmcli -f GENERAL,IP4 device show wlan0
 iw dev wlan0 info
 ```
 
-For a separate G2 Pi, substitute SSID `IFI7386-G2` and password `PrototypeG2!` in ALL the commands above. Use channel 11 instead of 6 in both places if needed to reduce interference. The active SSID and password must match the settings in that group's Arduino sketch.
-
-This sets an explicit classroom compatibility baseline: **2.4 GHz, WPA2/RSN with CCMP, PMF disabled** (`pmf 1` means disabled, not required). It removes security-setting ambiguity; it is not a confirmed diagnosis of a failed kit. The original `nmcli device wifi hotspot` command can already choose WPA2 according to device capabilities, so do not assume that a connection failure proves WPA3 was enabled.
+The profile should have no `802-11-wireless-security` setting. A phone should show an open network without asking for a password, and the Arduino Wi-Fi check should report `OPEN` for the target SSID. The supplied sketches use `WiFi.begin(WIFI_NAME)`, with no second argument. Do not use `nmcli device wifi hotspot` without a password as a shortcut: it can generate a password automatically.
 
 Confirm `iw` reports `type AP` and channel 6 (2437 MHz), or channel 11 (2462 MHz), and the Pi has address 10.42.0.1/24. Then connect another device. Shared mode supplies client IP addresses. Separate hotspots can use the same subnet. Stay connected despite “no internet”; disable automatic network switching if necessary. Internet is not required after preparation.
 
@@ -77,7 +96,7 @@ PORT=3001 node server.js
 
 On Windows PowerShell, use `$env:PORT=3001` then `node server.js` in the Group 2 terminal instead. Open G1 at http://localhost:3000 and G2 at http://localhost:3001. For another device on the Pi hotspot use 10.42.0.1 instead of localhost.
 
-For a SHARED Pi, both Arduino sketches must use that Pi's SSID/password/address, and G2 must change `SERVER_PORT` from 3000 to **3001**. G1 keeps 3000. The Group 2 simulator also needs the matching destination: on Pi run `HOST_URL=http://localhost:3001 node simulate.js ticket 04A1B2C3`; on PowerShell set `$env:HOST_URL='http://localhost:3001'` first. This is an optional hardware-saving arrangement; the main lesson assumes one Pi per group.
+For a SHARED Pi, both Arduino sketches must use that Pi's OPEN SSID and address, and G2 must change `SERVER_PORT` from 3000 to **3001**. G1 keeps 3000. The Group 2 simulator also needs the matching destination: on Pi run `HOST_URL=http://localhost:3001 node simulate.js ticket 04A1B2C3`; on PowerShell set `$env:HOST_URL='http://localhost:3001'` first. This is an optional hardware-saving arrangement; the main lesson assumes one Pi per group.
 
 ## Optional: isolate a host fault
 
@@ -85,7 +104,7 @@ Use only AFTER the serial-only checkpoint. Each group's own application README l
 
 ## Upload and troubleshoot
 
-Open the appropriate `.ino` in its same-named folder. Select **Arduino UNO R4 WiFi**, correct USB port, and check `WIFI_NAME`, `WIFI_PASSWORD`, `raspberryPiAddress` at the top. Upload; Serial Monitor **115200**. `HTTP/1.1 200 OK` means host accepted the message; Wi-Fi connection alone is insufficient.
+Open the appropriate `.ino` in its same-named folder. Select **Arduino UNO R4 WiFi**, correct USB port, and check `WIFI_NAME` and `raspberryPiAddress` at the top. The Wi-Fi network must be OPEN; there is no password variable. Upload; Serial Monitor **115200**. `HTTP/1.1 200 OK` means host accepted the message; Wi-Fi connection alone is insufficient.
 
 | Symptom | First checks |
 |---|---|

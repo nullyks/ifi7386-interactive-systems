@@ -28,7 +28,7 @@ All grounds common. Pressure lowers FSR resistance so the reading rises. Begin o
 
 1. Use your actual readings to explain one [JSON message](data-contract.md).
 2. Follow [Pi setup](setup.md): join prepared hotspot and start host. No simulator is required on the main route.
-3. Open `examples/group-1-library/library/library.ino`. Copy your FOUR calibrated thresholds from the serial-only sketch; opening another sketch does not transfer values automatically. Check Wi-Fi name/password and Pi address at the top.
+3. Open `examples/group-1-library/library/library.ino`. Copy your FOUR calibrated thresholds from the serial-only sketch; opening another sketch does not transfer values automatically. Check `WIFI_NAME` and the Pi address at the top. The hotspot uses OPEN Wi-Fi, so no password is needed.
 4. Upload; Serial Monitor now shows local readings, outgoing JSON and response. **C2:** obtain HTTP 200. If it fails, first check hotspot/server/address. Local sensing should already be verified.
 5. Open http://10.42.0.1:3000. Verify L1, L2 and both chairs; page shows raw readings, labels and colours. **C3:** physical input changes the correct seat. Expect a few seconds latency.
 

@@ -4,7 +4,7 @@
 
 First record C1 from the serial-only sketch: G1 shows two independently responding sensors with measured thresholds; G2 shows repeated real UIDs for 2–3 tags. Next record C2 (actual POST accepted with HTTP 200), then C3 (correct browser feedback). Only then run the complete-system tests below.
 
-Before C2, record a real Arduino Wi-Fi checkpoint: the intended hotspot is visible and the board has a usable IP address in the Pi subnet, different from `10.42.0.1`. If a phone connects but Arduino does not, follow [Wi-Fi diagnosis](wifi-troubleshooting.md). Save scan/status/firmware output and the Pi log; do not record the integration as complete based only on the phone test.
+Before C2, record a real Arduino Wi-Fi checkpoint: the intended hotspot appears as `OPEN` in the scan and the board has a usable IP address in the Pi subnet, different from `10.42.0.1`. No Wi-Fi password is needed. If a phone connects but Arduino does not, follow [Wi-Fi diagnosis](wifi-troubleshooting.md). Save scan/status/firmware output and the Pi log; do not record the integration as complete based only on the phone test.
 
 Stop any optional simulators first. Record PASS/FAIL, actual result, photo/log evidence and next action. Simulation can isolate a fault but must be labelled simulated. After a fix rerun the failed test and main path.
 

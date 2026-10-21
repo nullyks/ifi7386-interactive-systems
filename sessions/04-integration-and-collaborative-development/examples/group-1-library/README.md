@@ -23,7 +23,7 @@ If the Arduino cannot join the Pi hotspot, use [Wi-Fi diagnosis](../../wifi-trou
 
 ## 3. Transmit real data
 
-Open `library/library.ino`. Check Wi-Fi settings and Pi address. Copy your FOUR measured thresholds from the serial-only sketch. Upload and inspect outgoing JSON and HTTP 200 in Serial Monitor.
+Open `library/library.ino`. Check `WIFI_NAME` and the Pi address. The Pi hotspot uses **OPEN Wi-Fi**, so the sketch calls `WiFi.begin(WIFI_NAME)` with no password. Copy your FOUR measured thresholds from the serial-only sketch. Upload and inspect outgoing JSON and HTTP 200 in Serial Monitor.
 
 ## 4. Open your page
 

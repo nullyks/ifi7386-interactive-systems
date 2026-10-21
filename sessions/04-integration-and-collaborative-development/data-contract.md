@@ -4,7 +4,7 @@
 
 Each group runs its OWN server. Group 1 implements /api/seats; Group 2 implements /api/ticket and /api/reader. Both independently implement GET / and GET /api/state. A route belonging to the other group returns HTTP 404.
 
-Firmware sends HTTP POST with Content-Type application/json to Pi 10.42.0.1:3000. Browser polls GET /api/state every second. Version v is number 1. Host stores state in memory. This small example assumes a trusted isolated classroom network; there is no authentication or encrypted transport.
+Firmware sends HTTP POST with Content-Type application/json to Pi 10.42.0.1:3000. Browser polls GET /api/state every second. Version v is number 1. Host stores state in memory. This classroom example uses OPEN Wi-Fi with no Wi-Fi password, application authentication or encrypted transport.
 
 ## Requests
 

@@ -9,6 +9,8 @@ Build your selected Hi-Fi slice as one integrated system. Each group uses its ow
 - Group 1: two FSRs → one UNO R4 WiFi → Pi 400 → library plan with two seats.
 - Group 2: RFID-RC522 V1.33 with AMRFID → UNO R4 WiFi → Pi 400 → hall plan with seat and route for 2–3 tickets.
 
+Both Pi hotspots use **Wi-Fi security: OPEN** (no password). Their SSIDs are `IFI7386-G1` and `IFI7386-G2`. The Arduino network sketches and Wi-Fi check connect using the SSID only.
+
 By the end you can trace physical input through firmware, HTTP and JSON to visible feedback; agree a data contract; distinguish valid, waiting, unknown and error states; integrate contributions across layers; and demonstrate recovery.
 
 ## Practical route

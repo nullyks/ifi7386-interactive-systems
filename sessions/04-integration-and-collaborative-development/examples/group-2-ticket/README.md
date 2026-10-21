@@ -25,7 +25,7 @@ If the Arduino cannot join the Pi hotspot, use [Wi-Fi diagnosis](../../wifi-trou
 
 ## 3. Transmit real data
 
-Open `ticket/ticket.ino`. Check Wi-Fi settings and Pi address. Keep your actual UIDs ready for the mapping file. Upload and inspect outgoing JSON and HTTP 200 in Serial Monitor.
+Open `ticket/ticket.ino`. Check `WIFI_NAME` and the Pi address. The Pi hotspot uses **OPEN Wi-Fi**, so the sketch calls `WiFi.begin(WIFI_NAME)` with no password. Keep your actual UIDs ready for the mapping file. Upload and inspect outgoing JSON and HTTP 200 in Serial Monitor.
 
 ## 4. Open your page
 

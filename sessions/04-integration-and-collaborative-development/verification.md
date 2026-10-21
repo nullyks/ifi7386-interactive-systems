@@ -2,16 +2,33 @@
 
 Prepared 18 October 2026. Group 2 updated and rechecked 21 October 2026 for RFID-RC522 V1.33 with AMRFID.
 
-## Wi-Fi follow-up — 21 October 2026
+## OPEN Wi-Fi update — 21 October 2026
+
+- The requested classroom configuration is now **Wi-Fi security: OPEN**. Both application sketches and the standalone Wi-Fi check use `WiFi.begin(WIFI_NAME)` with no password argument or password variable. The diagnostic scan labels an unsecured network `OPEN` and reports `TARGET_NOT_OPEN` if the target SSID is secured.
+- The Pi guide creates a new AP profile without a wireless-security setting. Its separate migration block removes the entire `802-11-wireless-security` setting from an existing protected profile before restarting it, clearing the previous PSK/WPA configuration. No password-generating hotspot shortcut is used.
+- All current student instructions, both group guides and the Wi-Fi troubleshooting steps now follow the OPEN setup. Network names, 2.4 GHz channels and the Pi address remain the same. Sensor/UID helpers were compared with the preceding commit and are unchanged. Local teaching links resolve.
+- All three OPEN-network sketches compile for `arduino:renesas_uno:unor4wifi` with Arduino UNO R4 Boards **1.5.3**. The ticket sketch uses AMRFID **1.0.1** and MFRC522 **1.4.12**; the existing MFRC522 architecture-metadata warning remains.
+
+| Current sketch | Flash bytes | RAM bytes |
+|---|---|---|
+| library | 63,100 | 7,588 |
+| ticket | 70,716 | 8,044 |
+| wifi_check | 60,888 | 7,528 |
+
+- The WiFiS3 source confirms that the one-argument `begin(ssid)` overload selects the no-passphrase connection path. The profile-removal command was checked against the NetworkManager command reference. Actual Pi profile activation and Arduino radio connection still require checks on the physical kit; the earlier classroom fault remains unconfirmed.
+
+## Earlier Wi-Fi follow-up — 21 October 2026
+
+This section records the earlier protected-network setup and compile results, superseded by the OPEN update above.
 
 Both groups reported Arduino connection failure on fresh Pi installations; a phone could connect. No Arduino connection output, active Pi security settings or Pi logs were available for diagnosis. The cause of that physical failure remains unconfirmed.
 
-- The setup guide now explicitly configures 2.4 GHz, channel 6/11, WPA2/RSN with CCMP and PMF disabled, and requires an Arduino IP checkpoint. This is a compatibility baseline to test, not evidence that WPA3 or PMF caused the incident. NetworkManager's hotspot helper can already select WPA2.
+- That revision explicitly configured 2.4 GHz, channel 6/11, WPA2/RSN with CCMP and PMF disabled, and required an Arduino IP checkpoint. This was a compatibility baseline to test, not evidence that WPA3 or PMF caused the incident. The current guide uses OPEN Wi-Fi instead.
 - WiFiS3's `begin()` in board package 1.5.3 waits up to ten seconds by default. Both application sketches previously started their retry timer before that blocking call; they now start it after the call returns, leaving ten seconds between attempts. Both print the target SSID, firmware version, connection result and successful connection's IP/signal.
 - A standalone `examples/wifi_check/wifi_check.ino` scans for the configured SSID, reports channel/security/signal, firmware and MAC address, makes one twenty-second connection attempt, and then reports current status/IP. It needs no sensors, RFID library or host application.
 - All three final sketches compile for `arduino:renesas_uno:unor4wifi` with Arduino UNO R4 Boards **1.5.3**. The ticket sketch uses AMRFID **1.0.1** and MFRC522 **1.4.12**; the dependency's architecture-metadata warning remains as described below.
 
-| Current sketch | Flash bytes | RAM bytes |
+| Sketch at that revision | Flash bytes | RAM bytes |
 |---|---|---|
 | library | 63,068 | 7,588 |
 | ticket | 70,676 | 8,044 |

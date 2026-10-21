@@ -2,10 +2,10 @@
 // Select Arduino UNO R4 WiFi. Open Serial Monitor at 115200, then press Reset.
 #include <WiFiS3.h>
 
-// For Group 2, change BOTH values to IFI7386-G2 and PrototypeG2!.
-// They must match the ACTIVE hotspot, including upper/lowercase letters.
+// For Group 2, change the name to IFI7386-G2.
+// It must match the ACTIVE hotspot, including upper/lowercase letters.
+// Both Pi hotspots use OPEN Wi-Fi: there is no password setting.
 const char WIFI_NAME[] = "IFI7386-G1";
-const char WIFI_PASSWORD[] = "PrototypeG1!";
 
 const char* wifiStatusName(int status) {
   switch (status) {
@@ -28,7 +28,7 @@ const char* encryptionName(int type) {
     case ENC_TYPE_WPA2: return "WPA2";
     case ENC_TYPE_WPA2_ENTERPRISE: return "WPA2 enterprise";
     case ENC_TYPE_WPA3: return "WPA3";
-    case ENC_TYPE_NONE: return "Open";
+    case ENC_TYPE_NONE: return "OPEN";
     case ENC_TYPE_AUTO: return "Auto";
     default: return "Unknown";
   }
@@ -74,6 +74,9 @@ void scanForHotspot() {
     Serial.println(encryptionName(WiFi.encryptionType(index)));
     if (name == WIFI_NAME) {
       found = true;
+      if (WiFi.encryptionType(index) != ENC_TYPE_NONE) {
+        Serial.println("TARGET_NOT_OPEN: change the Pi hotspot security to OPEN.");
+      }
     }
   }
   if (found) {
@@ -92,7 +95,8 @@ void setup() {
   }
   Serial.println("UNO R4 WiFi connection check");
   Serial.print("Target SSID: ");
-  Serial.println(WIFI_NAME); // Never print the password.
+  Serial.println(WIFI_NAME);
+  Serial.println("Wi-Fi security: OPEN (no password)");
   Serial.print("Wi-Fi firmware: ");
   Serial.println(WiFi.firmwareVersion());
   byte mac[6] = {0}; // Leave a defined value even if the module does not reply.
@@ -120,7 +124,8 @@ void setup() {
   WiFi.setTimeout(20000); // Allow twenty seconds for this single diagnostic attempt.
   Serial.println("Trying one connection; this can take twenty seconds...");
   unsigned long attemptStarted = millis();
-  int result = WiFi.begin(WIFI_NAME, WIFI_PASSWORD);
+  // Only the SSID is passed: this is the OPEN-network overload.
+  int result = WiFi.begin(WIFI_NAME);
   Serial.print("WiFi.begin result: ");
   Serial.print(wifiStatusName(result));
   Serial.print(" (");

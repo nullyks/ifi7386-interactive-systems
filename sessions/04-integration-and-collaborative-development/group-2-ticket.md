@@ -44,7 +44,7 @@ After correcting wiring with USB disconnected, reconnect USB and reset or upload
 
 1. Turn one actual UID into a [JSON message](data-contract.md).
 2. Follow [Pi setup](setup.md): join hotspot and start host.
-3. Open `examples/group-2-ticket/ticket/ticket.ino`. Check G2 credentials. If sharing the G1 Pi, use its credentials AND set `SERVER_PORT = 3001` while starting your own server with `PORT=3001` (see setup). Upload. Scan a tag and inspect outgoing UID JSON plus HTTP 200 in Serial Monitor (**C2**).
+3. Open `examples/group-2-ticket/ticket/ticket.ino`. Check the G2 `WIFI_NAME`. The hotspot uses OPEN Wi-Fi, so no password is needed. If sharing the G1 Pi, use its SSID AND set `SERVER_PORT = 3001` while starting your own server with `PORT=3001` (see setup). Upload. Scan a tag and inspect outgoing UID JSON plus HTTP 200 in Serial Monitor (**C2**).
 4. Replace sample KEYS in `examples/group-2-ticket/host/tickets.json` with your saved UIDs and destinations. Keep valid JSON, no trailing comma. The bundled UIDs are examples and will probably not match your cards. Restart host after saving.
 5. Open http://10.42.0.1:3000. Scan each tag and check correct seat, path and written directions. Scan an unregistered tag: previous route must disappear. **C3:** physical card selects its actual mapped seat.
 

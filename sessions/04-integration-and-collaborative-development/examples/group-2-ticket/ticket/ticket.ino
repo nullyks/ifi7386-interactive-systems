@@ -3,7 +3,7 @@
 #include <WiFiS3.h>
 
 const char WIFI_NAME[] = "IFI7386-G2";
-const char WIFI_PASSWORD[] = "PrototypeG2!";
+// The Pi hotspot uses OPEN Wi-Fi. No password is needed.
 // An IP address is the destination computer's address on our local network.
 IPAddress raspberryPiAddress(10, 42, 0, 1);
 const int SERVER_PORT = 3000;
@@ -28,7 +28,8 @@ const char* wifiStatusName(int status) {
 void prepareWifi() {
   WiFi.setTimeout(10000); // One begin() call can wait for up to ten seconds.
   Serial.print("Wi-Fi target: ");
-  Serial.println(WIFI_NAME); // Never print the password.
+  Serial.println(WIFI_NAME);
+  Serial.println("Wi-Fi security: OPEN (no password)");
   Serial.print("Wi-Fi firmware: ");
   Serial.println(WiFi.firmwareVersion());
 }
@@ -45,7 +46,8 @@ bool connectToWifi() {
       } else {
         Serial.print("Connecting to Wi-Fi: ");
         Serial.println(WIFI_NAME);
-        int result = WiFi.begin(WIFI_NAME, WIFI_PASSWORD);
+        // The one-argument form joins an OPEN network without a password.
+        int result = WiFi.begin(WIFI_NAME);
         Serial.print("WiFi.begin result: ");
         Serial.print(wifiStatusName(result));
         Serial.print(" (");
