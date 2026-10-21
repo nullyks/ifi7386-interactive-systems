@@ -8,6 +8,8 @@ Use this page when Arduino cannot join the Pi hotspot, including when a phone ca
 
 During class both groups reported that their UNO R4 WiFi could not connect to a Pi 400 hotspot after a fresh OS installation. A phone could connect. This confirms that the hotspot was usable by at least one client; it does not identify why Arduino failed.
 
+**Update, 21 October 2026:** after switching to OPEN Wi-Fi, the instructor confirmed that both group examples work on real hardware. See [hardware confirmation](verification.md#hardware-confirmation--21-october-2026). The steps below remain available for diagnosing later connection problems.
+
 The original guide did not record the active security settings or require an Arduino-only connection checkpoint. Its application sketches printed no connection result, firmware version or IP address. They also measured the retry interval from BEFORE the blocking `WiFi.begin()` call, so a failed ten-second attempt could be followed immediately by another attempt. The revised sketches wait ten seconds after an attempt finishes. This is a confirmed code issue; it is not a confirmed explanation for the classroom failure.
 
 The current classroom setup uses **Wi-Fi security: OPEN**, with no password. Both application sketches and the diagnostic sketch call `WiFi.begin(WIFI_NAME)`. Confirm that the active Pi hotspot is also OPEN; the change in configuration does not by itself prove what caused the earlier failure.

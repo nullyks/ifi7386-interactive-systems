@@ -2,6 +2,15 @@
 
 Prepared 18 October 2026. Group 2 updated and rechecked 21 October 2026 for RFID-RC522 V1.33 with AMRFID.
 
+## Hardware confirmation — 21 October 2026
+
+After switching to OPEN Wi-Fi, the instructor confirmed that **both group examples work on real hardware**:
+
+- Group 1: library seat-status example.
+- Group 2: RC522/AMRFID ticket-guidance example.
+
+This confirmation is based on the instructor's reported hardware test. The earlier cause of the password-protected hotspot connection failure has not been established, and no separate results for individual failure/recovery acceptance tests were supplied.
+
 ## OPEN Wi-Fi update — 21 October 2026
 
 - The requested classroom configuration is now **Wi-Fi security: OPEN**. Both application sketches and the standalone Wi-Fi check use `WiFi.begin(WIFI_NAME)` with no password argument or password variable. The diagnostic scan labels an unsecured network `OPEN` and reports `TARGET_NOT_OPEN` if the target SSID is secured.
@@ -15,7 +24,7 @@ Prepared 18 October 2026. Group 2 updated and rechecked 21 October 2026 for RFID
 | ticket | 70,716 | 8,044 |
 | wifi_check | 60,888 | 7,528 |
 
-- The WiFiS3 source confirms that the one-argument `begin(ssid)` overload selects the no-passphrase connection path. The profile-removal command was checked against the NetworkManager command reference. Actual Pi profile activation and Arduino radio connection still require checks on the physical kit; the earlier classroom fault remains unconfirmed.
+- The WiFiS3 source confirms that the one-argument `begin(ssid)` overload selects the no-passphrase connection path. The profile-removal command was checked against the NetworkManager command reference. Subsequent hardware testing was confirmed by the instructor as recorded above.
 
 ## Earlier Wi-Fi follow-up — 21 October 2026
 
