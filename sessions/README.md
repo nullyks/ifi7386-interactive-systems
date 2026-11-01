@@ -10,6 +10,7 @@ Use the session pages in numerical order. Each main page contains the concepts, 
 | 02 | Interaction, Architecture, and Prototyping | [Open Session 2](02-interaction-architecture-and-prototyping/README.md) |
 | 03 | Wizard-of-Oz Study and Arduino Prototyping | [Open Session 3](03-wizard-of-oz-and-arduino-prototyping/README.md) |
 | 04 | Integration and Collaborative Development | [Open Session 4](04-integration-and-collaborative-development/README.md) |
+| 05 | AI-Assisted Development and the Git Workflow | [Open Session 5](05-ai-assisted-development-and-git-workflow/README.md) |
 
 ## How this section will grow
 
@@ -20,6 +21,8 @@ sessions/
 ├── 01-user-needs-and-initial-project-concept/
 ├── 02-interaction-architecture-and-prototyping/
 ├── 03-wizard-of-oz-and-arduino-prototyping/
+├── 04-integration-and-collaborative-development/
+├── 05-ai-assisted-development-and-git-workflow/
 └── ...
 ```
 

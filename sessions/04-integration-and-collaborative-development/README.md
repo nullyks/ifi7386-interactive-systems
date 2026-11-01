@@ -62,3 +62,5 @@ During Stage 1, everyone participates in wiring, reading or recording actual sen
 Minimum G1 result: both chairs work independently, thresholds come from measurements, missing data becomes unknown. Minimum G2 result: two real tags select distinct seats, unknown tickets give feedback, old guidance disappears. Both teams explain a request and show recovery.
 
 After the core works, choose ONE: clearer map/labels, better FSR thresholds, a third ticket or improved route wording. Keep databases, booking, accounts and automatic routing for later. Before next meeting save code, wiring photo, measured thresholds or UID mapping, test log, short demo and one usability question for participant testing.
+
+[Next session — AI-Assisted Development and the Git Workflow](../05-ai-assisted-development-and-git-workflow/README.md)
