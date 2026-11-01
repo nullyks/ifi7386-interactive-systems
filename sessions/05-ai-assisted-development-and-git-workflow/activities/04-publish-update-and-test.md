@@ -73,9 +73,17 @@ Allow Arduino time to reconnect to the restored hotspot. Check its IP/HTTP 200 o
 
 Perform the change card's acceptance checks and one original main-path test with the physical input. Also test a relevant failure/recovery: for example unplug/reconnect the board, scan an unknown card, or stop/restart the host. Use the [Session 4 acceptance tests](../../04-integration-and-collaborative-development/testing.md) for expected baseline behaviour. Record pass/fail and the tested commit. If the change fails, return to the development computer, prompt a correction, review it and repeat this whole loop.
 
-## If firmware changes later
+## Optional example: update Arduino firmware
 
-Develop the `.ino` file in the development clone, review it, commit and push it with the project. Use Arduino IDE and USB on the development computer to upload the intended sketch to the board. A Git pull on the Pi downloads firmware **source** but does not flash the Arduino. If a change affects the data contract, test matching server and firmware versions and record both. Today's two core changes should preserve the working firmware.
+Use this as an instructor demonstration or an extension after the two core rounds. A small example is a version message alongside the existing Serial Monitor output; it makes the uploaded version easy to recognise without changing the sensor behaviour.
+
+1. **Edit on the development computer.** In its existing Git clone, use Antigravity to add `Serial.println("Library firmware v2");` inside `printChairs()` in `library/library.ino`, alongside the regular readings. Group 2 can add `Ticket firmware v2` inside the successful-UID branch of `readNewCard()` in `ticket/ticket.ino`. Keep pins, measured thresholds, Wi-Fi settings and JSON fields unchanged.
+2. **Review and compile.** Inspect the `.ino` change. Open that same file from the development clone in Arduino IDE, select **Arduino UNO R4 WiFi**, and use **Verify** to check compilation. Node's host tests do not check firmware compilation.
+3. **Commit and push the source.** In Antigravity's Review pane, include the changed `.ino` file when committing, then push to the same group repository as the host code. The host-only `git add` example above does not stage firmware: if using the terminal, stage `library/library.ino` or `ticket/ticket.ino` instead. Record the commit and check that the file is visible on GitHub.
+4. **Upload from the development computer.** Connect the Arduino to that computer with a USB data cable. In Arduino IDE, check the board and USB port, then choose **Upload**. Use the reviewed, committed sketch with no further local edits. A successful push stores the source on GitHub; a successful Upload installs the compiled firmware on the board. [Arduino upload guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE).
+5. **Test and record.** Open Serial Monitor at **115200**. Group 1 should see the version message with the regular chair readings; Group 2 scans a tag to see it with the UID. With the Pi back in group-hotspot mode and its server running, repeat the original physical interaction and check HTTP 200 and browser feedback. Record the firmware source commit, upload result and physical test result.
+
+For a firmware-only change, the USB upload updates the board; the unchanged Pi server does not need restarting. You may pull on the Pi while it is on TLU to synchronise its source copy, but that pull does not install firmware. Another developer first pulls on their development computer, then opens the sketch there for a USB upload. If a later change affects the data contract, update and test compatible server and firmware versions and record both. The two required interface/server rounds keep the existing firmware unchanged.
 
 ## Quick fault checks
 

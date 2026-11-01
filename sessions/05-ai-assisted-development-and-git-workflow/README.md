@@ -15,29 +15,36 @@ Complete the loop twice: first for a small interface improvement, then for a sma
 - turn an observed problem into a bounded agent prompt and an observable test;
 - inspect an agent's changes and check the result locally;
 - commit and push a reviewed change, pull it on the Pi, restart and test it;
+- explain how Arduino firmware source is shared through GitHub and uploaded to the board over USB from the development computer;
 - switch the Pi between **TLU for GitHub access** and **your group hotspot for Arduino testing**, using the desktop Wi-Fi controls;
 - identify the tested version and explain what remains unverified.
 
 ## How your change reaches the Pi
 
-Work on your classroom computer or laptop. Share the code through GitHub, then download it on the Pi for testing.
+Edit both server code and Arduino firmware on your classroom computer or laptop. Keep both in the same group GitHub repository. The two devices receive their updates in different ways:
 
 ```mermaid
 flowchart LR
-    DEV["1. Development computer<br/>Edit and test"]
-    GITHUB["2. GitHub<br/>Share the code"]
-    PI["3. Raspberry Pi 400<br/>Run and test"]
+    DEV["Development computer<br/>Edit and test"]
+    GITHUB["GitHub<br/>Server + firmware source"]
+    PI["Raspberry Pi 400<br/>Run the server"]
+    ARDUINO["Arduino<br/>Run the firmware"]
     DEV -->|push| GITHUB
     GITHUB -->|pull| PI
+    DEV -->|"USB upload<br/>Arduino IDE"| ARDUINO
 ```
 
 1. **Develop on your computer.** Use Antigravity to change the code. Review and test the result, then **commit** to save a local version.
-2. **Share through GitHub.** **Push** uploads your commits to the group's repository. Other computers can now download them.
-3. **Test on the Pi.** Connect the Pi to **TLU** and **pull** to download the change. Restore the group **hotspot**, restart the server and test with the real Arduino. Keep code edits on the development computer.
+2. **Share through GitHub.** **Push** uploads your commits to the group's repository, including any changed `.ino` firmware files. Other development computers can **pull** this source before continuing the work.
+3. **Update the device you changed.** For server/interface changes, connect the Pi to **TLU**, **pull**, restore the group **hotspot** and restart the server. For firmware changes, use **Arduino IDE on the development computer** to upload the committed sketch to the Arduino over **USB**. Then test the physical interaction with the Pi server.
 
 **First setup:** use **clone** once on each computer to create its local Git copy. After that, repeat the three steps above for each change.
 
-**Arduino:** the board sends sensor readings or ticket scans to the Pi during the test. Downloading code onto the Pi does not upload firmware to the board; that is a separate USB upload from the development computer.
+**Firmware example:** add a version message such as `Library firmware v2` to the regular Serial output in `library/library.ino`, review and compile it, commit and push the source, then upload that same version from the development computer using Arduino IDE. Check the new message alongside the readings in Serial Monitor. Group 2 can print a version message when reading a tag in `ticket/ticket.ino`. See the [firmware update steps](activities/04-publish-update-and-test.md#optional-example-update-arduino-firmware).
+
+The Arduino sends readings or ticket scans to the Pi over Wi-Fi during testing. That data connection does not install firmware. Pulling the repository on the Pi downloads the `.ino` source too, but the board keeps running its previous firmware until a USB upload succeeds.
+
+The two required development rounds below focus on the interface and server. The firmware path is an optional example or instructor demonstration; it does not add a third required round.
 
 ## The Pi has two Wi-Fi modes
 
@@ -73,5 +80,7 @@ For this exercise, use one shared `main` branch and one active writer at a time.
 ## Completion evidence
 
 Save the repository URL, the two prompts, the before/after observations and one test record per loop. Each record names the commit, Pi network switches, expected result, actual result and whether real hardware or simulation was used. At least one interface improvement and one server improvement must reach and be tested on the Pi. A local-only change is unfinished delivery.
+
+If you also change firmware, record the source commit uploaded to the Arduino and its USB upload/test result separately from the server version running on the Pi.
 
 [Instructor preparation and sources](instructor-notes.md)

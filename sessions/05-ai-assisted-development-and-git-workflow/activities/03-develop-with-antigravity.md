@@ -39,7 +39,7 @@ Regression check: [the original physical interaction that must still work].
 Keep the existing Node server and plain HTML/SVG/JavaScript structure.
 Preserve Arduino request fields, endpoint names, seat IDs, calibrated values
 and expiry behaviour unless our change explicitly concerns one of them.
-Keep the firmware unchanged for this task. Add no new dependencies.
+For this interface/server task, keep the firmware unchanged. Add no new dependencies.
 First explain a short plan. After we agree it, implement only this change,
 run relevant checks and explain changed files and anything you could not test.
 Leave commit, push and Pi updating to our group.
@@ -72,6 +72,8 @@ cases you tested and what still needs a physical card test.
 ```
 
 ## 4. Review the change, then run it
+
+The prompts above are for the two required interface/server rounds. If you try the [optional firmware example](04-publish-update-and-test.md#optional-example-update-arduino-firmware), explicitly change the prompt's scope to your network `.ino` sketch. For example: **Print `Library firmware v2` alongside the regular readings in `printChairs()` in `library/library.ino`. Preserve pins, thresholds, Wi-Fi settings and JSON messages; leave the host files unchanged.** Group 2 can print `Ticket firmware v2` alongside each successfully read UID in `ticket/ticket.ino`. Review the change in Antigravity, then compile and upload using Arduino IDE. Node tests do not compile or upload firmware.
 
 Open **Review** from the conversation's Overview panel or changed-files card. Inspect the file differences: what was added, what was removed, and whether the change matches your card. Send a specific follow-up if needed: **The new total includes unmeasured chairs. Count only L1 and L2 and keep unknown separate from free.** The app supports comments on changed lines. [Review help](https://antigravity.google/docs/review-changes/).
 

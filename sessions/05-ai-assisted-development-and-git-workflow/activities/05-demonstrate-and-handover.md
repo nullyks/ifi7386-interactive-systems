@@ -14,7 +14,7 @@
 
 ## Keep a short test log
 
-Save this in the team's shared notes, or commit it as `docs/test-log.md` from the development copy after testing. A later documentation-only commit may follow the code version tested on the Pi; keep that tested code commit explicitly recorded.
+Save this in the team's shared notes, or commit it as `docs/test-log.md` from the development copy after testing. A later documentation-only or firmware-only commit may follow the server version tested on the Pi; keep that tested server commit explicitly recorded.
 
 | Field | Round 1 — interface | Round 2 — server |
 |---|---|---|
@@ -30,6 +30,8 @@ Save this in the team's shared notes, or commit it as `docs/test-log.md` from th
 | Original main-path regression check | | |
 | Failure/recovery check and result | | |
 | What the agent could not verify | | |
+
+If you also try the optional firmware example, record its `.ino` path, source commit uploaded over USB from the development computer, Serial Monitor result and physical interaction test. Keep this separate from the Pi's server commit. If firmware was not changed, record **unchanged**; a third development round is not required.
 
 ## Completion checklist
 
