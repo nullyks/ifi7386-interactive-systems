@@ -18,23 +18,26 @@ Complete the loop twice: first for a small interface improvement, then for a sma
 - switch the Pi between **TLU for GitHub access** and **your group hotspot for Arduino testing**, using the desktop Wi-Fi controls;
 - identify the tested version and explain what remains unverified.
 
-## Three places, one project
+## How your change reaches the Pi
 
-```text
-Development computer                 GitHub                  Raspberry Pi 400
-Antigravity + local Git copy  ─push─>  group repository  ─pull─> local Git copy
-edit → review → local test                                   restart → hardware test
-internet for AI and GitHub                                    switch Wi-Fi for each job
+Work on your classroom computer or laptop. Share the code through GitHub, then download it on the Pi for testing.
+
+```mermaid
+flowchart LR
+    DEV["1. Development computer<br/>Edit and test"]
+    GITHUB["2. GitHub<br/>Share the code"]
+    PI["3. Raspberry Pi 400<br/>Run and test"]
+    DEV -->|push| GITHUB
+    GITHUB -->|pull| PI
 ```
 
-| Place | Its job today |
-|---|---|
-| Development computer: classroom computer or laptop | Develop server, interface and, when needed, Arduino firmware; review, commit and push. |
-| GitHub | Share the group's committed versions between people and machines. |
-| Raspberry Pi 400 | Download the shared version, run the Node server and test with the real Arduino. Keep this copy free of local code edits. |
-| Arduino UNO R4 WiFi | Run the uploaded firmware and send physical readings or scans to the Pi hotspot. |
+1. **Develop on your computer.** Use Antigravity to change the code. Review and test the result, then **commit** to save a local version.
+2. **Share through GitHub.** **Push** uploads your commits to the group's repository. Other computers can now download them.
+3. **Test on the Pi.** Connect the Pi to **TLU** and **pull** to download the change. Restore the group **hotspot**, restart the server and test with the real Arduino. Keep code edits on the development computer.
 
-A **commit** records a local version. **Push** sends commits to GitHub. **Pull** brings GitHub commits into an existing local copy. **Clone** creates that copy the first time. Saving a file does not push it; pulling code does not restart a running server or upload Arduino firmware.
+**First setup:** use **clone** once on each computer to create its local Git copy. After that, repeat the three steps above for each change.
+
+**Arduino:** the board sends sensor readings or ticket scans to the Pi during the test. Downloading code onto the Pi does not upload firmware to the board; that is a separate USB upload from the development computer.
 
 ## The Pi has two Wi-Fi modes
 
