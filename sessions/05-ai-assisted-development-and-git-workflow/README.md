@@ -59,17 +59,17 @@ Change modes in the **desktop Wi-Fi menu**. Reactivate the existing group hotspo
 
 ## Session route
 
-| Minutes | Activity | Checkpoint |
-|---|---|---|
-| 0–10 | Recall the working Session 4 prototype; instructor demonstrates the loop and Wi-Fi switch | Name the three code locations and record the starting behaviour. |
-| 10–35 | [01 — Group repository and two clones](activities/01-team-repository-and-two-clones.md) | C1: own repository, development clone, Pi clone and working baseline. |
-| 35–45 | [02 — Find and specify improvements](activities/02-find-and-specify-improvements.md) | Choose one interface issue and one server issue with success conditions. |
-| 45–65 | [03 — Develop with Antigravity](activities/03-develop-with-antigravity.md), round 1: interface | Review the change and test it on the development computer. |
-| 65–80 | [04 — Publish, update and test](activities/04-publish-update-and-test.md), round 1 | C2: push → Pi on TLU → pull → hotspot → restart → physical test. |
-| 80–90 | Record the result, explain the changed code and rotate roles | Buffer for setup or a short break if needed; keep the next change small. |
-| 90–110 | [03 — Develop with Antigravity](activities/03-develop-with-antigravity.md), round 2: server | A different member drives; review and test the server change. |
-| 110–125 | [04 — Publish, update and test](activities/04-publish-update-and-test.md), round 2 | C3: repeat the complete delivery loop and record the tested commit. |
-| 125–135 | [05 — Demonstrate and hand over](activities/05-demonstrate-and-handover.md) | Show both changes, evidence and one remaining issue. |
+| Activity | Checkpoint |
+|---|---|
+| Recall the working Session 4 prototype; instructor demonstrates the loop and Wi-Fi switch | Name the three code locations and record the starting behaviour. |
+| [01 — Group repository and two clones](activities/01-team-repository-and-two-clones.md) | C1: own repository, development clone, Pi clone and working baseline. |
+| [02 — Find and specify improvements](activities/02-find-and-specify-improvements.md) | Choose one interface issue and one server issue with success conditions. |
+| [03 — Develop with Antigravity](activities/03-develop-with-antigravity.md), round 1: interface | Review the change and test it on the development computer. |
+| [04 — Publish, update and test](activities/04-publish-update-and-test.md), round 1 | C2: publish, update the Pi and test with physical input. |
+| Record the result, explain the changed code and rotate roles | Keep the next change small; take a short break if needed. |
+| [03 — Develop with Antigravity](activities/03-develop-with-antigravity.md), round 2: server | A different member drives; review and test the server change. |
+| [04 — Publish, update and test](activities/04-publish-update-and-test.md), round 2 | C3: repeat the complete delivery loop and record the tested commit. |
+| [05 — Demonstrate and hand over](activities/05-demonstrate-and-handover.md) | Show both changes, evidence and one remaining issue. |
 
 ## How to work together
 
@@ -82,5 +82,3 @@ For this exercise, use one shared `main` branch and one active writer at a time.
 Save the repository URL, the two prompts, the before/after observations and one test record per loop. Each record names the commit, Pi network switches, expected result, actual result and whether real hardware or simulation was used. At least one interface improvement and one server improvement must reach and be tested on the Pi. A local-only change is unfinished delivery.
 
 If you also change firmware, record the source commit uploaded to the Arduino and its USB upload/test result separately from the server version running on the Pi.
-
-[Instructor preparation and sources](instructor-notes.md)

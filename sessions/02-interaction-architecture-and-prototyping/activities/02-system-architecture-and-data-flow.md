@@ -48,15 +48,20 @@ Replace vague labels such as `information`, `data`, `signal`, or `response` with
 
 ## Worked example
 
-```text
-room condition
-  → simulated sensor input: comfort value
-  → threshold and persistence rule
-  → current state: comfortable / attention / action suggested
-  → physical indicator command + web status message
-  → student perceives label and signal
-  → student decides whether to ventilate or continue
+```mermaid
+flowchart TD
+    ROOM["Room condition"]
+    INPUT["Simulated sensor input"]
+    CONTROL["Controller<br/>Rule + stored state"]
+    OUTPUT["Indicator + web interface"]
+    USER["Student<br/>Notice feedback and decide"]
+    ROOM -->|"Comfort value"| INPUT
+    INPUT -->|"Simulated comfort value"| CONTROL
+    CONTROL -->|"Indicator command + status message"| OUTPUT
+    OUTPUT -->|"Label and signal"| USER
 ```
+
+The controller applies the threshold and persistence rule and stores the current state: **comfortable**, **attention** or **action suggested**. The student uses the feedback to decide whether to ventilate or continue.
 
 The first low-fidelity model may use a person to provide the simulated value and change the outputs. The architecture should still show the proposed future responsibilities so the team can distinguish simulated behaviour from intended implementation.
 

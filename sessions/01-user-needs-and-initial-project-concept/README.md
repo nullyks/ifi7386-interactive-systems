@@ -81,14 +81,18 @@ This includes screen-based products, embedded devices, sensor-based systems, and
 
 ### Interaction model
 
-```text
-user goal
-  → user action or environmental event
-  → input
-  → system interpretation or state change
-  → output
-  → feedback the user can notice
-  → user interpretation and next action
+```mermaid
+flowchart TD
+    GOAL["User goal"]
+    ACTION["Action or event"]
+    SYSTEM["Interpretation or<br/>state change"]
+    FEEDBACK["Noticeable feedback"]
+    NEXT["User interpretation<br/>and next action"]
+    GOAL --> ACTION
+    ACTION -->|Input| SYSTEM
+    SYSTEM -->|Output| FEEDBACK
+    FEEDBACK --> NEXT
+    NEXT --> ACTION
 ```
 
 The **interface** is everything through which the user and system communicate. It can include buttons, screens, sound, light, movement, sensors, and physical objects. Context changes whether the interaction works: lighting, noise, mobility, social expectations, connectivity, time pressure, prior knowledge, and assistive technology can all matter.

@@ -23,15 +23,15 @@ Avoid naming an event as a state. `Button pressed` is an event; `request registe
 
 For each arrow, record:
 
-```text
-event or condition [optional guard] / system action and feedback
-```
+`event or condition [optional guard] / system action and feedback`
 
 Example:
 
-```text
-comfort value remains above threshold for 60 seconds
-  / set state to action suggested and update both outputs
+```mermaid
+flowchart LR
+    COMFORTABLE["Comfortable"]
+    SUGGESTED["Action suggested"]
+    COMFORTABLE -->|"Value above threshold for 60 seconds<br/>Update both outputs"| SUGGESTED
 ```
 
 ## Step 3 - Add two alternative paths
@@ -62,12 +62,13 @@ Trace the main and alternative paths across the architecture diagram. Add a miss
 
 **Alternative:** The simulated sensor value does not update.
 
-```text
-comfortable
-  + no new value for the agreed interval
-  → mark input unavailable
-  → show “Status unavailable” without a comfort recommendation
-  → input unavailable
+```mermaid
+flowchart TD
+    COMFORTABLE["Comfortable"]
+    UNAVAILABLE["Input unavailable"]
+    FEEDBACK["Show: Status unavailable<br/>No comfort recommendation"]
+    COMFORTABLE -->|"No new value for<br/>the agreed interval"| UNAVAILABLE
+    UNAVAILABLE --> FEEDBACK
 ```
 
 The user can still understand the limitation. The system does not silently present an old value as current.

@@ -55,8 +55,15 @@ Use the research question, two task scenarios, and operator script prepared for 
 
 Mark the parts of your current architecture that receive input, apply a rule, hold state, and produce user feedback. An Arduino UNO can read switches and many sensors, run a local rule, and control modest outputs. A connected computer, phone app, network service, or heavy actuator may need additional hardware or remain simulated for now.
 
-```text
-person or environment → input → Arduino rule and state → visible, audible, or moving output → person's next action
+```mermaid
+flowchart LR
+    SOURCE["Person or<br/>environment"]
+    ARDUINO["Arduino<br/>Rule and state"]
+    OUTPUT["Visible, audible<br/>or moving output"]
+    NEXT["Person's<br/>next action"]
+    SOURCE -->|Input| ARDUINO
+    ARDUINO --> OUTPUT
+    OUTPUT --> NEXT
 ```
 
 The board is a tool for implementing the selected behaviour, not a reason to change the user problem. Choose the smallest path that matters to the user and that the available kit can safely demonstrate.

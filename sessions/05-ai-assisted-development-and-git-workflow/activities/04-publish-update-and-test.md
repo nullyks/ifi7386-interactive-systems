@@ -4,9 +4,15 @@
 
 **Time: about 15 minutes per round · Repeat after each reviewed change**
 
-```text
-Development: review → commit → push
-Pi: stop → Wi-Fi to TLU → pull → Wi-Fi to group hotspot → start → test
+```mermaid
+flowchart TD
+    DEV["Development computer<br/>Review · commit · push"]
+    DOWNLOAD["Stop Pi server<br/>Switch to TLU · pull"]
+    RUN["Pi hotspot<br/>Start updated server"]
+    TEST["Test with Arduino<br/>Record the result"]
+    DEV --> DOWNLOAD
+    DOWNLOAD --> RUN
+    RUN --> TEST
 ```
 
 ## 1. Commit and push on the development computer

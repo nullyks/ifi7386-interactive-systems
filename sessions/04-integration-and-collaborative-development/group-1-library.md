@@ -6,12 +6,27 @@
 
 One UNO R4 WiFi, two FSRs, two 10 kΩ resistors, breadboard, wires, USB data cable and prepared Pi/browser. Disconnect USB before changing wiring. Each sensor needs its own voltage divider:
 
-```text
-UNO 5 V ── FSR 1 ──┬── A0
-                    └── 10 kΩ ── GND
-UNO 5 V ── FSR 2 ──┬── A1
-                    └── 10 kΩ ── GND
+```mermaid
+flowchart TD
+    VCC["UNO 5 V"]
+    FSR1["FSR 1"]
+    FSR2["FSR 2"]
+    A0(("A0"))
+    A1(("A1"))
+    R1["10 kΩ resistor"]
+    R2["10 kΩ resistor"]
+    GND["Common GND"]
+    VCC --- FSR1
+    VCC --- FSR2
+    FSR1 --- A0
+    FSR2 --- A1
+    A0 --- R1
+    A1 --- R2
+    R1 --- GND
+    R2 --- GND
 ```
+
+The lines are wires. Connect A0 to the junction between FSR 1 and its resistor; connect A1 to the equivalent junction for FSR 2.
 
 All grounds common. Pressure lowers FSR resistance so the reading rises. Begin on the bench; then mount without sharp bending, overload or trip/pull hazards. Use a suitable pad to distribute pressure into the sensor's active area. A bag may also trigger occupancy: pressure is not proof of a seated person.
 

@@ -82,7 +82,6 @@ See the [session index](sessions/README.md) for the stable folder and naming str
     │       └── group-2-ticket/
     └── 05-ai-assisted-development-and-git-workflow/
         ├── README.md
-        ├── instructor-notes.md
         └── activities/
             ├── 01-team-repository-and-two-clones.md
             └── ...

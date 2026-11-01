@@ -87,9 +87,19 @@ Keep three distinctions visible:
 
 ### Running example: shared study-room comfort cue
 
-```text
-room conditions → sensor → comfort rule → current status → light display
-                                      ↘ event log
+```mermaid
+flowchart TD
+    ROOM["Room conditions"]
+    SENSOR["Sensor"]
+    RULE["Comfort rule"]
+    STATE["Current status"]
+    DISPLAY["Light display"]
+    LOG["Event log"]
+    ROOM -->|"CO₂ level"| SENSOR
+    SENSOR -->|"CO₂ value"| RULE
+    RULE -->|"Threshold result"| STATE
+    STATE -->|"Display command"| DISPLAY
+    STATE -->|"Status change"| LOG
 ```
 
 The arrow labels should name what moves: `CO₂ value`, `threshold result`, `current status`, and `display command`. The room and students are outside the system boundary; the sensor, rule, stored status, and light display are inside it. This is one possible model, not a required solution for your project.
@@ -107,16 +117,18 @@ A flow shows movement through the system. A state model shows what the system cu
 
 Write every transition in this form:
 
-```text
-current state + event or condition → system action and feedback → next state
-```
+**Current state** + **event or condition** → **system action and feedback** → **next state**.
 
 For the running example:
 
-```text
-normal + high reading persists for 2 minutes → show amber cue → attention requested
-attention requested + student acknowledges → show next-action cue → action pending
-action pending + reading returns to range → show normal cue → normal
+```mermaid
+flowchart TD
+    NORMAL["Normal"]
+    ATTENTION["Attention requested"]
+    PENDING["Action pending"]
+    NORMAL -->|"High reading persists for 2 minutes<br/>Show amber cue"| ATTENTION
+    ATTENTION -->|"Student acknowledges<br/>Show next-action cue"| PENDING
+    PENDING -->|"Reading returns to range<br/>Show normal cue"| NORMAL
 ```
 
 For the main scenario, show the expected path from trigger to outcome. Then add at least two alternatives that matter to the user. Useful alternatives include:

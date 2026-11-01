@@ -43,14 +43,16 @@ If Arduino cannot join the Pi hotspot, including when a phone connects, use [Wi-
 
 ## Explain the complete loop
 
-```text
-FSRs / RFID → Arduino → HTTP POST + JSON over Pi Wi-Fi
-                                  ↓
-                         Node.js holds latest state
-                                  ↓
-                    Browser GET /api/state every second
-                                  ↓
-                          Map, text and feedback
+```mermaid
+flowchart TD
+    SENSOR["FSRs or<br/>RFID reader"]
+    ARDUINO["Arduino"]
+    HOST["Pi 400 · Node.js<br/>Store latest state"]
+    BROWSER["Browser<br/>Map, text and feedback"]
+    SENSOR -->|"Readings or UID"| ARDUINO
+    ARDUINO -->|"HTTP POST + JSON<br/>over Pi Wi-Fi"| HOST
+    BROWSER -->|"GET /api/state<br/>every second"| HOST
+    HOST -->|"JSON state"| BROWSER
 ```
 
 Arduino is a client; Pi is access point and web server. The browser polls the Pi, not Arduino. Seats use repeated snapshots; tickets use events and reader heartbeats. Expect a few seconds of latency. State resets when the server restarts. Routes start at one fixed entrance; this is not live indoor positioning.

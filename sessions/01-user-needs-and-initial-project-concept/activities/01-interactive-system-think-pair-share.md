@@ -29,14 +29,18 @@ Name one interactive system you used today.
 
 Use this sequence:
 
-```text
-user goal
-  → action or environmental event
-  → input
-  → state or interpretation
-  → output
-  → feedback
-  → user interpretation or next action
+```mermaid
+flowchart TD
+    GOAL["User goal"]
+    ACTION["Action or event"]
+    SYSTEM["Interpretation or<br/>state change"]
+    FEEDBACK["Noticeable feedback"]
+    NEXT["User interpretation<br/>and next action"]
+    GOAL --> ACTION
+    ACTION -->|Input| SYSTEM
+    SYSTEM -->|Output| FEEDBACK
+    FEEDBACK --> NEXT
+    NEXT --> ACTION
 ```
 
 ## Worked example
