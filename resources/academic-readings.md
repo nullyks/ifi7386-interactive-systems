@@ -1,8 +1,20 @@
-# Academic readings and source notes
+# Readings and technical references
 
-[Course home](../README.md) · [Session 1](../sessions/01-user-needs-and-initial-project-concept/README.md) · [Session 2](../sessions/02-interaction-architecture-and-prototyping/README.md) · [Glossary](glossary.md)
+[Course home](../README.md) · [All sessions](../sessions/README.md) · [Glossary](glossary.md)
 
-The links on this page are public and do not require access through the university library. Full-text readings are identified separately from official overviews and publication records. Links were checked on **7 September 2026**.
+Shared references for **Sessions 1–5**. Sessions 1–2 emphasise research and design literature; Sessions 3–5 also need practical hardware, networking, version-control and AI-tool documentation. Full-text readings are identified separately from publication records and standards overviews. The full ISO standards are not required reading.
+
+Session coverage and the technical references were reviewed on **2 November 2026**. Use the linked session instructions for the classroom wiring, tested library versions, message fields and workflow. General documentation explains the underlying tools; it does not replace the group-specific instructions.
+
+## Find references for your session
+
+| Session | Focus | References |
+|---|---|---|
+| [1 — User needs and initial concept](../sessions/01-user-needs-and-initial-project-concept/README.md) | Users, context, evidence, value, teamwork and early prototypes | [Session 1 reading list](#start-here) |
+| [2 — Interaction, architecture and prototyping](../sessions/02-interaction-architecture-and-prototyping/README.md) | Architecture, states, accessibility, ergonomics and prototype methods | [Session 2 reading list](#session-2-readings) |
+| [3 — Wizard-of-Oz and Arduino](../sessions/03-wizard-of-oz-and-arduino-prototyping/README.md) | Participant study, input/output, sketches and a feasible Hi-Fi slice | [Session 3 references](#session-3--wizard-of-oz-and-arduino) |
+| [4 — Integration and collaboration](../sessions/04-integration-and-collaborative-development/README.md) | Sensors, Pi networking, HTTP/JSON, state and recovery | [Session 4 references](#session-4--integration-and-collaborative-development) |
+| [5 — AI-assisted development and Git](../sessions/05-ai-assisted-development-and-git-workflow/README.md) | Agent prompts, review, shared code, device updates and testing | [Session 5 references](#session-5--ai-assisted-development-and-git) |
 
 ## Start here
 
@@ -126,3 +138,49 @@ The following sources support architecture, interaction flow, ergonomics, access
 | Web accessibility | WCAG 2.2; ISO 9241-171 |
 | Low- and high-fidelity comparison | Houde and Hill; Lim and colleagues; Virzi and colleagues; Walker and colleagues |
 | Wizard-of-Oz | Porcheron, Fischer, and Reeves |
+
+## Session 3 — Wizard-of-Oz and Arduino
+
+Start with the [Wizard-of-Oz study](../sessions/03-wizard-of-oz-and-arduino-prototyping/activities/01-wizard-of-oz-study.md), then follow the Arduino activities in order. Reuse the [prototype and Wizard-of-Oz literature](#prototype-fidelity-and-wizard-of-oz) above: realistic technical behaviour should answer a design question informed by the study.
+
+| Topic | Source | What to focus on |
+|---|---|---|
+| Participant tasks, operator rules and evidence | [Course study activity](../sessions/03-wizard-of-oz-and-arduino-prototyping/activities/01-wizard-of-oz-study.md); Porcheron, Fischer and Reeves, reading 19 | Keep the participant goal, operator script and observation separate. Obtain consent and explain simulated behaviour in the debrief. |
+| Board setup, pins, sketch and first upload | [Course Arduino introduction](https://github.com/nullyks/Arduino-sissejuhatus); [Arduino upload guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) | Board and USB-port selection, compilation, upload and Serial Monitor. Use the actual board model. |
+| Button input and LED output | [Course button-to-LED activity](../sessions/03-wizard-of-oz-and-arduino-prototyping/activities/04-button-to-led-loop.md); [Arduino InputPullupSerial example](https://docs.arduino.cc/built-in-examples/digital/InputPullupSerial/) | With the course pull-up circuit, pressed is LOW. Follow the course's pins and 470 Ω LED resistor; inspect bounce before counting presses. |
+| Analog sensing | [Course sensor examples](https://github.com/nullyks/Arduino-erinevad-andurid); [Arduino analogRead reference](https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/) | Connect a physical quantity to a reading, then consider calibration, placement and noise. A reading is not automatically evidence of a person's intent. |
+| Physical visual feedback and movement | [Screens and LED elements](https://github.com/nullyks/Arduino-ekraanid-ja-led-elemendid); [motors and power](https://github.com/nullyks/Arduino-mootorid-ja-toide) | Compare feedback types, drivers and power requirements for the available kit. Check each example's board compatibility rather than assuming all UNO versions are interchangeable. |
+| Optional browser-interface route | [UNO R4 WiFi web-server material](https://github.com/nullyks/Arduino_UNO_R4_server) | This route uses UNO R4 WiFi, aWOT and a browser. Here the Arduino hosts the network and web server. It is an option to inspect, not a requirement to build every component station. |
+| Selecting a Hi-Fi slice | [Course build decision](../sessions/03-wizard-of-oz-and-arduino-prototyping/activities/06-hifi-slice-and-handover.md); Houde and Hill and Lim et al., readings 3–4 | Choose the physical behaviour needed to answer one question. Record what will remain simulated and the first bench-test success condition. |
+
+## Session 4 — Integration and Collaborative Development
+
+The architecture here differs from Session 3's optional Arduino web-server route: **the Pi hosts the group hotspot and Node.js server; Arduino is an HTTP client; the browser polls the Pi**. These are the two independent applications developed further in Session 5.
+
+| Topic | Source | What to focus on |
+|---|---|---|
+| UNO R4 WiFi and network client | [Arduino board documentation](https://docs.arduino.cc/hardware/uno-r4-wifi/); [WiFiS3 examples](https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-examples/); [course Wi-Fi diagnosis](../sessions/04-integration-and-collaborative-development/wifi-troubleshooting.md) | Distinguish joining Wi-Fi, receiving an IP address and reaching the server. The course uses an OPEN group hotspot. |
+| Pi hotspot and network settings | [Raspberry Pi networking documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#wireless-connection); [course Pi setup](../sessions/04-integration-and-collaborative-development/setup.md) | The course defines the SSID, `ifi-lab` profile and fixed hotspot address. Do not replace these with unrelated default hotspot settings. |
+| HTTP requests, JSON and validation | [HTTP methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods); [working with JSON](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON); [course data contract](../sessions/04-integration-and-collaborative-development/data-contract.md) | Match method, endpoint, fields, types and IDs. HTTP 200 confirms acceptance, not correct user-visible feedback. |
+| Server and browser responsibilities | [Node.js HTTP API](https://nodejs.org/api/http.html); [course code guide](../sessions/04-integration-and-collaborative-development/code-guide.md) | Node receives requests and holds state; browser JavaScript requests state and updates HTML/SVG. The host examples use built-in modules. |
+| Pressure sensing and occupancy | [Group 1 guide](../sessions/04-integration-and-collaborative-development/group-1-library.md); [Group 1 application](../sessions/04-integration-and-collaborative-development/examples/group-1-library/README.md) | Use real mounted-chair measurements, independent thresholds, smoothing and hysteresis. Pressure does not prove a seated person; unmeasured chairs have no known availability. |
+| RFID reading and ticket mapping | [AMRFID library](https://github.com/guicaiala/AMRFID); [Group 2 guide](../sessions/04-integration-and-collaborative-development/group-2-ticket.md); [Group 2 application](../sessions/04-integration-and-collaborative-development/examples/group-2-ticket/README.md) | Read actual UIDs and map them on the host. Follow the tested library versions in setup. Initialisation and heartbeats do not prove the reader can read a card; UID matching is not secure authentication. |
+| Freshness, failure and recovery | [Data contract](../sessions/04-integration-and-collaborative-development/data-contract.md); [acceptance tests](../sessions/04-integration-and-collaborative-development/testing.md); [verification record](../sessions/04-integration-and-collaborative-development/verification.md) | Compare chair snapshots, ticket events, reader heartbeats, expiry and host loss. Distinguish simulated checks, compile checks and physical hardware evidence. |
+
+The Session 2 readings still apply: check whether updated states and error messages are understandable, perceivable and accessible. A successful network request is only one part of the complete interaction.
+
+## Session 5 — AI-Assisted Development and Git
+
+Start with the [group repository and two-clone activity](../sessions/05-ai-assisted-development-and-git-workflow/activities/01-team-repository-and-two-clones.md). Use the **graphical Antigravity desktop app on the development computer**, and use the Pi's desktop Wi-Fi menu to switch between **TLU for GitHub access** and the **group hotspot for physical testing**. Ethernet internet is not assumed.
+
+| Topic | Source | What to focus on |
+|---|---|---|
+| A group repository and separate local copies | [Create a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository); [clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository); [course setup activity](../sessions/05-ai-assisted-development-and-git-workflow/activities/01-team-repository-and-two-clones.md) | Keep the host and Arduino source together. Clone once on the development computer and once on the Pi. Invite collaborators and check the remote URL. |
+| Sharing and retrieving versions | [Push commits](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository); [get remote changes](https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository) | Save, commit, push and pull are separate operations. Use the course's one-writer `main` workflow and compare the delivered commit IDs. |
+| Agent access to existing code | [Antigravity getting started](https://antigravity.google/docs/getting-started); [projects and Local mode](https://antigravity.google/docs/projects/); [course agent activity](../sessions/05-ai-assisted-development-and-git-workflow/activities/03-develop-with-antigravity.md) | Open the existing development clone and use Local mode. Give the agent the observed issue, relevant files, scope and observable success conditions. |
+| Reviewing and committing an agent's changes | [Antigravity Review pane](https://antigravity.google/docs/review-changes/) | Read file differences, send specific feedback, select the intended files and commit/push after checking the result. Agent output is a proposal to verify. |
+| Acceptance and regression checks | [Course change cards](../sessions/05-ai-assisted-development-and-git-workflow/activities/02-find-and-specify-improvements.md); [test log and handover](../sessions/05-ai-assisted-development-and-git-workflow/activities/05-demonstrate-and-handover.md); [Node.js test runner](https://nodejs.org/api/test.html) | State the expected change and the original behaviour that must still work. The supplied host check runs with `node --test host/test.js`; it does not test wiring or upload firmware. |
+| Updating the Pi server and interface | [Course publish/update/test sequence](../sessions/05-ai-assisted-development-and-git-workflow/activities/04-publish-update-and-test.md) | Push from development; stop the Pi server; use its GUI to join TLU and pull; restore the existing group hotspot; start the updated server and test. |
+| Updating Arduino firmware | [Course firmware example](../sessions/05-ai-assisted-development-and-git-workflow/activities/04-publish-update-and-test.md#optional-example-update-arduino-firmware); [Arduino upload guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) | Commit and push the `.ino` source to the same repository, then USB Upload from the development computer using Arduino IDE. Pulling on the Pi does not program the board. Record the firmware version separately when needed. |
+
+The two required rounds improve the interface and server; the firmware example is optional. Continue to use the earlier sessions' user goal, evidence, architecture and accessibility checks when choosing improvements. A clean diff or a published commit alone does not establish that the user's interaction works.

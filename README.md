@@ -44,7 +44,7 @@ See the [session index](sessions/README.md) for the stable folder and naming str
 
 ## Shared resources
 
-- [Academic readings and source notes](resources/academic-readings.md)
+- [Readings and technical references for Sessions 1–5](resources/academic-readings.md)
 - [Glossary of course terms](resources/glossary.md)
 - Further project guidance will be added when the relevant concepts are introduced.
 
