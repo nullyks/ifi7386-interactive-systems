@@ -17,6 +17,8 @@ flowchart TD
 
 ## 1. Commit and push on the development computer
 
+The [author and browser sign-in setup](01-team-repository-and-two-clones.md#3-clone-on-the-development-computer) should already be complete. If committing reports an unknown author, fix the local name/email settings; if pushing reports an authentication error, repeat the sign-in check. They are different problems.
+
 In Antigravity's **Review** pane, select the files that belong to the completed change and stage them. Choose **Commit**, write a short message describing the result, then choose **Push**. Check that the destination is your group's `origin/main`. If a different branch is selected, stop and agree the branch with the instructor before delivery. [Antigravity commit and push](https://antigravity.google/docs/review-changes/).
 
 If your desktop version has different Git controls, its integrated terminal can do the same work from the project root. Inspect the list, then stage only the files belonging to this change; adjust the paths below if other files were intentionally changed:

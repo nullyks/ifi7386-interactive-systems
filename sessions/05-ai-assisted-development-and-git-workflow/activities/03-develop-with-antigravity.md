@@ -8,6 +8,10 @@
 
 Launch Google Antigravity and sign in. Create a project with **New Project → Add Folder**, select your development clone's `team-project` root and choose **Create**. Start a conversation in **Local mode**, so the agent edits this same clone. In an older desktop version, use its equivalent open-folder action. Confirm the displayed path; do not open the course folder or a second accidental copy. [Official setup](https://antigravity.google/docs/getting-started) and [local project mode](https://antigravity.google/docs/projects/).
 
+First complete the [Git sign-in check](01-team-repository-and-two-clones.md#sign-git-into-github-and-check-it) yourself. Use the same OS user, local clone and native Git environment for the app terminal and agent; a separate WSL/container environment would need its own setup. Restart Antigravity after installing Git. This uses Git's normal credential helper, so a separate GitHub extension is not needed for ordinary Git operations.
+
+The agent can inspect and edit this clone; do not ask it to create a second repository. You can ask: **Check `git status` and `git remote -v` in this existing clone and explain the result. Do not change the remote, sign-in settings or files, and do not commit or push.** If an agent is allowed to commit/push later, use the configured Git environment and give that instruction explicitly. If it cannot access sign-in or needs a browser window, complete the operation yourself in the app terminal or Review pane. Keep credentials out of prompts.
+
 ## 2. Ask the agent to understand before changing
 
 Use this starting prompt and replace the group description:

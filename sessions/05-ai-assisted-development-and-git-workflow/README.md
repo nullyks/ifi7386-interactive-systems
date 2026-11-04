@@ -8,6 +8,12 @@ Develop your existing group project with an AI agent, then deliver and test the 
 
 Complete the loop twice: first for a small interface improvement, then for a small server improvement. Your group chooses what needs improving and writes the success conditions. The agent helps implement the change; your group reviews and tests it.
 
+## Before starting
+
+Follow [Activity 01](activities/01-team-repository-and-two-clones.md) from the beginning. It now includes **creating a free GitHub account, installing Git, setting the commit author and signing Git into GitHub**, followed by both clones. Prepare the account and software before class where possible.
+
+The recommended Windows route uses **Git for Windows + its included Git Credential Manager + HTTPS browser sign-in**. For the Pi, use a public group repository so download-only access needs no GitHub login. The [Pi instructions](activities/01-team-repository-and-two-clones.md#4-clone-on-the-pi-400) include `git --version` and installation if Git is missing. An alternative for a Mac/Linux development laptop is included in the same activity.
+
 ## By the end you can
 
 - create a group repository containing your existing server, interface and Arduino sketches;
@@ -62,7 +68,7 @@ Change modes in the **desktop Wi-Fi menu**. Reactivate the existing group hotspo
 | Activity | Checkpoint |
 |---|---|
 | Recall the working Session 4 prototype; instructor demonstrates the loop and Wi-Fi switch | Name the three code locations and record the starting behaviour. |
-| [01 — Group repository and two clones](activities/01-team-repository-and-two-clones.md) | C1: own repository, development clone, Pi clone and working baseline. |
+| [01 — Group repository and two clones](activities/01-team-repository-and-two-clones.md) | C1: own repository, working development Git sign-in, Git on the Pi, both clones and a working baseline. |
 | [02 — Find and specify improvements](activities/02-find-and-specify-improvements.md) | Choose one interface issue and one server issue with success conditions. |
 | [03 — Develop with Antigravity](activities/03-develop-with-antigravity.md), round 1: interface | Review the change and test it on the development computer. |
 | [04 — Publish, update and test](activities/04-publish-update-and-test.md), round 1 | C2: publish, update the Pi and test with physical input. |

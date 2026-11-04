@@ -149,6 +149,8 @@ Key terms from **Sessions 1–5**, grouped by topic. Each bold term has a short 
 |---|---|---|
 | <a id="git"></a>**Git** | A version-control tool that records changes as commits and supports sharing them between repositories. | The development computer and Pi each have their own Git copy. |
 | <a id="github"></a>**GitHub** | The online service used to host and share the group’s Git repository. Git and GitHub are different things. | The group shares both host code and Arduino source in one GitHub repository. |
+| <a id="authentication"></a>**Authentication** | Prove which account you are using. Repository permissions are checked separately. | Browser sign-in identifies your account; accepting the owner's invitation enables collaborator access. |
+| <a id="commit-author"></a>**Commit author** | The name and email recorded on a commit. These identify the author but do not sign Git into GitHub. | Set `user.name` and `user.email` in the development clone; use browser sign-in for remote access. |
 | <a id="repository"></a>**Repository** | The project’s version-controlled files and history. A local repository and its remote copy are separate. | The group repository contains `host/` and both sketch folders. |
 | <a id="clone"></a>**Clone** | Create a local Git copy of a repository, including its history and remote connection. | Clone once on the development computer and once on the Pi. |
 | <a id="commit"></a>**Commit** | A recorded local version of selected changes, identified by a commit ID. It is not automatically published. | Record the code commit tested on the Pi. |
