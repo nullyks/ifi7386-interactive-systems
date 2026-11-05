@@ -1,8 +1,12 @@
 # Activity 04 — Publish, Update and Test
 
-[Session 5](../README.md) · [Development activity](03-develop-with-antigravity.md) · [Final handover](05-demonstrate-and-handover.md)
+[Session 5](../README.md) · [Previous activity](03-develop-with-antigravity.md) · [Next activity](05-demonstrate-and-handover.md)
 
-**Time: about 15 minutes per round · Repeat after each reviewed change**
+**Time:** about 15 minutes per round · **Format:** repeat after each reviewed change
+
+## Goal
+
+Deliver a reviewed change through GitHub to the Pi and record its physical acceptance and regression checks.
 
 ```mermaid
 flowchart TD
@@ -104,3 +108,11 @@ For a firmware-only change, the USB upload updates the board; the unchanged Pi s
 | Server starts but no ticket route appears | Restart cleared the state: rescan a real mapped tag; check the mapping and reader heartbeat. |
 
 Git help: [Push commits](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository) · [Get remote changes](https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository).
+
+## Output
+
+One reviewed change pushed, pulled and tested on the Pi, with its code commit, physical result, original main-path check and relevant recovery result recorded.
+
+---
+
+[Session 5](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

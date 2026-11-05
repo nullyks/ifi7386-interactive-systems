@@ -55,3 +55,8 @@ If both servers run on one computer, Group 2 must use port 3001; see [shared-mac
 ## Edit table areas and descriptions
 
 In `host/index.html`, each `<g class="table-area">` groups a table, its chairs and clickable background. Keep each area ID unique. Edit `tableDescriptions` to change its title and description. New decorative chairs must not use L1/L2 IDs: sensor updates still affect only those two physical seats.
+
+
+---
+
+[Session 4](../../README.md) · [Glossary](../../../../resources/glossary.md) · [Readings and references](../../../../resources/academic-readings.md)

@@ -1,6 +1,6 @@
-# Activity 05 - Prototype Fidelity and Method Selection
+# Activity 05 — Prototype Fidelity and Method Selection
 
-[← Session 2](../README.md) · [← Previous activity](04-patterns-ergonomics-and-accessibility.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 2](../README.md) · [Previous activity](04-patterns-ergonomics-and-accessibility.md) · [Next activity](06-build-walkthrough-and-handover.md)
 
 **Time:** 13 minutes · **Format:** team decision with short rationale
 
@@ -51,7 +51,9 @@ If using Wizard-of-Oz, define:
 
 A prototype question, fidelity profile, method, operator plan where relevant, intentional omissions, and one limitation.
 
-## Public learning sources
+<a id="public-learning-sources"></a>
+
+## References
 
 - [Houde and Hill (1997), open PDF](https://hci.stanford.edu/courses/cs247/2012/readings/WhatDoPrototypesPrototype.pdf)
 - [Lim, Stolterman, and Tenenberg (2008), open PDF](https://faculty.washington.edu/jtenenbg/publications/limAnatomyOfPrototypes-tochi2008.pdf)
@@ -59,4 +61,6 @@ A prototype question, fidelity profile, method, operator plan where relevant, in
 - [Walker, Takayama, and Landay (2002), author-hosted paper](https://www.leilatakayama.org/downloads/Takayama.Prototypes_HFES2002_prepress.pdf)
 - [Porcheron, Fischer, and Reeves (2020), open author-hosted paper](https://people.cs.nott.ac.uk/pszsr/files/porcheron-2020-wizard-of-oz.pdf)
 
-[Next activity →](06-build-walkthrough-and-handover.md)
+---
+
+[Session 2](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

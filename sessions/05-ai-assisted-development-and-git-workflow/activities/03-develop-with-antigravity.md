@@ -1,8 +1,12 @@
 # Activity 03 — Develop with Antigravity
 
-[Session 5](../README.md) · [Change cards](02-find-and-specify-improvements.md) · [Publish and test next](04-publish-update-and-test.md)
+[Session 5](../README.md) · [Previous activity](02-find-and-specify-improvements.md) · [Next activity](04-publish-update-and-test.md)
 
-**Time: about 20 minutes per round · Use the graphical desktop app on the development computer**
+**Time:** about 20 minutes per round · **Format:** use the graphical desktop app on the development computer
+
+## Goal
+
+Use the agent to implement a chosen change, then review the files and check the result locally.
 
 ## 1. Open the existing project
 
@@ -92,4 +96,10 @@ Open **http://localhost:3000** in a browser and perform your acceptance checks. 
 
 If the result is wrong, report the action, expected result, actual result and relevant error to the agent. Repeat review and the failed check after its correction. Keep baseline failures separate from failures caused by this change.
 
-**Ready to publish:** the reviewer can explain the changed behaviour, the local checks are recorded and no unexplained file edits remain. Continue to [Activity 04](04-publish-update-and-test.md), then repeat this activity for the server card with a different driver.
+## Output
+
+The reviewer can explain the change, local checks are recorded and no unexplained edits remain. Continue to Activity 04, then repeat for the server card with a different driver.
+
+---
+
+[Session 5](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

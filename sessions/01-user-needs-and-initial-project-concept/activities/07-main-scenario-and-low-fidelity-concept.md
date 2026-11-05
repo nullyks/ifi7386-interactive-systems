@@ -1,6 +1,6 @@
-# Activity 07 - Main Use Scenario and Low-Fidelity Concept
+# Activity 07 — Main Use Scenario and Low-Fidelity Concept
 
-[← Session 1](../README.md) · [← Previous activity](06-value-proposition-and-interaction-loop.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](06-value-proposition-and-interaction-loop.md) · [Next activity](08-pitch-and-peer-feedback.md)
 
 **Time:** 25 minutes · **Format:** team scenario → rapid making → internal rehearsal
 
@@ -14,7 +14,7 @@ Use blank paper, sticky notes, markers, index cards, tape, scrap cardboard, and 
 
 ## Part 1 - Six-step main scenario
 
-**Time: 13 minutes**
+**Time:** 13 minutes
 
 Create one scenario:
 
@@ -43,7 +43,7 @@ Suitable questions include whether:
 
 ## Part 3 - Build and act it out
 
-**Time: 10 minutes**
+**Time:** 10 minutes
 
 1. Build only the elements required by the scenario and prototype question.
 2. Represent changing states with movable cards, replaceable paper screens, or objects.
@@ -54,7 +54,7 @@ Suitable questions include whether:
 
 ## Part 4 - Record the result
 
-**Time: 2 minutes**
+**Time:** 2 minutes
 
 Capture a photo or digital image of the prototype. Record:
 
@@ -95,11 +95,15 @@ A folded cardboard device holds one of three replaceable state cards. A paper br
 
 A six-step scenario, a named prototype question, a low-fidelity concept the team can act out, a photo or screenshot of the prototype, and one rehearsal observation.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [Carroll (2000), public university research record](https://pure.psu.edu/en/publications/five-reasons-for-scenario-based-design-2/)
 - [Houde and Hill (1997), open PDF](https://hci.stanford.edu/courses/cs247/2012/readings/WhatDoPrototypesPrototype.pdf)
 - [Lim, Stolterman, and Tenenberg (2008), open PDF](https://faculty.washington.edu/jtenenbg/publications/limAnatomyOfPrototypes-tochi2008.pdf)
 - [The Open University: sketching and prototyping within interaction design](https://www.open.edu/openlearn/mod/oucontent/view.php?id=66703&section=1)
 
-[Next activity →](08-pitch-and-peer-feedback.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

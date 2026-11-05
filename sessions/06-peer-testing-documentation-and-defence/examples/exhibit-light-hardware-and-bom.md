@@ -76,3 +76,8 @@ Matching part IDs and a separate parts list make the documentation easier to fol
 4. Ask a participant to make the light brighter without showing them how. Record their first action and any help needed. Keep technical operation separate from whether the control is understandable.
 
 **Example verification status: NOT RUN.** These are proposed checks for the fictional light box. Your team writes and performs the checks relevant to its own project.
+
+
+---
+
+[Session 6](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

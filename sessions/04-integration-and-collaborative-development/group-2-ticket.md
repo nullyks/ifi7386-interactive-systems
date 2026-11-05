@@ -59,3 +59,8 @@ Latest scan replaces the previous one. Guidance clears after 15 seconds; reader 
 AMRFID's `begin()` returns no success flag, and an empty `lerUID()` result does not distinguish "no new card" from a read failure. The firmware sends `ready: true` after initialisation; this means the initialisation code ran, not that hardware health was verified. The heartbeat proves the Arduino is reachable. A disconnected RC522 may therefore leave the board online with no scans. The browser says "Reader initialised; scan a card to check." Verify with a known card, reconnect with power off, and reset the board. The optional `reader-error` simulator demonstrates an explicit error report; this firmware does not generate that report automatically.
 
 After core works add a third ticket, improve route text or adapt the plan. Routes start at one fixed entrance through the centre aisle; edit geometry AND written instructions together for a different layout. This is not live positioning. Ask a peer to follow directions from the drawn entrance. [Run acceptance tests](testing.md).
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

@@ -118,3 +118,8 @@ Open the appropriate `.ino` in its same-named folder. Select **Arduino UNO R4 Wi
 | WIFI_CONNECTED with usable Arduino IP, then HOST_UNREACHABLE | Wi-Fi connected; check server, destination IP/port and firewall |
 
 After five minutes on one blocker use the instructor's prepared setup. Keep the verified local sensor sketch as a fallback. Use simulation only to isolate the later host stage, then reconnect actual input.
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

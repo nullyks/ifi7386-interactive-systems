@@ -1,6 +1,6 @@
-# Activity 01 - Interactive System Think–Pair–Share
+# Activity 01 — Interactive System Think–Pair–Share
 
-[← Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Next activity](02-human-centred-design-worked-example.md)
 
 **Time:** 7 minutes · **Format:** individual reflection → pairs → whole-class synthesis
 
@@ -72,10 +72,14 @@ A printed bus timetable is useful but is not itself an interactive system. It pr
 
 A complete interaction loop that can contribute to the class discussion.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [The Open University: What is interaction design?](https://www.open.edu/openlearn/mod/oucontent/view.php?id=66703&section=1)
 - [ISO 9241-11:2018 official overview](https://www.iso.org/standard/63500.html)
 - [Maguire (2001), open repository copy](https://repository.lboro.ac.uk/articles/journal_contribution/Context_of_use_within_usability_activities/9349751)
 
-[Next activity →](02-human-centred-design-worked-example.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

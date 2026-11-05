@@ -1,8 +1,12 @@
 # Activity 04 — Hardware and BOM
 
-[Session 6](../README.md) · [Worked light-box example](../examples/exhibit-light-hardware-and-bom.md) · [Next: defence rehearsal](05-defence-rehearsal.md)
+[Session 6](../README.md) · [Previous activity](03-document-the-project-with-ai.md) · [Next activity](05-defence-rehearsal.md)
 
-**Time: 25 minutes · Inspect the actual build, then use AI to draft its record**
+**Time:** 25 minutes · **Format:** inspect the actual build, then use AI to draft its record
+
+## Goal
+
+Document the actual physical build and produce a matching BOM with verified facts and explicit unknowns.
 
 A **bill of materials (BOM)** lists the physical parts and quantities needed for a particular build. The hardware record explains how those parts are connected and used. Give the same part IDs to the items in the BOM, diagram and photographs so another person can match them. See [OSHWA's documentation and BOM guidance](https://oshwa.org/resources/sharing-best-practices/).
 
@@ -59,4 +63,10 @@ Prices are optional in this lesson. An unknown price is **not €0**. If you add
 
 Review and push the two documentation files and approved evidence images. Keep previous hardware revisions or describe changes when the build changes.
 
-**Output:** a checked hardware record and BOM for the current build, with matching IDs, clear power/wiring, evidence and explicit unknowns.
+## Output
+
+A checked hardware record and BOM for the current build, with matching IDs, clear power/wiring, evidence and explicit unknowns.
+
+---
+
+[Session 6](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

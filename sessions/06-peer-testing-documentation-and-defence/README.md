@@ -1,8 +1,10 @@
 # Session 6 — Peer Testing, Documentation and Defence
 
-[Course home](../../README.md) · [Sessions](../README.md) · [Previous session](../05-ai-assisted-development-and-git-workflow/README.md)
+[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)
 
-**135 minutes in three 45-minute blocks · Practical group work and discussion · Working language: English**
+**Duration:** 135 minutes in three 45-minute blocks · **Format:** team testing and documentation · **Working language:** English
+
+## Where we are going
 
 Let another team use your prototype, discuss why its design has changed, and turn your course evidence into a short project record. Use AI to organise and draft the documentation, then check it against your notes, code and physical build. Finish with a brief defence rehearsal.
 
@@ -16,11 +18,36 @@ Let another team use your prototype, discuss why its design has changed, and tur
 - identify the tested server version, uploaded firmware source and hardware revision;
 - present the prototype's strengths, limitations and next useful test.
 
-## Bring to class
+<a id="bring-to-class"></a>
+
+## Before starting
 
 Bring your working Pi/Arduino prototype, group GitHub repository and development computer with the graphical Antigravity app. Bring the evidence you already have: early concept and prototype images, architecture/state diagrams, Wizard-of-Oz notes, calibration or RFID records, Session 5 change cards, prompts and test results. Existing notes in another workspace are useful; export or copy only the relevant, anonymised material.
 
 Prepare the working version before testing. If you need a GitHub update on the Pi, use the [Session 5 update sequence](../05-ai-assisted-development-and-git-workflow/activities/04-publish-update-and-test.md): desktop Wi-Fi menu → **TLU** → pull → restore the existing **ifi-lab** group hotspot → start the server. There is no Ethernet internet connection. Keep Arduino on its existing **IFI7386-G1/G2** network. Firmware uploads still happen over USB from the development computer.
+
+## Session route
+
+The opening and final handover take five minutes each. Activity times on the linked pages complete the three 45-minute blocks below.
+
+| Focus | Open in class | Team result |
+|---|---|---|
+| Block 1 — Try each other’s solutions | Opening; [Activity 01](activities/01-prepare-and-cross-test.md) | Both teams host and test; each keeps a versioned record with at least three observations. |
+| Block 2 — Explain and document | [Activity 02](activities/02-discuss-design-decisions.md); [Activity 03](activities/03-document-the-project-with-ai.md) | Two explained changes, one decision from today’s test and a checked record covering Sessions 1–6. |
+| Block 3 — Record the build and rehearse | [Activity 04](activities/04-hardware-and-bom.md); [Activity 05](activities/05-defence-rehearsal.md); final handover | Hardware record, matching BOM, reviewed documentation on GitHub and assigned defence gaps. |
+
+## Key terms for today
+
+| Term | Simple meaning |
+|---|---|
+| **Cross-testing** | Teams try each other’s solutions and record what happens. |
+| **Design rationale** | The reasons and evidence behind a design choice. |
+| **Traceability** | A link from a claim or decision to its evidence and version. |
+| **Hardware revision** | A label for a documented physical build and its settings. |
+| **Bill of materials (BOM)** | Physical items, specifications and quantities for an identified build. |
+| **Reproducibility** | Enough information for another person to repeat a setup or check. |
+
+See the [course glossary](../../resources/glossary.md) for more terms and examples.
 
 ## From testing to a defensible project record
 
@@ -35,15 +62,7 @@ flowchart LR
 
 During the peer test, let the participant act before explaining your design. Discuss the reasons afterwards. Peer testing provides useful classroom evidence; it does not establish that the solution works for every intended user.
 
-## Session route
-
-The opening and final handover take five minutes each. Activity times on the linked pages complete the three blocks below.
-
-| Block | Activity | Checkpoint |
-|---|---|---|
-| 1 — Try each other's solutions | Opening; [01 — Prepare and cross-test](activities/01-prepare-and-cross-test.md) | Both teams have hosted and tested; each has a versioned record with at least three observations. |
-| 2 — Explain and document | [02 — Discuss design decisions](activities/02-discuss-design-decisions.md); [03 — Document the project with AI](activities/03-document-the-project-with-ai.md) | Two explained design changes, one decision from today's test, and a checked draft covering Sessions 1–6. |
-| 3 — Record the build and rehearse | [04 — Hardware and BOM](activities/04-hardware-and-bom.md); [05 — Defence rehearsal](activities/05-defence-rehearsal.md); final handover | Hardware record, matching BOM, reviewed documentation on GitHub and a short list of gaps before the defence. |
+## How to work together
 
 Use one documentation writer and a second person to check facts. Other members inspect the build, find earlier evidence and prepare the demonstration. Rotate speakers so that each member explains part of the work. Keep the Session 5 one-writer Git workflow.
 
@@ -62,10 +81,18 @@ The worked examples use a **fictional exhibition light box**. Apply the method t
 
 Link existing evidence rather than rewriting every note. Keep `docs/test-log.md` from Session 5 if you already use it; link it from the project record. A concise table and a few labelled images are enough. Record missing evidence as **MISSING**, an untested statement as **UNVERIFIED**, and a proposed change as **PLANNED**.
 
-## Completion and work before the defence
+## Completion evidence
 
 Before leaving, open the pushed documentation on GitHub and check that links and images work. Keep the code commit tested on the Pi, firmware source uploaded to Arduino and hardware revision explicit; a later documentation commit does not mean the prototype was retested.
+
+<a id="completion-and-work-before-the-defence"></a>
+
+## Next steps
 
 Assign an owner and next action to each important gap in the [defence checklist](activities/05-defence-rehearsal.md#short-defence-checklist). Implement only the improvements you choose to take forward, use the Session 5 delivery workflow, and retest after any code, calibration or wiring change. Preserve today's original observations.
 
 The rehearsal format is practice guidance. Use the instructor's separately announced submission requirements, presentation length and assessment criteria for the actual defence.
+
+---
+
+[Previous session](../05-ai-assisted-development-and-git-workflow/README.md) · [All sessions](../README.md) · [Back to session route](#session-route)

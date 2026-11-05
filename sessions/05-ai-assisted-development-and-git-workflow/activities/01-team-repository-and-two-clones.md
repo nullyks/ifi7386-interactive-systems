@@ -2,7 +2,11 @@
 
 [Session 5](../README.md) · [Next activity](02-find-and-specify-improvements.md)
 
-**Time: about 25 minutes after account/software preparation · One new GitHub repository per group**
+**Time:** about 25 minutes after account/software preparation · **Format:** one new GitHub repository per group
+
+## Goal
+
+Create one group repository, connect both local copies and verify Git sign-in and the working prototype baseline.
 
 ## Before class: account and development software
 
@@ -190,3 +194,11 @@ If a baseline test fails, record the failure before changing anything. Group 2's
 On a shared classroom computer, sign out of your browser/Antigravity when finished and remove **your own** saved GitHub entry from Windows Credential Manager. Browser sign-out alone does not remove Git's remembered sign-in. Do not put passwords, access tokens or login codes in project files or agent prompts.
 
 Source help: [Create a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), [upload files](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository), [clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+
+## Output
+
+C1: group repository URL, two clone locations, starting commit and baseline result; development author/sign-in check completed and Pi ready in hotspot mode.
+
+---
+
+[Session 5](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

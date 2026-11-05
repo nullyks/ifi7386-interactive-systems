@@ -4,7 +4,7 @@
 
 Shared references for **Sessions 1–6**. Sessions 1–2 emphasise research and design literature; Sessions 3–6 also need practical hardware, networking, version-control, AI-tool and project-documentation references. Full-text readings are identified separately from publication records and standards overviews. The full ISO standards are not required reading.
 
-Session coverage and the technical references were reviewed on **2 November 2026**; the Session 5 account, authentication and Git-installation guidance was updated on **4 November 2026**. References for the Session 6 plan were added on **5 November 2026**. Use the linked session instructions for the classroom wiring, tested library versions, message fields and workflow. General documentation explains the underlying tools; it does not replace the group-specific instructions.
+Session coverage and the technical references were reviewed on **2 November 2026**; the Session 5 account, authentication and Git-installation guidance was updated on **4 November 2026**. References for Session 6 were added on **5 November 2026**. Use the linked session instructions for the classroom wiring, tested library versions, message fields and workflow. General documentation explains the underlying tools; it does not replace the group-specific instructions.
 
 ## Find references for your session
 
@@ -189,7 +189,7 @@ The two required rounds improve the interface and server; the firmware example i
 
 ## Session 6 — Peer Testing, Documentation and Defence
 
-Use the [session plan](../sessions/06-peer-testing-documentation-and-defence/README.md) and its concise templates. Reuse the earlier project evidence rather than reconstructing a successful project story from code alone.
+Use the [session materials](../sessions/06-peer-testing-documentation-and-defence/README.md) and its concise templates. Reuse the earlier project evidence rather than reconstructing a successful project story from code alone.
 
 | Topic | Source | What to focus on |
 |---|---|---|

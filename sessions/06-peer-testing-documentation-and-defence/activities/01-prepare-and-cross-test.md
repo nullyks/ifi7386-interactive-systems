@@ -1,8 +1,12 @@
 # Activity 01 — Prepare and Cross-Test
 
-[Session 6](../README.md) · [Project record template](../templates/project-record.md) · [Next: design discussion](02-discuss-design-decisions.md)
+[Session 6](../README.md) · [Next activity](02-discuss-design-decisions.md)
 
-**Time: 40 minutes · 10 minutes of preparation, then two 15-minute rounds**
+**Time:** 40 minutes · **Format:** 10 minutes of preparation, then two 15-minute rounds
+
+## Goal
+
+Let another team try the main interaction and one failure/recovery task, keeping observations separate from interpretation.
 
 ## 1. Prepare a testable version
 
@@ -44,4 +48,10 @@ Use the peer-test section of the [project record template](../templates/project-
 
 This example is not your team's result. Preserve actual failures and help given. If hardware cannot run, record a **blocked** task or a clearly labelled simulation; the physical test remains unverified. A peer participant also may not represent your intended user or context.
 
-**Output:** a versioned peer-test record with one main task, one failure/recovery task, outcomes, at least three observations and one limitation of the test.
+## Output
+
+A versioned peer-test record with one main task, one failure/recovery task, outcomes, at least three observations and one limitation of the test.
+
+---
+
+[Session 6](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

@@ -1,6 +1,6 @@
-# Activity 03 - States and Alternative Interaction Paths
+# Activity 03 — States and Alternative Interaction Paths
 
-[← Session 2](../README.md) · [← Previous activity](02-system-architecture-and-data-flow.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 2](../README.md) · [Previous activity](02-system-architecture-and-data-flow.md) · [Next activity](04-patterns-ergonomics-and-accessibility.md)
 
 **Time:** 18 minutes · **Format:** team state modelling and walkthrough
 
@@ -77,9 +77,13 @@ The user can still understand the limitation. The system does not silently prese
 
 One main state path, at least two alternative paths, and a marked correction to the architecture or prototype requirements.
 
-## Public learning sources
+<a id="public-learning-sources"></a>
+
+## References
 
 - [Harel (1987), open university-hosted PDF](https://www.csd.uoc.gr/~hy565/docs/pdfs/papers/statecharts_visual_formalism.pdf)
 - [MIT, open reading on input events and state machines](https://web.mit.edu/6.813/www/sp17/classes/12-input/)
 
-[Next activity →](04-patterns-ergonomics-and-accessibility.md)
+---
+
+[Session 2](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

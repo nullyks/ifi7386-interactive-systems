@@ -1,6 +1,6 @@
-# Activity 01 - Wizard-of-Oz Study
+# Activity 01 — Wizard-of-Oz Study
 
-[← Session 3](../README.md) · [Glossary](../../../resources/glossary.md)
+[Session 3](../README.md) · [Next activity](02-map-the-interaction-to-arduino.md)
 
 **Time:** 35 minutes · **Format:** project-team study with a peer participant
 
@@ -35,8 +35,12 @@ Identify one result that affects a state, label, cue, timing, recovery path, or 
 
 One study record with the prototype version, participant task, wizard-script deviations, at least three observations, one supported design implication, and one remaining question.
 
-## Public learning source
+<a id="public-learning-source"></a>
+
+## References
 
 - [Porcheron, Fischer, and Reeves (2020), Wizard-of-Oz practice](https://people.cs.nott.ac.uk/pszsr/files/porcheron-2020-wizard-of-oz.pdf)
 
-[Next activity →](02-map-the-interaction-to-arduino.md)
+---
+
+[Session 3](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

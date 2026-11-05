@@ -60,3 +60,8 @@ Use your actual mapped UID if you changed the file. Known sample tickets select 
 Group 2 POST routes: /api/ticket and /api/reader. State contains only reader and ticket. Both use GET / for HTML and GET /api/state for browser updates. The other group's routes are deliberately unavailable.
 
 If both servers run on one computer, Group 2 must use port 3001; see [shared-machine instructions](../../setup.md). On separate Pis both groups keep port 3000. Reload after changing HTML; restart after server or ticket mapping changes. Then run [acceptance tests](../../testing.md).
+
+
+---
+
+[Session 4](../../README.md) · [Glossary](../../../../resources/glossary.md) · [Readings and references](../../../../resources/academic-readings.md)

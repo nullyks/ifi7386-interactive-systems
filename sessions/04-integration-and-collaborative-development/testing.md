@@ -37,3 +37,8 @@ Group 2 uses RC522 with AMRFID. Its heartbeats prove the Arduino is online, not 
 Demonstration: about four minutes per group and one minute feedback. Show main interaction, one failure/recovery, one JSON message, and main limitation. Each member explains a layer.
 
 Save: team/date/version; actual wiring photo; Pi SSID/IP/startup path (avoid publishing private credentials); measured FSR thresholds or real UID mapping; test results; implemented versus simulated parts; modification/reason; known limitation; next usability question; next owner/action. Keep firmware and full host folder together so another member can restart the system.
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

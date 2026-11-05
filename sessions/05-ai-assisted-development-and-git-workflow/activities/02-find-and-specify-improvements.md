@@ -2,7 +2,11 @@
 
 [Session 5](../README.md) · [Previous activity](01-team-repository-and-two-clones.md) · [Next activity](03-develop-with-antigravity.md)
 
-**Time: 10 minutes · Choose one interface change and one server change**
+**Time:** 10 minutes · **Format:** choose one interface change and one server change
+
+## Goal
+
+Choose one interface issue and one server issue, each with a bounded change and an observable success condition.
 
 ## Observe first
 
@@ -40,4 +44,10 @@ These are suggestions, not instructions to add every feature. Find your own issu
 
 For the library summary, a useful check is: **L1 occupied + L2 free → occupied 1, free 1, unknown 0; after both readings expire → unknown 2, free 0.** For ticket mapping, use a temporary invalid mapping for the negative test and restore the real one before delivery.
 
-**Output:** two selected change cards with expected results. Your group chooses the change; the agent may help explain the code and refine the plan.
+## Output
+
+Two selected change cards with expected results. Your group chooses the change; the agent may help explain the code and refine the plan.
+
+---
+
+[Session 5](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

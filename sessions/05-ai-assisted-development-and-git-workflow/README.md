@@ -1,18 +1,14 @@
 # Session 5 — AI-Assisted Development and the Git Workflow
 
-[Course home](../../README.md) · [Sessions](../README.md) · [Previous session](../04-integration-and-collaborative-development/README.md) · [Next session plan](../06-peer-testing-documentation-and-defence/README.md)
+[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)
 
-**135 minutes in three 45-minute blocks · Practical group work · Working language: English**
+**Duration:** 135 minutes in three 45-minute blocks · **Format:** team development with an AI agent · **Working language:** English
+
+## Where we are going
 
 Develop your existing group project with an AI agent, then deliver and test the change on your Raspberry Pi 400. Use your own group GitHub repository and two local Git copies: one on a development computer and one on the Pi. The examples use **Google Antigravity's graphical desktop app** on the development computer. Another AI development tool is acceptable if you can show the same workflow.
 
 Complete the loop twice: first for a small interface improvement, then for a small server improvement. Your group chooses what needs improving and writes the success conditions. The agent helps implement the change; your group reviews and tests it.
-
-## Before starting
-
-Follow [Activity 01](activities/01-team-repository-and-two-clones.md) from the beginning. It now includes **creating a free GitHub account, installing Git, setting the commit author and signing Git into GitHub**, followed by both clones. Prepare the account and software before class where possible.
-
-The recommended Windows route uses **Git for Windows + its included Git Credential Manager + HTTPS browser sign-in**. For the Pi, use a public group repository so download-only access needs no GitHub login. The [Pi instructions](activities/01-team-repository-and-two-clones.md#4-clone-on-the-pi-400) include `git --version` and installation if Git is missing. An alternative for a Mac/Linux development laptop is included in the same activity.
 
 ## By the end you can
 
@@ -24,6 +20,39 @@ The recommended Windows route uses **Git for Windows + its included Git Credenti
 - explain how Arduino firmware source is shared through GitHub and uploaded to the board over USB from the development computer;
 - switch the Pi between **TLU for GitHub access** and **your group hotspot for Arduino testing**, using the desktop Wi-Fi controls;
 - identify the tested version and explain what remains unverified.
+
+## Before starting
+
+Follow [Activity 01](activities/01-team-repository-and-two-clones.md) from the beginning. It now includes **creating a free GitHub account, installing Git, setting the commit author and signing Git into GitHub**, followed by both clones. Prepare the account and software before class where possible.
+
+The recommended Windows route uses **Git for Windows + its included Git Credential Manager + HTTPS browser sign-in**. For the Pi, use a public group repository so download-only access needs no GitHub login. The [Pi instructions](activities/01-team-repository-and-two-clones.md#4-clone-on-the-pi-400) include `git --version` and installation if Git is missing. An alternative for a Mac/Linux development laptop is included in the same activity.
+
+## Session route
+
+| Focus | Open in class | Team result |
+|---|---|---|
+| Recall the working prototype and demonstrate delivery | [Delivery loop](#how-your-change-reaches-the-pi) | Name the three code locations and record the starting behaviour. |
+| Set up the group repository and two clones | [Activity 01](activities/01-team-repository-and-two-clones.md) | C1: own repository, development Git sign-in, Git on Pi and a working baseline. |
+| Find and specify improvements | [Activity 02](activities/02-find-and-specify-improvements.md) | One interface issue and one server issue with success conditions. |
+| Develop round 1: interface | [Activity 03](activities/03-develop-with-antigravity.md) | Review the change and test it on the development computer. |
+| Publish, update and test round 1 | [Activity 04](activities/04-publish-update-and-test.md) | C2: update the Pi and test with physical input. |
+| Record the result, explain the code and rotate roles | [Team roles](#how-to-work-together) | Keep the next change small; take a short break if needed. |
+| Develop round 2: server | [Activity 03](activities/03-develop-with-antigravity.md) | A different member drives; review and test the server change. |
+| Publish, update and test round 2 | [Activity 04](activities/04-publish-update-and-test.md) | C3: repeat delivery and record the tested commit. |
+| Demonstrate and hand over | [Activity 05](activities/05-demonstrate-and-handover.md) | Show both changes, evidence and one remaining issue. |
+
+## Key terms for today
+
+| Term | Simple meaning |
+|---|---|
+| **Clone** | Create a local Git copy once on each computer. |
+| **Commit** | Record a local version of selected changes. |
+| **Push** | Share commits with the group repository on GitHub. |
+| **Pull** | Retrieve changes into a local copy; it does not restart the server. |
+| **AI agent** | A tool that can inspect and edit files within the task you give it. |
+| **Firmware upload** | Install the compiled sketch over USB from the development computer. |
+
+See the [course glossary](../../resources/glossary.md) for more terms and examples.
 
 ## How your change reaches the Pi
 
@@ -63,20 +92,6 @@ Work at the Pi's own keyboard and monitor. There is **no Ethernet internet conne
 
 Change modes in the **desktop Wi-Fi menu**. Reactivate the existing group hotspot profile, `ifi-lab`, with the same OPEN security, SSID and `10.42.0.1` address from Session 4. Do not change Arduino's SSID to TLU. The development computer can remain on its internet connection; use the Pi browser for the hardware test. See the [update sequence](activities/04-publish-update-and-test.md).
 
-## Session route
-
-| Activity | Checkpoint |
-|---|---|
-| Recall the working Session 4 prototype; instructor demonstrates the loop and Wi-Fi switch | Name the three code locations and record the starting behaviour. |
-| [01 — Group repository and two clones](activities/01-team-repository-and-two-clones.md) | C1: own repository, working development Git sign-in, Git on the Pi, both clones and a working baseline. |
-| [02 — Find and specify improvements](activities/02-find-and-specify-improvements.md) | Choose one interface issue and one server issue with success conditions. |
-| [03 — Develop with Antigravity](activities/03-develop-with-antigravity.md), round 1: interface | Review the change and test it on the development computer. |
-| [04 — Publish, update and test](activities/04-publish-update-and-test.md), round 1 | C2: publish, update the Pi and test with physical input. |
-| Record the result, explain the changed code and rotate roles | Keep the next change small; take a short break if needed. |
-| [03 — Develop with Antigravity](activities/03-develop-with-antigravity.md), round 2: server | A different member drives; review and test the server change. |
-| [04 — Publish, update and test](activities/04-publish-update-and-test.md), round 2 | C3: repeat the complete delivery loop and record the tested commit. |
-| [05 — Demonstrate and hand over](activities/05-demonstrate-and-handover.md) | Show both changes, evidence and one remaining issue. |
-
 ## How to work together
 
 Use a **driver**, a **reviewer** and a **Pi/test owner**; larger teams can add an observer and recorder. Rotate the driver after the first loop. The reviewer checks that the agent solved the chosen problem and preserved the existing interaction. The Pi owner records network mode, version and test result.
@@ -88,3 +103,11 @@ For this exercise, use one shared `main` branch and one active writer at a time.
 Save the repository URL, the two prompts, the before/after observations and one test record per loop. Each record names the commit, Pi network switches, expected result, actual result and whether real hardware or simulation was used. At least one interface improvement and one server improvement must reach and be tested on the Pi. A local-only change is unfinished delivery.
 
 If you also change firmware, record the source commit uploaded to the Arduino and its USB upload/test result separately from the server version running on the Pi.
+
+## Next steps
+
+Keep the working prototype, repository, prompts and test evidence ready for the peer test and documentation work in Session 6. Follow the [handover checklist](activities/05-demonstrate-and-handover.md#completion-checklist).
+
+---
+
+[Previous session](../04-integration-and-collaborative-development/README.md) · [All sessions](../README.md) · [Next session](../06-peer-testing-documentation-and-defence/README.md) · [Back to session route](#session-route)

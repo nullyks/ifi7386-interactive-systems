@@ -1,6 +1,6 @@
-# Activity 02 - System Architecture and Data Flow
+# Activity 02 — System Architecture and Data Flow
 
-[← Session 2](../README.md) · [← Previous activity](01-evidence-and-concept-reconnect.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 2](../README.md) · [Previous activity](01-evidence-and-concept-reconnect.md) · [Next activity](03-states-and-alternative-interaction-paths.md)
 
 **Time:** 20 minutes · **Format:** team modelling and instructor checkpoint
 
@@ -78,9 +78,13 @@ The first low-fidelity model may use a person to provide the simulated value and
 
 Architecture and labelled data-flow diagram version 1, plus one dependency or uncertainty to revisit.
 
-## Public learning sources
+<a id="public-learning-sources"></a>
+
+## References
 
 - [ISO/IEC/IEEE 42010:2022 official overview](https://www.iso.org/standard/74393.html)
 - [Fielding (2000), open chapter on software architecture](https://ics.uci.edu/~fielding/pubs/dissertation/software_arch.htm)
 
-[Next activity →](03-states-and-alternative-interaction-paths.md)
+---
+
+[Session 2](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

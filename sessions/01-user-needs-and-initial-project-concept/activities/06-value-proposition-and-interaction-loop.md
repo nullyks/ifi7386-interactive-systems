@@ -1,6 +1,6 @@
-# Activity 06 - Value Proposition and Interaction Loop
+# Activity 06 — Value Proposition and Interaction Loop
 
-[← Session 1](../README.md) · [← Previous activity](05-candidate-idea-screen.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](05-candidate-idea-screen.md) · [Next activity](07-main-scenario-and-low-fidelity-concept.md)
 
 **Time:** 10 minutes · **Format:** team writing and diagramming in shared notes
 
@@ -16,7 +16,7 @@ State what could become better for the named user in the named context. Then tra
 
 ## Part 1 - Value proposition
 
-**Time: 4 minutes**
+**Time:** 4 minutes
 
 > For **[specific user]** in **[specific context]** who needs to **[goal]**, our concept may help by **[benefit]**, so that **[meaningful outcome]**.
 
@@ -29,7 +29,7 @@ Check the sentence:
 
 ## Part 2 - Interaction loop
 
-**Time: 6 minutes**
+**Time:** 6 minutes
 
 Record the following elements with arrows between them:
 
@@ -83,10 +83,14 @@ Add the interface or touchpoint through which each action or perception occurs. 
 
 One initial value proposition, one complete interaction loop, named controls or places where interaction happens, and clearly marked assumptions.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [The Open University: interaction design and user-centred design](https://www.open.edu/openlearn/mod/oucontent/view.php?id=66703&section=1)
 - [ISO 9241-11:2018 official overview](https://www.iso.org/standard/63500.html)
 - [Cockton (2006), public university research record](https://researchportal.northumbria.ac.uk/en/publications/designing-worth-is-worth-designing/)
 
-[Next activity →](07-main-scenario-and-low-fidelity-concept.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

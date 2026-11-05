@@ -1,17 +1,14 @@
-# Session 3 - Wizard-of-Oz Study and Arduino Prototyping
+# Session 3 — Wizard-of-Oz Study and Arduino Prototyping
 
-[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Academic readings](../../resources/academic-readings.md)
+[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)
 
-**Duration:** 135 minutes in three 45-minute blocks · **Working language:** English · **Equipment:** one Arduino kit per student; work individually, in pairs, or in project teams
-
-> [!NOTE]
-> Begin with the Wizard-of-Oz study prepared after Session 2. Keep the participant task, operator script, and observation record separate. After the study, follow the Arduino exercises in order. A team may share a circuit, but every member should be able to explain its input, rule, and output.
+**Duration:** 135 minutes in three 45-minute blocks · **Format:** team study and Arduino practice · **Working language:** English
 
 ## Where we are going
 
 First, use your low-fidelity prototype with a participant and learn where the interaction succeeds or breaks down. Then get a working Arduino input-to-output loop and explore which parts of your project could become a **high-fidelity (Hi-Fi) prototype** on Arduino. Here, Hi-Fi means realistic behaviour in the selected physical interaction; it does not mean that every part of the system must be finished.
 
-By the end of the meeting, you can:
+## By the end you can
 
 - run a repeatable Wizard-of-Oz task and separate observation from interpretation;
 - upload and change an Arduino sketch, identify the board and port, and use Serial Monitor;
@@ -19,16 +16,20 @@ By the end of the meeting, you can:
 - compare sensing, screens and LED elements, motors, and an UNO R4 WiFi web interface as possible project routes, including their requirements and constraints;
 - name a small Arduino-based Hi-Fi slice, a first test, and what will remain simulated.
 
+## Before starting
+
+Bring the research question, two participant tasks, operator script and low-fidelity prototype prepared after Session 2. Have one Arduino kit per student; work individually, in pairs or in project teams. Keep the participant task, operator script and observation record separate. Every member should be able to explain the circuit’s input, rule and output.
+
 ## Session route
 
-| Minutes | Focus | Open in class | Team result |
-|---|---|---|---|
-| 0–35 | Wizard-of-Oz study and evidence | [Activity 01](activities/01-wizard-of-oz-study.md) | Observation record and one design implication |
-| 35–45 | Transition from simulated to implemented behaviour | [Activity 02](activities/02-map-the-interaction-to-arduino.md) | Input → rule → output map |
-| 45–70 | Board, sketch, upload, and first output | [Activity 03](activities/03-first-upload-and-output.md) | Working on-board Blink and checked board/port |
-| 70–100 | Button input and LED feedback | [Activity 04](activities/04-button-to-led-loop.md) | Working physical interaction and Serial Monitor evidence |
-| 100–120 | Sensors, displays, movement, and web interface options | [Activity 05](activities/05-component-stations.md) | Feasibility notes for project routes |
-| 120–135 | Choose the Hi-Fi slice | [Activity 06](activities/06-hifi-slice-and-handover.md) | Build decision and next-session preparation |
+| Focus | Open in class | Team result |
+|---|---|---|
+| Wizard-of-Oz study and evidence | [Activity 01](activities/01-wizard-of-oz-study.md) | Observation record and one design implication |
+| Transition from simulated to implemented behaviour | [Activity 02](activities/02-map-the-interaction-to-arduino.md) | Input → rule → output map |
+| Board, sketch, upload, and first output | [Activity 03](activities/03-first-upload-and-output.md) | Working on-board Blink and checked board/port |
+| Button input and LED feedback | [Activity 04](activities/04-button-to-led-loop.md) | Working physical interaction and Serial Monitor evidence |
+| Sensors, displays, movement, and web interface options | [Activity 05](activities/05-component-stations.md) | Feasibility notes for project routes |
+| Choose the Hi-Fi slice | [Activity 06](activities/06-hifi-slice-and-handover.md) | Build decision and next-session preparation |
 
 ## Key terms for today
 
@@ -45,13 +46,19 @@ By the end of the meeting, you can:
 | **Driver** | Electronics that let a low-current control signal switch a larger load |
 | **Hi-Fi slice** | One selected interaction whose important physical behaviour is implemented realistically |
 
-## 1. Run the Wizard-of-Oz study first
+See the [course glossary](../../resources/glossary.md) for more terms and examples.
+
+<a id="1-run-the-wizard-of-oz-study-first"></a>
+
+## Run the Wizard-of-Oz study first
 
 Use the research question, two task scenarios, and operator script prepared for this meeting. Tell the participant enough to give informed consent and explain any recording; avoid claiming the prototype is automated if that would mislead them about a material risk. The operator follows the written rules and timing. The observer records actions and statements before the team discusses causes. Debrief the participant about simulated behaviour after the task.
 
 **Do now:** [Activity 01 - Wizard-of-Oz Study](activities/01-wizard-of-oz-study.md)
 
-## 2. Translate the interaction into an Arduino loop
+<a id="2-translate-the-interaction-into-an-arduino-loop"></a>
+
+## Translate the interaction into an Arduino loop
 
 Mark the parts of your current architecture that receive input, apply a rule, hold state, and produce user feedback. An Arduino UNO can read switches and many sensors, run a local rule, and control modest outputs. A connected computer, phone app, network service, or heavy actuator may need additional hardware or remain simulated for now.
 
@@ -70,7 +77,9 @@ The board is a tool for implementing the selected behaviour, not a reason to cha
 
 **Do now:** [Activity 02 - Map the Interaction to Arduino](activities/02-map-the-interaction-to-arduino.md)
 
-## 3. Get a sketch running
+<a id="3-get-a-sketch-running"></a>
+
+## Get a sketch running
 
 Identify your UNO model and matching USB data cable. In Arduino IDE, select the board and port, open the built-in Blink example, upload it, and change the blink interval. If upload fails, check the selected board, port, cable, and whether another program has the serial port open. The on-board LED lets you verify the upload before adding wires.
 
@@ -82,7 +91,9 @@ Identify your UNO model and matching USB data cable. In Arduino IDE, select the 
 - [Arduino introduction: connection and upload](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/2_%C3%9Chendamine_ja_%C3%BCleslaadimine.md)
 - [Arduino introduction: UNO pins](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/3_Arduino_UNO_viigud.md)
 
-## 4. Build one complete physical interaction
+<a id="4-build-one-complete-physical-interaction"></a>
+
+## Build one complete physical interaction
 
 Connect a pushbutton between digital pin 3 and GND. Configure the pin as `INPUT_PULLUP`: unpressed reads `HIGH`; pressed reads `LOW`. Then connect an LED through a **470 Ω series resistor** to a suitable output pin and GND. Start by making the LED show the button state. Open Serial Monitor to see the read value or a short status message. Change only one thing at a time and explain the observed effect.
 
@@ -95,7 +106,9 @@ Disconnect the USB cable before changing wiring. Check LED polarity and avoid a 
 - [Button input and `INPUT_PULLUP`](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/4_Nupu_lugemine.md)
 - [LED control and PWM](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/5_LED_juhtimine.md)
 
-## 5. Explore sensing, feedback, movement, and web interface options
+<a id="5-explore-sensing-feedback-movement-and-web-interface-options"></a>
+
+## Explore sensing, feedback, movement, and web interface options
 
 Use the component examples as design choices. You do not need to build every circuit today. For sensing, compare the event or physical quantity your project needs with examples for force or bend, temperature, distance, motion, humidity, and soil moisture. Ask whether the reading is direct enough for the user claim, whether it needs calibration, and what a missing or noisy value should cause.
 
@@ -114,16 +127,31 @@ A browser interface is another project route. The [UNO R4 WiFi web-server materi
 - [Arduino motors and power: overview and component lessons](https://github.com/nullyks/Arduino-mootorid-ja-toide)
 - [Arduino UNO R4 WiFi web server and browser interface](https://github.com/nullyks/Arduino_UNO_R4_server)
 
-## 6. Select a Hi-Fi slice for your project
+<a id="6-select-a-hi-fi-slice-for-your-project"></a>
+
+## Select a Hi-Fi slice for your project
 
 Return to the Wizard-of-Oz evidence. Select one interaction that would benefit from realistic sensing, timing, feedback, or movement. Describe what Arduino can implement, what other parts are needed, what remains simulated, and what a successful bench test would show. Keep the planned slice consistent with the architecture and state model.
 
 **Do now:** [Activity 06 - Hi-Fi Slice and Handover](activities/06-hifi-slice-and-handover.md)
 
-## 7. Prepare for Session 4
+## Completion evidence
 
-Bring a one-page build decision with: the user action or environmental trigger; input component and pin or interface; decision rule and state; output component; power and safety needs; expected feedback and recovery; one simple test; component availability; and parts that stay simulated. Include a revised architecture or interaction path if today's evidence changed it. You may bring a working Arduino sketch, but a justified and buildable plan is the minimum handover.
+Keep a one-page build decision with:
+
+- the user action or environmental trigger;
+- input component and pin/interface, decision rule/state and output;
+- power and safety needs, expected feedback and recovery;
+- one simple bench test and component availability;
+- the parts that remain simulated;
+- a revised architecture or interaction path if the evidence changed it.
+
+<a id="7-prepare-for-session-4"></a>
+
+## Next steps
+
+Bring the build decision to Session 4. You may also bring a working Arduino sketch; a justified and buildable plan is the minimum handover.
 
 ---
 
-[Previous session](../02-interaction-architecture-and-prototyping/README.md) · [Open Activity 01](activities/01-wizard-of-oz-study.md) · [Academic readings](../../resources/academic-readings.md)
+[Previous session](../02-interaction-architecture-and-prototyping/README.md) · [All sessions](../README.md) · [Next session](../04-integration-and-collaborative-development/README.md) · [Back to session route](#session-route)

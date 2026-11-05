@@ -1,6 +1,6 @@
-# Activity 04 - Patterns, Ergonomics, and Accessibility
+# Activity 04 — Patterns, Ergonomics, and Accessibility
 
-[← Session 2](../README.md) · [← Previous activity](03-states-and-alternative-interaction-paths.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 2](../README.md) · [Previous activity](03-states-and-alternative-interaction-paths.md) · [Next activity](05-prototype-fidelity-and-method-selection.md)
 
 **Time:** 18 minutes · **Format:** structured team inspection
 
@@ -64,11 +64,15 @@ Record at least two changes:
 
 One justified interaction response, an ergonomic and accessibility review, and at least two concrete design changes or test questions.
 
-## Public learning sources
+<a id="public-learning-sources"></a>
+
+## References
 
 - [ISO 9241-110:2020 official overview](https://www.iso.org/standard/75258.html)
 - [ISO 9241-171:2025 official overview](https://www.iso.org/standard/86308.html)
 - [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/)
 - [van Welie and Trætteberg (2000), open paper](https://www.welie.com/papers/PLoP2k-Welie.pdf)
 
-[Next activity →](05-prototype-fidelity-and-method-selection.md)
+---
+
+[Session 2](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

@@ -1,6 +1,6 @@
-# Activity 08 - Pitch and Peer Feedback
+# Activity 08 — Pitch and Peer Feedback
 
-[← Session 1](../README.md) · [← Previous activity](07-main-scenario-and-low-fidelity-concept.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](07-main-scenario-and-low-fidelity-concept.md) · [Next activity](09-exit-ticket-and-between-session-task.md)
 
 **Time:** 8 minutes · **Format:** paired teams
 
@@ -63,9 +63,13 @@ I understood the concept as support for a group decision rather than an air-qual
 
 One set of structured feedback notes and one receiving-team decision.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [Topping (1998), open PDF](https://moodle-ut.univ-toulouse.fr/pluginfile.php/97836/mod_folder/content/0/Topping%20-%201998%20-%20Peer%20Assessment%20between%20Students%20in%20Colleges%20and%20U.pdf)
 - [Carroll (2000), public university research record](https://pure.psu.edu/en/publications/five-reasons-for-scenario-based-design-2/)
 
-[Next activity →](09-exit-ticket-and-between-session-task.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

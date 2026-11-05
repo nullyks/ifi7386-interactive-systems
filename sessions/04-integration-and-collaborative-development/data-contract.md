@@ -56,3 +56,8 @@ Success: HTTP 200, `{"ok":true}` confirms receipt, not that a person saw feedbac
 | No response | Network/host unavailable; inspect Wi-Fi, retry |
 
 Discuss: why snapshots for occupancy and events for scans? What can be lost or duplicated? Which errors are directly detected and which inferred from silence? Which decisions belong on each layer?
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

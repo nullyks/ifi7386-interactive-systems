@@ -1,6 +1,6 @@
-# Activity 01 - Evidence and Concept Reconnect
+# Activity 01 — Evidence and Concept Reconnect
 
-[← Session 2](../README.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 2](../README.md) · [Next activity](02-system-architecture-and-data-flow.md)
 
 **Time:** 10 minutes · **Format:** team review and decision
 
@@ -45,9 +45,13 @@ Keep these statements separate:
 
 One current concept handover and one focus for today's modelling and prototype work.
 
-## Public learning sources
+<a id="public-learning-sources"></a>
+
+## References
 
 - [ISO 9241-210:2019 official overview](https://www.iso.org/standard/77520.html)
 - [Maguire (2001), open repository copy](https://repository.lboro.ac.uk/articles/journal_contribution/Context_of_use_within_usability_activities/9349751)
 
-[Next activity →](02-system-architecture-and-data-flow.md)
+---
+
+[Session 2](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

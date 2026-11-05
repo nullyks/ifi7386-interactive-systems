@@ -1,6 +1,6 @@
-# Activity 04 - Button to LED Loop
+# Activity 04 — Button to LED Loop
 
-[← Session 3](../README.md) · [← Previous activity](03-first-upload-and-output.md)
+[Session 3](../README.md) · [Previous activity](03-first-upload-and-output.md) · [Next activity](05-component-stations.md)
 
 **Time:** 30 minutes · **Format:** individual or shared circuit and sketch
 
@@ -87,4 +87,6 @@ A circuit photo or sketch, working code, and a short observation: input value �
 - [Button input](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/4_Nupu_lugemine.md)
 - [LED output](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/5_LED_juhtimine.md)
 
-[Next activity →](05-component-stations.md)
+---
+
+[Session 3](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

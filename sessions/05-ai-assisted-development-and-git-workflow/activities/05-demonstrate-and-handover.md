@@ -1,8 +1,12 @@
 # Activity 05 — Demonstrate and Hand Over
 
-[Session 5](../README.md) · [Update and test sequence](04-publish-update-and-test.md)
+[Session 5](../README.md) · [Previous activity](04-publish-update-and-test.md)
 
-**Time: 10 minutes · About four minutes of demonstration and one minute of feedback per group**
+**Time:** 10 minutes · **Format:** about four minutes of demonstration and one minute of feedback per group
+
+## Goal
+
+Demonstrate both improvements and hand over the versions, prompts, checks and remaining limitation.
 
 ## Show the workflow
 
@@ -42,3 +46,11 @@ If you also try the optional firmware example, record its `.ino` path, source co
 - Test results distinguish real hardware, simulation, failures and unverified claims.
 
 Before the next session, keep the README sufficient for another group member to restart the project: folder layout, Node command, sketch name, required libraries, group hotspot and Pi address. Preserve calibrated thresholds and actual ticket mappings. Bring one question about how a real user understands the updated feedback.
+
+## Output
+
+Two demonstrated improvements, a completed test log, recorded versions and one remaining issue for the next session.
+
+---
+
+[Session 5](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

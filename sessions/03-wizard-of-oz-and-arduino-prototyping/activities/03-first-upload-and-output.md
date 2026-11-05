@@ -1,6 +1,6 @@
-# Activity 03 - First Upload and Output
+# Activity 03 — First Upload and Output
 
-[← Session 3](../README.md) · [← Previous activity](02-map-the-interaction-to-arduino.md)
+[Session 3](../README.md) · [Previous activity](02-map-the-interaction-to-arduino.md) · [Next activity](04-button-to-led-loop.md)
 
 **Time:** 25 minutes · **Format:** individual kits or shared build in pairs and teams
 
@@ -64,4 +64,6 @@ A successful upload, one intentional code change, and a short note on the observ
 - [Connection and upload](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/2_%C3%9Chendamine_ja_%C3%BCleslaadimine.md)
 - [UNO pins](https://github.com/nullyks/Arduino-sissejuhatus/blob/main/materjalid/3_Arduino_UNO_viigud.md)
 
-[Next activity →](04-button-to-led-loop.md)
+---
+
+[Session 3](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

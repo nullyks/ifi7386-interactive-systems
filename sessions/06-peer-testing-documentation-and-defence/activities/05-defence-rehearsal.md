@@ -1,8 +1,12 @@
 # Activity 05 — Defence Rehearsal
 
-[Session 6](../README.md) · [Project record template](../templates/project-record.md)
+[Session 6](../README.md) · [Previous activity](04-hardware-and-bom.md)
 
-**Time: 15 minutes · Two short rehearsals with feedback and a final gap check**
+**Time:** 15 minutes · **Format:** two short rehearsals with feedback and a final gap check
+
+## Goal
+
+Practise the demonstration and design explanation, then assign the remaining gaps before the defence.
 
 ## Practise explaining the work
 
@@ -32,4 +36,10 @@ Useful peer questions: **Why this input? What changed after testing? What happen
 
 If the live demonstration fails, show a clearly dated recording or earlier test evidence if available, explain which version it shows and report the current failure. A backup is evidence of an earlier run, not proof that today's build works.
 
-**Output:** a rehearsal completed by each team, peer feedback, and an owner/next action for each important remaining gap.
+## Output
+
+A rehearsal completed by each team, peer feedback, and an owner/next action for each important remaining gap.
+
+---
+
+[Session 6](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

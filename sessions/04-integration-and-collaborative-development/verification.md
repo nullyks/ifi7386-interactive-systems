@@ -1,5 +1,7 @@
 # Verification and sources
 
+[Session 4](README.md)
+
 Prepared 18 October 2026. Group 2 updated and rechecked 21 October 2026 for RFID-RC522 V1.33 with AMRFID.
 
 ## Hardware confirmation — 21 October 2026
@@ -96,3 +98,8 @@ The original example code accompanies the course licence; linked libraries retai
 ## Three-table library view
 
 The Group 1 map contains independent 2-, 4- and 6-seat areas with their own descriptions. Browser checks confirmed mouse opening for Tables 2/3, close-button/Escape behaviour and keyboard activation. Simulated POST still updates L1 red and L2 green; added chairs stay white/dashed and unmeasured. Group 1 API regression test passes. Arduino and server code were unchanged.
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

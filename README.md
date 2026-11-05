@@ -5,7 +5,7 @@ Student learning materials for **IFI7386.DT Foundations for the Development of I
 This repository is the course's shared learning space. Open the current session during class, follow the material from top to bottom, and use the linked activity pages when prompted. New sessions will be added here as the course progresses.
 
 > [!IMPORTANT]
-> **Current session:** [Session 5 - AI-Assisted Development and the Git Workflow](sessions/05-ai-assisted-development-and-git-workflow/README.md)
+> **Current session:** [Session 6 — Peer Testing, Documentation and Defence](sessions/06-peer-testing-documentation-and-defence/README.md)
 
 ## How to use this repository
 
@@ -38,7 +38,7 @@ The first concept must have:
 | [03](sessions/03-wizard-of-oz-and-arduino-prototyping/README.md) | Wizard-of-Oz Study and Arduino Prototyping | Available |
 | [04](sessions/04-integration-and-collaborative-development/README.md) | Integration and Collaborative Development | Available |
 | [05](sessions/05-ai-assisted-development-and-git-workflow/README.md) | AI-Assisted Development and the Git Workflow | Available |
-| [06](sessions/06-peer-testing-documentation-and-defence/README.md) | Peer Testing, Documentation and Defence | Planned — materials available |
+| [06](sessions/06-peer-testing-documentation-and-defence/README.md) | Peer Testing, Documentation and Defence | **Current** |
 | 07 onward | Added as the course progresses | Not yet published |
 
 See the [session index](sessions/README.md) for the stable folder and naming structure.

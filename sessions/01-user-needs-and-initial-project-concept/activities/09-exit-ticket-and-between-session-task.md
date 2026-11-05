@@ -1,8 +1,8 @@
-# Activity 09 - Exit Ticket and Between-Session Task
+# Activity 09 — Exit Ticket and Between-Session Task
 
-[← Session 1](../README.md) · [← Previous activity](08-pitch-and-peer-feedback.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](08-pitch-and-peer-feedback.md)
 
-**Time in class:** 2 minutes · **Format:** team exit record followed by contextual evidence gathering
+**Time:** 2 minutes · **Format:** team exit record followed by contextual evidence gathering
 
 ## Goal
 
@@ -83,9 +83,17 @@ Is sensing plausible? Does the concept avoid sensitive data? Could it be mistake
 - three assumptions or risks;
 - one sentence stating what the team needs to learn next.
 
-## Academic basis
+## Output
+
+A completed exit record and an assigned evidence-gathering action. Complete the between-session task and bring the records listed above to Session 2.
+
+<a id="academic-basis"></a>
+
+## References
 
 - [ISO 9241-210:2019 official overview](https://www.iso.org/standard/77520.html)
 - [Maguire (2001), open repository copy](https://repository.lboro.ac.uk/articles/journal_contribution/Context_of_use_within_usability_activities/9349751)
 
-[Return to Session 1 →](../README.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

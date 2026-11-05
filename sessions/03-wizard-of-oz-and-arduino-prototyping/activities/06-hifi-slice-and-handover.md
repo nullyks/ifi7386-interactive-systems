@@ -1,6 +1,6 @@
-# Activity 06 - Hi-Fi Slice and Handover
+# Activity 06 — Hi-Fi Slice and Handover
 
-[← Session 3](../README.md) · [← Previous activity](05-component-stations.md)
+[Session 3](../README.md) · [Previous activity](05-component-stations.md)
 
 **Time:** 15 minutes · **Format:** team decision and exit ticket
 
@@ -32,8 +32,12 @@ Choose a small Arduino-based Hi-Fi slice that answers a project question and is 
 
 Complete: **We can implement [specific input → rule → output] on Arduino. We need [component or verification] before building. We will test [observable success condition].**
 
-## Output and preparation for Session 4
+<a id="output-and-preparation-for-session-4"></a>
+
+## Output
 
 Save the build decision, revised diagram or flow, Wizard-of-Oz evidence, circuit or code from today, and a short component list. The next meeting starts from this chosen slice. A working project-specific sketch is welcome; a coherent, safely buildable plan is the required minimum.
 
-[Back to Session 3](../README.md)
+---
+
+[Session 3](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

@@ -1,6 +1,6 @@
-# Activity 05 - Candidate Idea Screen
+# Activity 05 — Candidate Idea Screen
 
-[← Session 1](../README.md) · [← Previous activity](04-problem-candidates-and-context-scan.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](04-problem-candidates-and-context-scan.md) · [Next activity](06-value-proposition-and-interaction-loop.md)
 
 **Time:** 14 minutes, including the instructor checkpoint · **Format:** team comparison → checkpoint
 
@@ -68,10 +68,14 @@ Use **0** for weak or unknown, **1** for possible, and **2** for strong. Scores 
 
 A selected direction, a short decision rationale, a parked alternative, and approval or a specific revision request.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [Maguire (2001), open repository copy](https://repository.lboro.ac.uk/articles/journal_contribution/Context_of_use_within_usability_activities/9349751)
 - [Cockton (2006), public university research record](https://researchportal.northumbria.ac.uk/en/publications/designing-worth-is-worth-designing/)
 - [Blumenfeld et al. (1991), open PDF](https://web.eecs.umich.edu/~mjguz/csl/home.cc.gatech.edu/allison/uploads/4/blumenfeld1991.pdf)
 
-[Next activity →](06-value-proposition-and-interaction-loop.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

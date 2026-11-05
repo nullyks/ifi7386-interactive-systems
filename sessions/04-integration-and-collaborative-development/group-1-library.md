@@ -56,3 +56,8 @@ After core functionality, choose one change: tune separate thresholds, adapt map
 ## Explore the table areas
 
 The page now includes Table 1 (2 sensor seats), Table 2 (4 seats) and Table 3 (6 seats). Click anywhere inside a table area to open its description; close it with the button or Escape. Tab plus Enter/Space also opens an area. Added white dashed chairs have no sensors and must not be described as free. Descriptions are example library uses; change them in `tableDescriptions` in the HTML file. Arduino pins, thresholds, messages and server validation remain unchanged.
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

@@ -1,6 +1,6 @@
-# Activity 06 - Build, Walkthrough, and Handover
+# Activity 06 — Build, Walkthrough, and Handover
 
-[← Session 2](../README.md) · [← Previous activity](05-prototype-fidelity-and-method-selection.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 2](../README.md) · [Previous activity](05-prototype-fidelity-and-method-selection.md)
 
 **Time:** 26 minutes · **Format:** team build → paired-team walkthrough → handover
 
@@ -10,7 +10,7 @@ Build a testable low-fidelity prototype that matches the architecture and intera
 
 ## Part 1 - Build
 
-**Time: 14 minutes**
+**Time:** 14 minutes
 
 1. Represent every state needed by the main path and one selected alternative.
 2. Build the user controls, information, and feedback required by the prototype question.
@@ -20,7 +20,7 @@ Build a testable low-fidelity prototype that matches the architecture and intera
 
 ## Part 2 - Paired-team walkthrough
 
-**Time: 8 minutes**
+**Time:** 8 minutes
 
 Each team receives one four-minute round.
 
@@ -32,7 +32,7 @@ Each team receives one four-minute round.
 
 ## Part 3 - Handover record
 
-**Time: 4 minutes**
+**Time:** 4 minutes
 
 Record:
 
@@ -59,10 +59,14 @@ Low-fidelity prototype version 1.1, a photo or screen capture, one walkthrough r
 
 Finish a stable test version. Write one research question and two realistic user tasks. Keep the participant goal separate from instructions for using the interface. Bring the architecture, state model, accessibility review, prototype decision, operator script where relevant, and known limitations.
 
-## Public learning sources
+<a id="public-learning-sources"></a>
+
+## References
 
 - [Houde and Hill (1997), open PDF](https://hci.stanford.edu/courses/cs247/2012/readings/WhatDoPrototypesPrototype.pdf)
 - [Walker, Takayama, and Landay (2002), author-hosted paper](https://www.leilatakayama.org/downloads/Takayama.Prototypes_HFES2002_prepress.pdf)
 - [Porcheron, Fischer, and Reeves (2020), open author-hosted paper](https://people.cs.nott.ac.uk/pszsr/files/porcheron-2020-wizard-of-oz.pdf)
 
-[Back to Session 2](../README.md)
+---
+
+[Session 2](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

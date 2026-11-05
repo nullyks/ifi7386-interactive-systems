@@ -1,8 +1,12 @@
 # Activity 02 — Discuss Design Decisions
 
-[Session 6](../README.md) · [Previous: cross-testing](01-prepare-and-cross-test.md) · [Next: AI documentation](03-document-the-project-with-ai.md)
+[Session 6](../README.md) · [Previous activity](01-prepare-and-cross-test.md) · [Next activity](03-document-the-project-with-ai.md)
 
-**Time: 20 minutes · Discussion with the other team**
+**Time:** 20 minutes · **Format:** discussion with the other team
+
+## Goal
+
+Explain the evidence and trade-offs behind two completed changes and record one reasoned next decision.
 
 Use four minutes to select evidence, twelve minutes for a shared discussion and four minutes to record decisions. With two teams, give each team about six minutes of discussion. Show the earlier and current interface or interaction when possible.
 
@@ -37,4 +41,10 @@ Select one finding from the peer test and choose **change**, **keep**, or **inve
 
 Add the two completed changes and today's decision to the project record. Keep **implemented**, **tested** and **planned** separate. A failed test can support a useful design decision.
 
-**Output:** two explained earlier changes and one reasoned next decision, with evidence and a verification status.
+## Output
+
+Two explained earlier changes and one reasoned next decision, with evidence and a verification status.
+
+---
+
+[Session 6](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

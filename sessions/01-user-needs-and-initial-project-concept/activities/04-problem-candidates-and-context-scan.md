@@ -1,6 +1,6 @@
-# Activity 04 - Problem Candidates and Context Scan
+# Activity 04 — Problem Candidates and Context Scan
 
-[← Session 1](../README.md) · [← Previous activity](03-team-formation-and-skills-mapping.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](03-team-formation-and-skills-mapping.md) · [Next activity](05-candidate-idea-screen.md)
 
 **Time:** 24 minutes · **Format:** individual ideas → team grouping → context analysis
 
@@ -15,7 +15,7 @@ A **context scan** is a short, structured description of the user, task, place, 
 
 ## Part 1 - Generate candidates
 
-**Time: 5 minutes**
+**Time:** 5 minutes
 
 Working individually, write one possible problem direction at a time. Start with a person, activity, or situation rather than a technology. Generate at least three notes per person.
 
@@ -28,7 +28,7 @@ Useful starting questions:
 
 ## Part 2 - Cluster and frame candidates
 
-**Time: 7 minutes**
+**Time:** 7 minutes
 
 Combine related notes and produce two or three candidate frames. For each candidate, record:
 
@@ -45,7 +45,7 @@ Use this pattern:
 
 ## Part 3 - Context scan
 
-**Time: 12 minutes**
+**Time:** 12 minutes
 
 For every candidate, identify:
 
@@ -90,11 +90,15 @@ For every candidate, identify:
 
 Two or three candidate problem frames and a context scan for each candidate in shared notes.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [The Open University: interaction design and design context](https://www.open.edu/openlearn/mod/oucontent/view.php?id=66703&section=1)
 - [ISO 9241-210:2019 official overview](https://www.iso.org/standard/77520.html)
 - [ISO 9241-11:2018 official overview](https://www.iso.org/standard/63500.html)
 - [Maguire (2001), open repository copy](https://repository.lboro.ac.uk/articles/journal_contribution/Context_of_use_within_usability_activities/9349751)
 
-[Next activity →](05-candidate-idea-screen.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

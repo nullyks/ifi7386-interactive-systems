@@ -41,3 +41,8 @@ Do not confuse three successes: a local reading proves sensing; HTTP 200 proves 
 `index.html` runs in the browser. HTML describes content, CSS colours/styles it, SVG draws the plan, and JavaScript changes it. Read `refresh()` first: request state → show YOUR group’s library or ticket feedback → wait and repeat. `async`/`await` let a function wait for a network reply. `try`/`catch` handles failure. `document.getElementById` finds an element by its HTML id; `textContent` changes its text; `setAttribute` changes drawing properties.
 
 Start modifications with ONE setting or label. Suggested entry points: four FSR thresholds, UID keys in tickets.json, written route text, or one chair rectangle position. Keep the validation/network helper code as supplied until the main loop works. The optional simulator and automated test file are support tools, not required code-writing tasks in this 135-minute class.
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

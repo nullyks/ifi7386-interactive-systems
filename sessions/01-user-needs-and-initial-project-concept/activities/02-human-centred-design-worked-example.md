@@ -1,6 +1,6 @@
-# Activity 02 - Human-Centred Design Worked Example
+# Activity 02 — Human-Centred Design Worked Example
 
-[← Session 1](../README.md) · [← Previous activity](01-interactive-system-think-pair-share.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](01-interactive-system-think-pair-share.md) · [Next activity](03-team-formation-and-skills-mapping.md)
 
 **Time:** 10 minutes · **Format:** demonstration and whole-class questions
 
@@ -82,11 +82,15 @@ This is an initial hypothesis. The team has not yet observed how students notice
 
 A visible concept chain from user and context through problem, value, interaction, and prototype question, together with an explicit list of assumptions.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [ISO 9241-210:2019 official overview](https://www.iso.org/standard/77520.html)
 - [Maguire (2001), open repository copy](https://repository.lboro.ac.uk/articles/journal_contribution/Context_of_use_within_usability_activities/9349751)
 - [Cockton (2006), public university research record](https://researchportal.northumbria.ac.uk/en/publications/designing-worth-is-worth-designing/)
 - [Houde and Hill (1997), open PDF](https://hci.stanford.edu/courses/cs247/2012/readings/WhatDoPrototypesPrototype.pdf)
 
-[Next activity →](03-team-formation-and-skills-mapping.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

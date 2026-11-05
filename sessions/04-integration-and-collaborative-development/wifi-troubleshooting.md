@@ -99,3 +99,8 @@ First confirm a usable Arduino IP, then start the group's Pi server and look for
 - [NetworkManager Wi-Fi security settings](https://www.networkmanager.dev/docs/api/latest/settings-802-11-wireless-security.html): security-profile properties; the OPEN setup omits the wireless-security setting entirely.
 - [WiFiS3 1.5.3 implementation](https://github.com/arduino/ArduinoCore-renesas/blob/1.5.3/libraries/WiFiS3/src/WiFi.cpp): the default ten-second wait inside `begin()` and generic failure result.
 - [Arduino connectivity firmware update instructions](https://support.arduino.cc/hc/en-us/articles/9670986058780-Update-the-connectivity-module-firmware-on-UNO-R4-WiFi): Firmware Updater and reconnecting USB before the next upload.
+
+
+---
+
+[Session 4](README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)

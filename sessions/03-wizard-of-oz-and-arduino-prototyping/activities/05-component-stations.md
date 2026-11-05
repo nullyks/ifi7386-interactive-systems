@@ -1,6 +1,6 @@
-# Activity 05 - Component Stations
+# Activity 05 — Component Stations
 
-[← Session 3](../README.md) · [← Previous activity](04-button-to-led-loop.md)
+[Session 3](../README.md) · [Previous activity](04-button-to-led-loop.md) · [Next activity](06-hifi-slice-and-handover.md)
 
 **Time:** 20 minutes · **Format:** guided component comparison
 
@@ -36,4 +36,6 @@ If your project requires movement, record the motor load, driver, and power sour
 
 One or two candidate routes from sensing, screens or LED elements, movement, and a browser interface; a reason tied to the project interaction; and the unknowns to resolve before committing to the Hi-Fi build.
 
-[Next activity →](06-hifi-slice-and-handover.md)
+---
+
+[Session 3](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

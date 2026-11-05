@@ -1,6 +1,6 @@
-# Activity 02 - Map the Interaction to Arduino
+# Activity 02 — Map the Interaction to Arduino
 
-[← Session 3](../README.md) · [← Previous activity](01-wizard-of-oz-study.md)
+[Session 3](../README.md) · [Previous activity](01-wizard-of-oz-study.md) · [Next activity](03-first-upload-and-output.md)
 
 **Time:** 10 minutes · **Format:** short instructor demonstration and team mapping
 
@@ -28,4 +28,6 @@ Connect one tested project interaction to a physical input, a rule, and an outpu
 
 One input → rule/state → output map and a candidate physical interaction to implement.
 
-[Next activity →](03-first-upload-and-output.md)
+---
+
+[Session 3](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

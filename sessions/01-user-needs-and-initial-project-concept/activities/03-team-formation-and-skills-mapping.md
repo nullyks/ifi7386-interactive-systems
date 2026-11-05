@@ -1,6 +1,6 @@
-# Activity 03 - Team Formation and Skills Mapping
+# Activity 03 — Team Formation and Skills Mapping
 
-[← Session 1](../README.md) · [← Previous activity](02-human-centred-design-worked-example.md) · [Glossary](../../../resources/glossary.md) · [Academic readings](../../../resources/academic-readings.md)
+[Session 1](../README.md) · [Previous activity](02-human-centred-design-worked-example.md) · [Next activity](04-problem-candidates-and-context-scan.md)
 
 **Time:** 20 minutes · **Format:** individual reflection → structured team formation → team agreement
 
@@ -10,7 +10,7 @@ Form a workable team of 3–5 students while making interests, current contribut
 
 ## Part 1 - Individual profile
 
-**Time: 6 minutes**
+**Time:** 6 minutes
 
 Record brief answers in a note you can show classmates.
 
@@ -22,7 +22,7 @@ Record brief answers in a note you can show classmates.
 
 ## Part 2 - Structured team formation
 
-**Time: 7 minutes**
+**Time:** 7 minutes
 
 1. Speak with several classmates before committing.
 2. Look for compatible availability and a shared interest in a user or problem area.
@@ -40,7 +40,7 @@ Before moving on, check that:
 
 ## Part 3 - Team record and working agreement
 
-**Time: 7 minutes**
+**Time:** 7 minutes
 
 Record in the team's shared notes:
 
@@ -78,9 +78,13 @@ A team shares an interest in study environments. One member can organise and con
 
 An initial team of 3–5 and a short digital record of team members, interests, practical limits, rotating roles, and three working agreements.
 
-## Academic basis
+<a id="academic-basis"></a>
+
+## References
 
 - [Oakley et al. (2004), open PDF](https://engr.ncsu.edu/wp-content/uploads/drive/1ofGhdOciEwloA2zofffqkr7jG3SeKRq3/2004-Oakley-paper%28JSCL%29.pdf)
 - [Edmondson (1999), public publisher page and abstract](https://journals.sagepub.com/doi/10.2307/2666999)
 
-[Next activity →](04-problem-candidates-and-context-scan.md)
+---
+
+[Session 1](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

@@ -1,8 +1,12 @@
 # Activity 03 — Document the Project with AI
 
-[Session 6](../README.md) · [Project record template](../templates/project-record.md) · [Next: hardware and BOM](04-hardware-and-bom.md)
+[Session 6](../README.md) · [Previous activity](02-discuss-design-decisions.md) · [Next activity](04-hardware-and-bom.md)
 
-**Time: 25 minutes · Use Antigravity's graphical desktop app on the development computer**
+**Time:** 25 minutes · **Format:** use Antigravity's graphical desktop app on the development computer
+
+## Goal
+
+Use AI to organise the main project evidence across Sessions 1–6, then check and publish the documentation.
 
 The aim is a useful project record, not a transcript of every class or AI conversation. Save the main decisions, evidence, versions and limitations. AI can organise supplied material and explain code; code alone cannot prove that a user study or hardware test happened.
 
@@ -67,4 +71,10 @@ Preview the Markdown, then commit and push the reviewed documentation using the 
 
 Documentation-only edits do not require a Pi restart or an Arduino upload. Keep the earlier tested code version recorded; a new documentation commit is not a new hardware test.
 
-**Output:** a readable, checked project record covering Sessions 1–6, with evidence links, an AI-use note and visible gaps.
+## Output
+
+A readable, checked project record covering Sessions 1–6, with evidence links, an AI-use note and visible gaps.
+
+---
+
+[Session 6](../README.md) · [Glossary](../../../resources/glossary.md) · [Readings and references](../../../resources/academic-readings.md)

@@ -1,17 +1,14 @@
-# Session 2 - Interaction, Architecture, and Prototyping
+# Session 2 — Interaction, Architecture, and Prototyping
 
-[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Academic readings](../../resources/academic-readings.md)
+[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)
 
-**Duration:** 135 minutes in three 45-minute blocks · **Team size:** 3–5 students · **Working language:** English
-
-> [!NOTE]
-> Follow this page from top to bottom during class. Open each activity in a new tab when prompted and record the result in your team's own shared workspace.
+**Duration:** 135 minutes in three 45-minute blocks · **Format:** team modelling and prototyping · **Working language:** English
 
 ## Where we are going
 
 Today your team turns the initial concept into two connected models: a **system architecture** and an **interaction flow**. You will use them to decide what the low-fidelity prototype must represent, inspect ergonomic and accessibility risks, and build a testable version without implementing the final technology.
 
-By the end of the meeting, your team can:
+## By the end you can
 
 - identify system components, responsibilities, boundaries, and labelled data flows;
 - represent system states, events, transitions, feedback, and meaningful alternative paths;
@@ -19,6 +16,10 @@ By the end of the meeting, your team can:
 - choose prototype fidelity by the question being investigated rather than by visual polish;
 - select and justify paper prototyping, a physical mock-up, Wizard-of-Oz, or a hybrid method;
 - keep the architecture, interaction flow, and low-fidelity prototype consistent.
+
+## Before starting
+
+Bring the latest concept, user–context–problem statement, value proposition, scenario, prototype image and evidence notes from Session 1. Continue in teams of 3–5 students and keep new decisions in your shared workspace.
 
 ## Session route
 
@@ -49,9 +50,11 @@ By the end of the meeting, your team can:
 | **Prototype fidelity** | How realistically selected qualities of a design are represented |
 | **Wizard-of-Oz** | A prototype in which a person secretly or visibly performs behaviour that a future system may automate |
 
-See the [course glossary](../../resources/glossary.md) for fuller definitions.
+See the [course glossary](../../resources/glossary.md) for more terms and examples.
 
-## 1. Reconnect evidence and the concept
+<a id="1-reconnect-evidence-and-the-concept"></a>
+
+## Reconnect evidence and the concept
 
 Bring forward the latest user-context-problem statement, value proposition, main scenario, prototype image, and evidence notes from Session 1. Do not treat the earlier concept as fixed. Evidence may support it, narrow it, or show that it needs revision.
 
@@ -61,7 +64,9 @@ Before drawing architecture, agree on one sentence:
 
 **Do now:** [Activity 01 - Evidence and Concept Reconnect](activities/01-evidence-and-concept-reconnect.md)
 
-## 2. Model the system architecture
+<a id="2-model-the-system-architecture"></a>
+
+## Model the system architecture
 
 An architecture description is a model made for a purpose. Today the purpose is to make the proposed interaction understandable and testable. The diagram is not a complete technical specification.
 
@@ -111,7 +116,9 @@ The arrow labels should name what moves: `CO₂ value`, `threshold result`, `cur
 - [ISO/IEC/IEEE 42010:2022 official overview](https://www.iso.org/standard/74393.html)
 - [Fielding (2000), open chapter on software architecture](https://ics.uci.edu/~fielding/pubs/dissertation/software_arch.htm)
 
-## 3. Model states and alternative interaction paths
+<a id="3-model-states-and-alternative-interaction-paths"></a>
+
+## Model states and alternative interaction paths
 
 A flow shows movement through the system. A state model shows what the system currently treats as true and what event can change it.
 
@@ -149,7 +156,9 @@ Do not add every imaginable failure. Choose alternatives that could change the d
 - [Harel (1987), open university-hosted PDF](https://www.csd.uoc.gr/~hy565/docs/pdfs/papers/statecharts_visual_formalism.pdf)
 - [MIT, open reading on input events and state machines](https://web.mit.edu/6.813/www/sp17/classes/12-input/)
 
-## 4. Check patterns, ergonomics, and accessibility
+<a id="4-check-patterns-ergonomics-and-accessibility"></a>
+
+## Check patterns, ergonomics, and accessibility
 
 An interaction pattern is a reusable response to a recurring user problem. A pattern is not a decoration or a rule that fits every context. State the user problem, the proposed response, and why it fits this situation.
 
@@ -186,7 +195,9 @@ For the study-room cue, colour alone would be insufficient. A redundant signal c
 - [W3C Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
 - [van Welie and Trætteberg (2000), Interaction Patterns in User Interfaces](https://www.welie.com/papers/PLoP2k-Welie.pdf)
 
-## 5. Choose prototype fidelity and method
+<a id="5-choose-prototype-fidelity-and-method"></a>
+
+## Choose prototype fidelity and method
 
 Fidelity is not one scale from bad to good. A prototype can be detailed in one respect and deliberately rough in another. Select the qualities needed to answer the prototype question.
 
@@ -209,7 +220,9 @@ High-fidelity prototypes become useful when the question depends on realistic ti
 - [Walker, Takayama, and Landay (2002), author-hosted paper](https://www.leilatakayama.org/downloads/Takayama.Prototypes_HFES2002_prepress.pdf)
 - [Porcheron, Fischer, and Reeves (2020), open author-hosted paper on Wizard-of-Oz practice](https://people.cs.nott.ac.uk/pszsr/files/porcheron-2020-wizard-of-oz.pdf)
 
-## 6. Build and walk through the prototype
+<a id="6-build-and-walk-through-the-prototype"></a>
+
+## Build and walk through the prototype
 
 Build only the states, controls, outputs, and alternative paths required by the question. The prototype, architecture, and interaction flow must describe the same system.
 
@@ -224,11 +237,9 @@ During the walkthrough, do not teach the interface. Give the scenario and goal, 
 
 **Do now:** [Activity 06 - Build, Walkthrough, and Handover](activities/06-build-walkthrough-and-handover.md)
 
-## 7. Prepare for Session 3
+## Completion evidence
 
-Between sessions, finish one testable low-fidelity version. Keep the architecture, state model, and prototype consistent. Write one research question and two realistic participant tasks for the next meeting.
-
-Bring:
+Keep these records and complete the handover before the next meeting:
 
 - architecture and labelled data-flow diagram version 1;
 - main and alternative interaction paths;
@@ -238,6 +249,12 @@ Bring:
 - operator script if the prototype uses Wizard-of-Oz behaviour;
 - a list of assumptions, known limitations, and questions that remain.
 
+<a id="7-prepare-for-session-3"></a>
+
+## Next steps
+
+Between sessions, finish one testable low-fidelity version. Keep the architecture, state model, and prototype consistent. Write one research question and two realistic participant tasks for the next meeting.
+
 ---
 
-[Previous session](../01-user-needs-and-initial-project-concept/README.md) · [Open Activity 01](activities/01-evidence-and-concept-reconnect.md) · [Academic readings](../../resources/academic-readings.md)
+[Previous session](../01-user-needs-and-initial-project-concept/README.md) · [All sessions](../README.md) · [Next session](../03-wizard-of-oz-and-arduino-prototyping/README.md) · [Back to session route](#session-route)

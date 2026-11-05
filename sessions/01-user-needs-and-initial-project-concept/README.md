@@ -1,17 +1,14 @@
-# Session 1 - User Needs and Initial Project Concept
+# Session 1 — User Needs and Initial Project Concept
 
-[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Academic readings](../../resources/academic-readings.md)
+[Course home](../../README.md) · [All sessions](../README.md) · [Glossary](../../resources/glossary.md) · [Readings and references](../../resources/academic-readings.md)
 
-**Duration:** 135 minutes in three 45-minute blocks · **Team size:** 3–5 students · **Working language:** English
-
-> [!NOTE]
-> Follow this page from top to bottom during class. When an activity begins, open its linked page in a new tab and record the result in your team's own shared workspace.
+**Duration:** 135 minutes in three 45-minute blocks · **Format:** team work and discussion · **Working language:** English
 
 ## Where we are going
 
 Today your team moves from a broad interest to a clear first project idea. This idea is a **hypothesis**: it still needs to be checked with evidence. By the end of the session, you should have a reachable user, a specific context, a problem hypothesis, an intended value, one complete interaction loop, a six-step main scenario, and a rough concept that another team can understand.
 
-By the end of the meeting, your team can:
+## By the end you can
 
 - explain an interactive system as an interaction loop between a person and a system in a real context;
 - record team members' interests, contributions, learning goals, availability, and first working agreement;
@@ -19,6 +16,10 @@ By the end of the meeting, your team can:
 - write an initial value proposition and identify input, system response or state, output, feedback, and interface;
 - represent one main use scenario through a paper- or mock-up-based low-fidelity prototype;
 - present the initial concept, give focused peer feedback, and choose one way to collect evidence.
+
+## Before starting
+
+Work in teams of 3–5 students. Have a shared space for notes and simple materials for a low-fidelity prototype. Follow the page in order; open the linked activities when prompted and record results in your team’s workspace.
 
 ## Session route
 
@@ -55,9 +56,9 @@ By the end of the meeting, your team can:
 
 See the [course glossary](../../resources/glossary.md) for more terms and examples.
 
----
+<a id="1-course-project-and-boundaries"></a>
 
-## 1. Course project and boundaries
+## Course project and boundaries
 
 The course project is not a race to build a feature. It is a repeated process of learning, designing, testing, and improving. The first concept may be wrong. It only needs to be clear enough to investigate and revise.
 
@@ -73,7 +74,9 @@ For the first project concept:
 > [!CAUTION]
 > At this stage, a statement about a user is a **hypothesis**, meaning an idea that still needs to be checked. **Evidence** is information that helps you judge the idea. Your own experience can inspire a direction, but it does not represent every future user.
 
-## 2. Interactive systems
+<a id="2-interactive-systems"></a>
+
+## Interactive systems
 
 An interactive system receives input, changes or responds, and produces output. The user notices the feedback, understands something, and decides what to do next.
 
@@ -113,7 +116,9 @@ A printed bus timetable presents useful information but does not change when a p
 
 **Do now:** [Activity 01 - Interactive System Think–Pair–Share](activities/01-interactive-system-think-pair-share.md)
 
-## 3. Human-centred design
+<a id="3-human-centred-design"></a>
+
+## Human-centred design
 
 Human-centred design is an approach that keeps people, their goals, and their context central throughout development. It is not one single research technique.
 
@@ -144,7 +149,9 @@ Human-centred framing begins with these questions and treats the sensor as one p
 
 **Do now:** [Activity 02 - Human-Centred Design Worked Example](activities/02-human-centred-design-worked-example.md)
 
-## 4. Form a project team
+<a id="4-form-a-project-team"></a>
+
+## Form a project team
 
 A useful project team makes current contributions and learning goals visible without assigning permanent expert roles. Technical experience is one contribution among many. Observation, interviewing, writing, visual explanation, coordination, prototyping, presentation, careful testing, programming, and electronics can all matter.
 
@@ -160,7 +167,9 @@ Use rotating roles today:
 
 **Do now:** [Activity 03 - Team Formation and Skills Mapping](activities/03-team-formation-and-skills-mapping.md)
 
-## 5. User, context, problem, and evidence
+<a id="5-user-context-problem-and-evidence"></a>
+
+## User, context, problem, and evidence
 
 Do not begin by choosing a gadget. Begin by making the situation specific enough to investigate.
 
@@ -183,7 +192,9 @@ Do not begin by choosing a gadget. Begin by making the situation specific enough
 
 **Do now:** [Activity 04 - Problem Candidates and Context Scan](activities/04-problem-candidates-and-context-scan.md)
 
-## 6. Select one working direction
+<a id="6-select-one-working-direction"></a>
+
+## Select one working direction
 
 Compare candidates using shared criteria. A number helps make uncertainty visible, but it does not replace judgement. A high total cannot rescue a direction that is unsafe, impossible to investigate, or outside the course scope.
 
@@ -204,7 +215,9 @@ Your checkpoint statement is:
 
 **Do now:** [Activity 05 - Candidate Idea Screen](activities/05-candidate-idea-screen.md)
 
-## 7. Value proposition and interaction loop
+<a id="7-value-proposition-and-interaction-loop"></a>
+
+## Value proposition and interaction loop
 
 A value proposition is an initial claim about how the concept may help a specific user in a specific context. Describe what may become better for the person, not how new the technology is or how many features it has.
 
@@ -230,7 +243,9 @@ An output becomes useful feedback only when the user can notice it and understan
 
 **Do now:** [Activity 06 - Value Proposition and Interaction Loop](activities/06-value-proposition-and-interaction-loop.md)
 
-## 8. Main scenario and low-fidelity concept
+<a id="8-main-scenario-and-low-fidelity-concept"></a>
+
+## Main scenario and low-fidelity concept
 
 A scenario is a short and concrete story of use. It connects the user, setting, goal, actions, system responses, feedback, and outcome. You can change it when you learn something new.
 
@@ -261,7 +276,9 @@ Complete this sentence before making anything:
 
 **Do now:** [Activity 07 - Main Use Scenario and Low-Fidelity Concept](activities/07-main-scenario-and-low-fidelity-concept.md)
 
-## 9. Present and receive peer feedback
+<a id="9-present-and-receive-peer-feedback"></a>
+
+## Present and receive peer feedback
 
 The pitch should make the initial concept understandable, not sell it as finished. Feedback should show what another team understood, what is unclear, and what you should investigate next.
 
@@ -278,13 +295,17 @@ Useful feedback begins with:
 
 **Do now:** [Activity 08 - Pitch and Peer Feedback](activities/08-pitch-and-peer-feedback.md)
 
-## 10. Finish the session
+<a id="10-finish-the-session"></a>
+
+## Finish the session
 
 Before leaving, record the largest untested assumption, what you need to learn next, how you will investigate it, who will arrange the activity, and where anonymised evidence will be stored.
 
 **Do now:** [Activity 09 - Exit Ticket and Between-Session Task](activities/09-exit-ticket-and-between-session-task.md)
 
-## Bring to Session 2
+<a id="bring-to-session-2"></a>
+
+## Completion evidence
 
 - team roster and working agreement;
 - initial and revised user–context–problem statement;
@@ -294,6 +315,10 @@ Before leaving, record the largest untested assumption, what you need to learn n
 - three assumptions or risks: user/context, interaction, and feasibility/ethics;
 - one sentence stating what the team needs to learn next.
 
+## Next steps
+
+Complete the [between-session evidence task](activities/09-exit-ticket-and-between-session-task.md#between-session-task). Bring the records above to Session 2, preserving the original concept when you revise it.
+
 ---
 
-[Back to course home](../../README.md) · [Open the glossary](../../resources/glossary.md) · [Open the academic readings](../../resources/academic-readings.md) · [Back to session route](#session-route)
+[All sessions](../README.md) · [Next session](../02-interaction-architecture-and-prototyping/README.md) · [Back to session route](#session-route)
