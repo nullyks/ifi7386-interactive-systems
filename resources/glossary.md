@@ -183,11 +183,11 @@ Key terms from **Sessions 1–6**, grouped by topic. Each bold term has a short 
 
 | Term | Meaning | Course example |
 |---|---|---|
-| <a id="cross-testing"></a>**Cross-testing** | Teams try each other's solutions and record what happens, using agreed tasks and identified versions. | One team hosts the library prototype while a participant from the other team interprets its feedback, then the teams swap. |
-| <a id="design-rationale"></a>**Design rationale** | The reasons for a design choice, connecting a need and evidence to alternatives, trade-offs and verification. | Explain why unavailable data needs an explicit label, what alternative was considered and how the label was tested. |
+| <a id="cross-testing"></a>**Cross-testing** | Teams try each other's solutions and record what happens, using agreed tasks and identified versions. | One team hosts while a participant from the other team tries a task; then the teams swap. |
+| <a id="design-rationale"></a>**Design rationale** | The reasons for a design choice, connecting a need and evidence to alternatives, trade-offs and verification. | In the fictional light-box example, explain why a knob needs direction markings and how their meaning would be tested. |
 | <a id="traceability"></a>**Traceability** | Being able to follow a claim or decision back to its supporting evidence and relevant version. | A design-decision row links observation O1, the implementing commit and the physical test result. |
-| <a id="hardware-revision"></a>**Hardware revision** | A label for a documented physical configuration, including components, wiring, mounting and relevant calibration settings. | HW-02 records revised FSR mounting and thresholds; keep the matching test results. |
-| <a id="bill-of-materials-bom"></a>**Bill of materials (BOM)** | A list of physical items, specifications and quantities needed for an identified build. Prices can be included when known. | Two FSRs need two separate divider resistors; label required Pi demonstration equipment separately. |
+| <a id="hardware-revision"></a>**Hardware revision** | A label for a documented physical configuration, including components, wiring, mounting and relevant calibration settings. | HW-02 could record a revised knob mount; keep the matching test results. |
+| <a id="bill-of-materials-bom"></a>**Bill of materials (BOM)** | A list of physical items, specifications and quantities needed for an identified build. Prices can be included when known. | The fictional light box needs one LED and one series resistor; label its development laptop separately. |
 | <a id="reproducibility"></a>**Reproducibility** | Providing enough information for another person to repeat a build, setup or check and compare the result. | A teammate can identify the hardware, start the recorded server version and repeat the input-to-feedback check. |
 
 ## Safety and scope

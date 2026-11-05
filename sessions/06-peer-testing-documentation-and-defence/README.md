@@ -56,7 +56,9 @@ Create these in **your team's existing repository**, alongside the code:
 | `README.md` | What the prototype does, how to start it, links to the records below | Improve your existing README; preserve working startup instructions. |
 | `docs/project-record.md` | Course milestones, design reasons, peer-test evidence and remaining questions | [Project record template](templates/project-record.md) |
 | `docs/hardware.md` | Actual components, wiring, power, mounting, calibration and version record | [Hardware template](templates/hardware.md) |
-| `docs/bom.csv` | Quantities and specifications of the physical parts and required equipment | [BOM template](templates/bom.csv) and [worked example](examples/library-hardware-and-bom.md) |
+| `docs/bom.csv` | Quantities and specifications of the physical parts and required equipment | [BOM template](templates/bom.csv) and [worked example](examples/exhibit-light-hardware-and-bom.md) |
+
+The worked examples use a **fictional exhibition light box**. Apply the method to your own project using its actual evidence, components and wiring; start from the blank templates.
 
 Link existing evidence rather than rewriting every note. Keep `docs/test-log.md` from Session 5 if you already use it; link it from the project record. A concise table and a few labelled images are enough. Record missing evidence as **MISSING**, an untested statement as **UNVERIFIED**, and a proposed change as **PLANNED**.
 

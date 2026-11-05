@@ -1,6 +1,6 @@
 # Activity 04 — Hardware and BOM
 
-[Session 6](../README.md) · [Worked library example](../examples/library-hardware-and-bom.md) · [Next: defence rehearsal](05-defence-rehearsal.md)
+[Session 6](../README.md) · [Worked light-box example](../examples/exhibit-light-hardware-and-bom.md) · [Next: defence rehearsal](05-defence-rehearsal.md)
 
 **Time: 25 minutes · Inspect the actual build, then use AI to draft its record**
 
@@ -21,9 +21,9 @@ Take an overview photo and a readable close-up of connections. Use IDs such as `
 
 ## 2. Try the worked example — about 5 minutes
 
-Open the [two-chair library example](../examples/library-hardware-and-bom.md). Compare its connection table, simple diagram and [example CSV](../examples/library-bom.csv). Notice that two FSRs require **two** separate divider resistors, while their exact sensor models and jumper count still require inspection.
+Open the [fictional exhibition light-box example](../examples/exhibit-light-hardware-and-bom.md): a potentiometer controls an LED's brightness. Compare its connection table, simple diagram and [example CSV](../examples/exhibit-light-bom.csv). Notice how the same part IDs appear in all three, and how unknown models and quantities remain visible. There is no need to build the example.
 
-The example includes a deliberately incomplete inventory. Identify one missing fact and how you would verify it. Then use the same method for your own group. Group 2 follows its [RC522 classroom wiring guide](../../04-integration-and-collaborative-development/group-2-ticket.md#parts-and-wiring), including **3.3 V reader power**, actual reader model and test tags; do not copy the FSR circuit into the ticket project.
+Identify one missing fact and how you would verify it. Then use the method to document your own team's actual parts, wiring and required equipment. Start your BOM from the blank template and your own inspection notes. Consult the [Group 1 wiring guide](../../04-integration-and-collaborative-development/group-1-library.md#parts-and-wiring) or [Group 2 wiring guide](../../04-integration-and-collaborative-development/group-2-ticket.md#parts-and-wiring) as appropriate.
 
 ## 3. Ask the agent for a draft — about 8 minutes
 

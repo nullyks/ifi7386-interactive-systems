@@ -1,0 +1,10 @@
+id,item,quantity,unit,specification,role,source_or_evidence,unit_price_eur,status
+U1,Arduino UNO R4 WiFi,1,piece,UNO R4 WiFi board,prototype,Fictional light-box design notes,,TEACHING DESIGN; no build inspected
+RV1,Potentiometer,1,piece,10 kΩ linear; model UNVERIFIED,prototype,Fictional light-box design notes,,TEACHING DESIGN; verify terminals and mounting
+LED1,Red indicator LED,1,piece,Model and ratings UNVERIFIED,prototype,Fictional light-box design notes,,TEACHING DESIGN; verify polarity and ratings
+R1,LED series resistor,1,piece,470 Ω; tolerance UNVERIFIED,prototype,Fictional light-box design notes,,TEACHING DESIGN; check actual value
+B1,Breadboard,1,piece,Size UNVERIFIED,prototype,Fictional light-box design notes,,TEACHING DESIGN; inspect actual layout
+C1,USB data cable,1,piece,UNO USB-C end; laptop connector UNVERIFIED,prototype,Fictional light-box design notes,,TEACHING DESIGN; inspect cable
+W1,Jumper wires,,piece,Lengths and connector types UNVERIFIED,prototype,Fictional light-box design notes,,COUNT ON BUILD; price unknown
+M1,Enclosure and mounting materials,,piece,Split enclosure and fasteners into separate rows,prototype,Fictional light-box design notes,,COUNT ON BUILD; materials and price unknown
+DEV1,Development laptop,1,setup,Laptop with its power equipment,demonstration equipment,Fictional light-box design notes,,TEACHING DESIGN; identify actual equipment and loan status

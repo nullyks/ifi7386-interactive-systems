@@ -10,7 +10,7 @@ Pair with another team. In round 1, Team A hosts and Team B tests. In round 2, s
 
 1. Run the prototype on its own Pi and hotspot. Visitors use that Pi's browser and your physical input; they do not need a clone or GitHub write access.
 2. Record the date, server code commit on the Pi (`git rev-parse --short HEAD`), firmware source last uploaded and a hardware revision such as `HW-01`. If the firmware version is not known, write **UNVERIFIED**. Record any uncommitted code/calibration changes; a commit alone would not identify that build.
-3. Agree one question about the updated interaction: for example, **Can a new participant distinguish unavailable data from an available seat?**
+3. Agree one question about your updated interaction. For a fictional exhibition light box, a question could be: **Can a first-time participant tell which way to turn the knob to make the light brighter?** Write a question for your own project.
 4. Prepare one main task and one failure/recovery task. Write the expected result privately in the test record. Keep the code and wiring fixed during both rounds.
 5. Assign a facilitator, an observer and a hardware operator in the hosting team. The visiting team chooses a participant; other visitors observe without coaching. Explain note-taking and obtain consent. Use anonymous labels such as P1.
 
@@ -40,7 +40,7 @@ Use the peer-test section of the [project record template](../templates/project-
 
 | Observation | Interpretation | Possible action |
 |---|---|---|
-| Example only: P1 called a grey chair “free” after the board had been disconnected. | “Unknown” may not be explained clearly enough. | Consider explicit unavailable-data text, then test whether it is understood. |
+| Fictional light-box example: P1 turned the knob left to make the light brighter, then reversed direction when it dimmed. | The adjustment direction may be unclear. | Consider direction markings, then ask a new participant to make the light brighter. |
 
 This example is not your team's result. Preserve actual failures and help given. If hardware cannot run, record a **blocked** task or a clearly labelled simulation; the physical test remains unverified. A peer participant also may not represent your intended user or context.
 

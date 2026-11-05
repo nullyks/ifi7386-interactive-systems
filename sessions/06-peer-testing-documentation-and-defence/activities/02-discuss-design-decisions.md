@@ -33,7 +33,7 @@ Select one finding from the peer test and choose **change**, **keep**, or **inve
 
 | Decision | Evidence | Reason and trade-off | Verification / next check |
 |---|---|---|---|
-| Example only: replace a colour-only unknown state with text as well | P1's recorded interpretation of the unavailable-data state | More explicit meaning, with slightly more screen space | PLANNED: disconnect the board and ask a new participant what the status means |
+| Fictional light-box example: add “dimmer / brighter” direction markings around the knob | P1 first turned the knob in the wrong direction | Makes the direction explicit, with more text on the enclosure | PLANNED: ask a new participant to make the light brighter without help |
 
 Add the two completed changes and today's decision to the project record. Keep **implemented**, **tested** and **planned** separate. A failed test can support a useful design decision.
 
