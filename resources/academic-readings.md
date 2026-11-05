@@ -2,9 +2,9 @@
 
 [Course home](../README.md) · [All sessions](../sessions/README.md) · [Glossary](glossary.md)
 
-Shared references for **Sessions 1–5**. Sessions 1–2 emphasise research and design literature; Sessions 3–5 also need practical hardware, networking, version-control and AI-tool documentation. Full-text readings are identified separately from publication records and standards overviews. The full ISO standards are not required reading.
+Shared references for **Sessions 1–6**. Sessions 1–2 emphasise research and design literature; Sessions 3–6 also need practical hardware, networking, version-control, AI-tool and project-documentation references. Full-text readings are identified separately from publication records and standards overviews. The full ISO standards are not required reading.
 
-Session coverage and the technical references were reviewed on **2 November 2026**; the Session 5 account, authentication and Git-installation guidance was updated on **4 November 2026**. Use the linked session instructions for the classroom wiring, tested library versions, message fields and workflow. General documentation explains the underlying tools; it does not replace the group-specific instructions.
+Session coverage and the technical references were reviewed on **2 November 2026**; the Session 5 account, authentication and Git-installation guidance was updated on **4 November 2026**. References for the Session 6 plan were added on **5 November 2026**. Use the linked session instructions for the classroom wiring, tested library versions, message fields and workflow. General documentation explains the underlying tools; it does not replace the group-specific instructions.
 
 ## Find references for your session
 
@@ -15,6 +15,7 @@ Session coverage and the technical references were reviewed on **2 November 2026
 | [3 — Wizard-of-Oz and Arduino](../sessions/03-wizard-of-oz-and-arduino-prototyping/README.md) | Participant study, input/output, sketches and a feasible Hi-Fi slice | [Session 3 references](#session-3--wizard-of-oz-and-arduino) |
 | [4 — Integration and collaboration](../sessions/04-integration-and-collaborative-development/README.md) | Sensors, Pi networking, HTTP/JSON, state and recovery | [Session 4 references](#session-4--integration-and-collaborative-development) |
 | [5 — AI-assisted development and Git](../sessions/05-ai-assisted-development-and-git-workflow/README.md) | Agent prompts, review, shared code, device updates and testing | [Session 5 references](#session-5--ai-assisted-development-and-git) |
+| [6 — Peer testing, documentation and defence](../sessions/06-peer-testing-documentation-and-defence/README.md) | Peer observations, design reasons, evidence-based AI documentation, hardware and BOM | [Session 6 references](#session-6--peer-testing-documentation-and-defence) |
 
 ## Start here
 
@@ -185,3 +186,16 @@ Start with the [group repository and two-clone activity](../sessions/05-ai-assis
 | Updating Arduino firmware | [Course firmware example](../sessions/05-ai-assisted-development-and-git-workflow/activities/04-publish-update-and-test.md#optional-example-update-arduino-firmware); [Arduino upload guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) | Commit and push the `.ino` source to the same repository, then USB Upload from the development computer using Arduino IDE. Pulling on the Pi does not program the board. Record the firmware version separately when needed. |
 
 The two required rounds improve the interface and server; the firmware example is optional. Continue to use the earlier sessions' user goal, evidence, architecture and accessibility checks when choosing improvements. A clean diff or a published commit alone does not establish that the user's interaction works.
+
+## Session 6 — Peer Testing, Documentation and Defence
+
+Use the [session plan](../sessions/06-peer-testing-documentation-and-defence/README.md) and its concise templates. Reuse the earlier project evidence rather than reconstructing a successful project story from code alone.
+
+| Topic | Source | What to focus on |
+|---|---|---|
+| Peer tasks and observations | [Session 6 cross-test activity](../sessions/06-peer-testing-documentation-and-defence/activities/01-prepare-and-cross-test.md); [earlier study method](../sessions/03-wizard-of-oz-and-arduino-prototyping/activities/01-wizard-of-oz-study.md); Topping, reading 8 | Give a goal without teaching the controls; separate observation, interpretation and action. Classroom peers do not automatically represent intended users. |
+| Explaining design reasons | [Design discussion](../sessions/06-peer-testing-documentation-and-defence/activities/02-discuss-design-decisions.md); [human-centred design readings](#interaction-design-human-centred-design-and-context) | Connect a before/after change to a need, evidence, an alternative, a trade-off and a test. Preserve uncertainty. |
+| AI-assisted project records | [Documentation activity](../sessions/06-peer-testing-documentation-and-defence/activities/03-document-the-project-with-ai.md); [Antigravity projects](https://antigravity.google/docs/projects/); [Review pane](https://antigravity.google/docs/review-changes/) | Supply the actual evidence; inventory gaps before drafting. Review claims and changed files before publishing. |
+| Hardware documentation and BOM | [OSHWA sharing best practices](https://oshwa.org/resources/sharing-best-practices/); [course worked example](../sessions/06-peer-testing-documentation-and-defence/examples/library-hardware-and-bom.md) | Match part IDs between the physical build, wiring and BOM. Record specifications, quantities and evidence; unknown prices are not zero. |
+| Board and demonstration equipment identity | [UNO R4 WiFi documentation](https://docs.arduino.cc/hardware/uno-r4-wifi/); [Pi 400 specifications](https://www.raspberrypi.com/products/raspberry-pi-400/specifications/); [Group 1 wiring](../sessions/04-integration-and-collaborative-development/group-1-library.md#parts-and-wiring); [Group 2 wiring](../sessions/04-integration-and-collaborative-development/group-2-ticket.md#parts-and-wiring) | Identify actual parts and power connections. The FSR circuit and RC522 classroom wiring have different supply requirements. |
+| Defence preparation | [Rehearsal and short checklist](../sessions/06-peer-testing-documentation-and-defence/activities/05-defence-rehearsal.md) | Demonstrate the interaction, justify choices, identify tested versions and explain AI use, contributions and limitations. Use the instructor's announced requirements for formal assessment. |

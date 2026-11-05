@@ -38,13 +38,14 @@ The first concept must have:
 | [03](sessions/03-wizard-of-oz-and-arduino-prototyping/README.md) | Wizard-of-Oz Study and Arduino Prototyping | Available |
 | [04](sessions/04-integration-and-collaborative-development/README.md) | Integration and Collaborative Development | Available |
 | [05](sessions/05-ai-assisted-development-and-git-workflow/README.md) | AI-Assisted Development and the Git Workflow | Available |
-| 06 onward | Added as the course progresses | Not yet published |
+| [06](sessions/06-peer-testing-documentation-and-defence/README.md) | Peer Testing, Documentation and Defence | Planned — materials available |
+| 07 onward | Added as the course progresses | Not yet published |
 
 See the [session index](sessions/README.md) for the stable folder and naming structure.
 
 ## Shared resources
 
-- [Readings and technical references for Sessions 1–5](resources/academic-readings.md)
+- [Readings and technical references for Sessions 1–6](resources/academic-readings.md)
 - [Glossary of course terms](resources/glossary.md)
 - Further project guidance will be added when the relevant concepts are introduced.
 
@@ -80,11 +81,16 @@ See the [session index](sessions/README.md) for the stable folder and naming str
     │   └── examples/
     │       ├── group-1-library/
     │       └── group-2-ticket/
-    └── 05-ai-assisted-development-and-git-workflow/
+    ├── 05-ai-assisted-development-and-git-workflow/
+    │   ├── README.md
+    │   └── activities/
+    │       ├── 01-team-repository-and-two-clones.md
+    │       └── ...
+    └── 06-peer-testing-documentation-and-defence/
         ├── README.md
-        └── activities/
-            ├── 01-team-repository-and-two-clones.md
-            └── ...
+        ├── activities/
+        ├── templates/
+        └── examples/
 ```
 
 Session folders use a two-digit number so that later material remains easy to find and appears in teaching order. Each session contains one main teaching page and its own activity pages.

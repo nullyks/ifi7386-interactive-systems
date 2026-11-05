@@ -1,6 +1,6 @@
 # Session 5 — AI-Assisted Development and the Git Workflow
 
-[Course home](../../README.md) · [Sessions](../README.md) · [Previous session](../04-integration-and-collaborative-development/README.md)
+[Course home](../../README.md) · [Sessions](../README.md) · [Previous session](../04-integration-and-collaborative-development/README.md) · [Next session plan](../06-peer-testing-documentation-and-defence/README.md)
 
 **135 minutes in three 45-minute blocks · Practical group work · Working language: English**
 

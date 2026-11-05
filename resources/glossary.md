@@ -2,7 +2,7 @@
 
 [Course home](../README.md) · [All sessions](../sessions/README.md) · [Readings and technical references](academic-readings.md)
 
-Key terms from **Sessions 1–5**, grouped by topic. Each bold term has a short meaning and a course example. Use this as a reference while working; the examples include the study-room concept, both integrated group projects and the AI-assisted Git workflow.
+Key terms from **Sessions 1–6**, grouped by topic. Each bold term has a short meaning and a course example. Use this as a reference while working; the examples include the study-room concept, both integrated group projects, the AI-assisted Git workflow and project documentation.
 
 ## Find a topic
 
@@ -14,6 +14,7 @@ Key terms from **Sessions 1–5**, grouped by topic. Each bold term has a short 
 - [Networking and integration](#networking-and-integration)
 - [Git and shared code](#git-and-shared-code)
 - [AI-assisted development and testing](#ai-assisted-development-and-testing)
+- [Documentation and defence](#documentation-and-defence)
 - [Safety and scope](#safety-and-scope)
 
 ## Find terms for your session
@@ -25,6 +26,7 @@ Key terms from **Sessions 1–5**, grouped by topic. Each bold term has a short 
 | [3 — Wizard-of-Oz and Arduino](../sessions/03-wizard-of-oz-and-arduino-prototyping/README.md) | [Study terms](#claims-and-evidence), [Hi-Fi slice](#hi-fi-slice), [Arduino and firmware](#arduino-sensing-and-firmware). |
 | [4 — Integration](../sessions/04-integration-and-collaborative-development/README.md) | [Sensors and calibration](#arduino-sensing-and-firmware), [networking and integration](#networking-and-integration), [testing](#ai-assisted-development-and-testing). |
 | [5 — AI-assisted Git workflow](../sessions/05-ai-assisted-development-and-git-workflow/README.md) | [Git and shared code](#git-and-shared-code), [AI development and testing](#ai-assisted-development-and-testing), [firmware upload](#firmware-upload). |
+| [6 — Peer testing and documentation](../sessions/06-peer-testing-documentation-and-defence/README.md) | [Documentation and defence](#documentation-and-defence), [evidence](#claims-and-evidence), [testing](#ai-assisted-development-and-testing), [calibration](#calibration). |
 
 ## People, goals, and context
 
@@ -124,8 +126,8 @@ Key terms from **Sessions 1–5**, grouped by topic. Each bold term has a short 
 
 | Term | Meaning | Course example |
 |---|---|---|
-| <a id="client"></a>**Client** | A program or device that sends a request to a server. Its role depends on the architecture. | In Sessions 4–5, both Arduino and the browser request services from the Pi. |
-| <a id="server"></a>**Server** | A program that handles requests and returns responses. It is not necessarily a separate kind of computer. | Sessions 4–5 run a Node.js server on the Pi 400. |
+| <a id="client"></a>**Client** | A program or device that sends a request to a server. Its role depends on the architecture. | In Sessions 4–6, both Arduino and the browser request services from the Pi. |
+| <a id="server"></a>**Server** | A program that handles requests and returns responses. It is not necessarily a separate kind of computer. | Sessions 4–6 run a Node.js server on the Pi 400. |
 | <a id="nodejs"></a>**Node.js** | The JavaScript runtime used to run the supplied server outside the browser. | Start `node host/server.js` on the Pi. |
 | <a id="http"></a>**HTTP** | The request/response protocol used here between clients and the server. | Arduino sends a reading; the server returns an acceptance or error response. |
 | <a id="get-and-post"></a>**GET and POST** | HTTP methods: GET requests a representation; POST submits data for the server to process. | The browser GETs `/api/state`; Group 1 POSTs readings to `/api/seats`. |
@@ -176,6 +178,17 @@ Key terms from **Sessions 1–5**, grouped by topic. Each bold term has a short 
 | <a id="simulation"></a>**Simulation** | Represent an input or system behaviour without using the actual component. Label what is simulated. | A host simulator helps isolate faults but does not prove an FSR or RFID reader works. |
 | <a id="recovery"></a>**Recovery** | Return to an understood working state after a failure. | Reconnect the board and check that fresh readings reach the correct display. |
 | <a id="deployment--device-update"></a>**Deployment / device update** | Put a selected code version into use on the intended device. Different targets require different steps. | Pi: pull and restart the server. Arduino: USB Upload from the development computer. |
+
+## Documentation and defence
+
+| Term | Meaning | Course example |
+|---|---|---|
+| <a id="cross-testing"></a>**Cross-testing** | Teams try each other's solutions and record what happens, using agreed tasks and identified versions. | One team hosts the library prototype while a participant from the other team interprets its feedback, then the teams swap. |
+| <a id="design-rationale"></a>**Design rationale** | The reasons for a design choice, connecting a need and evidence to alternatives, trade-offs and verification. | Explain why unavailable data needs an explicit label, what alternative was considered and how the label was tested. |
+| <a id="traceability"></a>**Traceability** | Being able to follow a claim or decision back to its supporting evidence and relevant version. | A design-decision row links observation O1, the implementing commit and the physical test result. |
+| <a id="hardware-revision"></a>**Hardware revision** | A label for a documented physical configuration, including components, wiring, mounting and relevant calibration settings. | HW-02 records revised FSR mounting and thresholds; keep the matching test results. |
+| <a id="bill-of-materials-bom"></a>**Bill of materials (BOM)** | A list of physical items, specifications and quantities needed for an identified build. Prices can be included when known. | Two FSRs need two separate divider resistors; label required Pi demonstration equipment separately. |
+| <a id="reproducibility"></a>**Reproducibility** | Providing enough information for another person to repeat a build, setup or check and compare the result. | A teammate can identify the hardware, start the recorded server version and repeat the input-to-feedback check. |
 
 ## Safety and scope
 

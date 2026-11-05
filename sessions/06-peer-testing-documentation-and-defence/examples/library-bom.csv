@@ -1,0 +1,17 @@
+id,item,quantity,unit,specification,role,source_or_evidence,unit_price_eur,status
+U1,Arduino UNO R4 WiFi,1,piece,UNO R4 WiFi board,prototype,Session 4 library guide and network sketch,,REFERENCE DESIGN; inspect actual board
+S1,FSR for L1,1,piece,Model UNVERIFIED; divider junction to A0,prototype,Session 4 library guide,,REFERENCE DESIGN; inspect model and mounting
+S2,FSR for L2,1,piece,Model UNVERIFIED; divider junction to A1,prototype,Session 4 library guide,,REFERENCE DESIGN; inspect model and mounting
+R1,Divider resistor for L1,1,piece,10 kΩ; tolerance UNVERIFIED,prototype,Session 4 library guide,,REFERENCE DESIGN; check actual value
+R2,Divider resistor for L2,1,piece,10 kΩ; tolerance UNVERIFIED,prototype,Session 4 library guide,,REFERENCE DESIGN; check actual value
+B1,Breadboard,1,piece,Size UNVERIFIED,prototype,Session 4 library guide,,REFERENCE DESIGN; inspect actual layout
+C1,USB data cable for UNO,1,piece,UNO USB-C end; computer connector UNVERIFIED,prototype,Session 4 library guide and UNO R4 WiFi documentation,,REFERENCE DESIGN; inspect cable and test power source
+W1,Jumper wires,,piece,Lengths and connector types UNVERIFIED,prototype,Session 4 library guide,,COUNT ON BUILD; price unknown
+M1,Mounting materials,,piece,Split actual pads and fasteners into separate rows,prototype,Session 4 mounting guidance,,COUNT ON BUILD; materials and price unknown
+P1,Raspberry Pi 400,1,piece,Pi host with built-in keyboard,demonstration equipment,Session 4 Pi setup,,REFERENCE SETUP; inspect and record loan status
+PS1,Pi power supply,1,piece,Suitable Pi 400 supply; model and rating UNVERIFIED,demonstration equipment,Physical inspection required,,INSPECT; record rating and loan status
+SD1,Pi OS storage,1,piece,microSD; capacity and OS version UNVERIFIED,demonstration equipment,Physical inspection required,,INSPECT; record loan status
+D1,Monitor,1,piece,Model and input UNVERIFIED,demonstration equipment,Physical inspection required,,INSPECT; record loan status and power supply if separate
+C2,Pi display cable,1,piece,Pi micro-HDMI end; monitor connector UNVERIFIED,demonstration equipment,Physical inspection required,,INSPECT; record loan status
+I1,Mouse,1,piece,Actual device UNVERIFIED,demonstration equipment,Physical inspection required,,INSPECT; record loan status
+DEV1,Development computer,1,piece,Classroom computer or laptop with its power equipment,demonstration equipment,Session 5 development setup,,INSPECT; expand any separate required power items; record loan status

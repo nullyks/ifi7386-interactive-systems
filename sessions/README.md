@@ -11,6 +11,7 @@ Use the session pages in numerical order. Each main page contains the concepts, 
 | 03 | Wizard-of-Oz Study and Arduino Prototyping | [Open Session 3](03-wizard-of-oz-and-arduino-prototyping/README.md) |
 | 04 | Integration and Collaborative Development | [Open Session 4](04-integration-and-collaborative-development/README.md) |
 | 05 | AI-Assisted Development and the Git Workflow | [Open Session 5](05-ai-assisted-development-and-git-workflow/README.md) |
+| 06 | Peer Testing, Documentation and Defence | [Open Session 6 plan](06-peer-testing-documentation-and-defence/README.md) |
 
 ## How this section will grow
 
@@ -23,6 +24,7 @@ sessions/
 ├── 03-wizard-of-oz-and-arduino-prototyping/
 ├── 04-integration-and-collaborative-development/
 ├── 05-ai-assisted-development-and-git-workflow/
+├── 06-peer-testing-documentation-and-defence/
 └── ...
 ```
 
